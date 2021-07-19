@@ -9,7 +9,15 @@
     var logo = home.Logo?.LocalCrops;
     var sharedContent = Model.Name;
     var favicon = settings.Favicon?.LocalCrops;
-    var about = (Tours)home.Children.FirstOrDefault(c => c.ContentType.Alias == "tours");
+    var tours = (Tours)home.Children.FirstOrDefault(c => c.ContentType.Alias == "tours");
+    var hotel = (Hotel)home.Children.FirstOrDefault(c => c.ContentType.Alias == "hotel");
+    var vehicle = (Vehicle)home.Children.FirstOrDefault(c => c.ContentType.Alias == "vehicle");
+    var food = (FoodAndRestaurant)home.Children.FirstOrDefault(c => c.ContentType.Alias == "foodAndRestaurant");
+    var news = (News)home.Children.FirstOrDefault(c => c.ContentType.Alias == "news");
+    var contact = (Contact)home.Children.FirstOrDefault(c => c.ContentType.Alias == "contact");
+    var aboutus = (AboutUs)home.Children.FirstOrDefault(c => c.ContentType.Alias == "aboutUs");
+    var faq = (FAqs)home.Children.FirstOrDefault(c => c.ContentType.Alias == "fAQs");
+    var voucher = (Voucher)home.Children.FirstOrDefault(c => c.ContentType.Alias == "voucher");
 
     var lang = "vi";
     var uri = new Uri(Request.Url.AbsoluteUri);
@@ -38,29 +46,36 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
 
     <link rel="stylesheet" href="~/css/bootstrap.css">
+    <link rel="stylesheet" href="~/css/style.css">
+
 </head>
 
 <body>
     <div id="wrapper">
         <header id="header">
             <div class="top_header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-2">
+                <div class="container-fluid">
+                    <div class="row top_header-row">
+                        <div class="col-4">
                             <div class="logo">
                                 <a href="">
                                     <img src="@logo" alt="" />
                                 </a>
                             </div>
                         </div>
-                        <div class="col-10">
+                        <div class="col-8">
                             <ul class="menu_top">
+                                <li>
+                                    @Html.Partial("~/Views/Partials/Language.cshtml")
+                                </li>
                                 <li>
                                     <a href="tel:@settings.ContactPhone">@settings.ContactPhone</a>
                                 </li>
                                 <li>
                                     <a href="@home.DownloadApp.Url">@home.DownloadApp.Name</a>
                                 </li>
+                                <li><a class="signup" href="@faq.Url()">@Umbraco.GetDictionaryValue("FAQs").ToFirstUpper()</a></li>
+                                <li><a class="signin" href="@voucher.Url()">@Umbraco.GetDictionaryValue("Voucher").ToFirstUpper()</a></li>
                             </ul>
                         </div>
                     </div>
@@ -72,7 +87,7 @@
                         <div class="col-12">
                             <ul class="main_menu">
                                 <li>
-                                    <a href="@tours.Url">@about.PageTitle</a>
+                                    <a href="@tours.Url()">@tours.PageTitle</a>
                                     <ul class="sub_menu">
                                         @if (tours.Children != null)
                                         {
@@ -85,12 +100,101 @@
                                                 }
                                                 if (content != null)
                                                 {
-                                                    <li><a href="@(content.Url)">@content.Value("pageTitle")</a></li>
+                                                    <li><a href="@(content.Url())">@content.Value("pageTitle")</a></li>
                                                 }
                                             }
                                         }
                                     </ul>
                                 </li>
+
+                                <li>
+                                    <a href="@hotel.Url()">@hotel.PageTitle</a>
+                                    <ul class="sub_menu">
+                                        @if (tours.Children != null)
+                                        {
+                                            foreach (var child in hotel.Children)
+                                            {
+                                                IPublishedContent content = child;
+                                                if (child.HasProperty("referencePage"))
+                                                {
+                                                    content = child.Value<IPublishedContent>("referencePage");
+                                                }
+                                                if (content != null)
+                                                {
+                                                    <li><a href="@(content.Url())">@content.Value("pageTitle")</a></li>
+                                                }
+                                            }
+                                        }
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="@vehicle.Url()">@vehicle.PageTitle</a>
+                                    <ul class="sub_menu">
+                                        @if (tours.Children != null)
+                                        {
+                                            foreach (var child in vehicle.Children)
+                                            {
+                                                IPublishedContent content = child;
+                                                if (child.HasProperty("referencePage"))
+                                                {
+                                                    content = child.Value<IPublishedContent>("referencePage");
+                                                }
+                                                if (content != null)
+                                                {
+                                                    <li><a href="@(content.Url())">@content.Value("pageTitle")</a></li>
+                                                }
+                                            }
+                                        }
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="@food.Url()">@food.PageTitle</a>
+                                    <ul class="sub_menu">
+                                        @if (tours.Children != null)
+                                        {
+                                            foreach (var child in food.Children)
+                                            {
+                                                IPublishedContent content = child;
+                                                if (child.HasProperty("referencePage"))
+                                                {
+                                                    content = child.Value<IPublishedContent>("referencePage");
+                                                }
+                                                if (content != null)
+                                                {
+                                                    <li><a href="@(content.Url())">@content.Value("pageTitle")</a></li>
+                                                }
+                                            }
+                                        }
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="@news.Url()">@news.PageTitle</a>
+                                    <ul class="sub_menu">
+                                        @if (tours.Children != null)
+                                        {
+                                            foreach (var child in news.Children)
+                                            {
+                                                IPublishedContent content = child;
+                                                if (child.HasProperty("referencePage"))
+                                                {
+                                                    content = child.Value<IPublishedContent>("referencePage");
+                                                }
+                                                if (content != null)
+                                                {
+                                                    <li><a href="@(content.Url())">@content.Value("pageTitle")</a></li>
+                                                }
+                                            }
+                                        }
+                                    </ul>
+                                </li>
+
+                                <li><a href="@contact.Url()">@Umbraco.GetDictionaryValue("Contact").ToFirstUpper()</a></li>
+                                <li><a href="@aboutus.Url()">@Umbraco.GetDictionaryValue("AboutUs").ToFirstUpper()</a></li>
+                                <li><a href="@faq.Url()">@Umbraco.GetDictionaryValue("FAQs").ToFirstUpper()</a></li>
+                                <li><a href="@voucher.Url()">@Umbraco.GetDictionaryValue("Voucher").ToFirstUpper()</a></li>
                             </ul>
                         </div>
                     </div>

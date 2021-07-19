@@ -1,0 +1,53 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+    Layout = null;
+}
+@{
+    <div class="box-language">
+        <div class="dropdown show">
+            @{
+                var uri = new Uri(Request.Url.AbsoluteUri);
+                if (uri.Segments.Length > 1)
+                {
+                    if (uri.Segments[1].Trim('/').ToLower() == "en")
+                    {
+                        <a class="dropdown-toggle dropdown-toggle-split" href="@Model.Url("en-US")" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span><img src="~/images/en-us.png" /> </span> EN 
+                        </a>
+                    }
+                    else
+                    {
+                        <a class="dropdown-toggle dropdown-toggle-split" href="@Model.Url("vi-VN")" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span><img src="~/images/vi-vn.png" /> </span> VN 
+                        </a>
+                    }
+                }
+                else
+                {
+                    <a class="dropdown-toggle dropdown-toggle-split" href="@Model.Url("vi-VN")" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span><img src="~/images/vi-vn.png" /> </span> VN 
+                    </a>
+                }
+            }
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                @if (uri.Segments.Length > 1)
+                {
+                    if (uri.Segments[1].Trim('/').ToLower() == "vi")
+                    {
+                        <li><a class="dropdown-item" href="@Model.Url("en-US")"><span><img src="~/images/en-us.png" /> </span> EN</a></li>
+
+                    }
+                    else
+                    {
+                        <li><a class="dropdown-item" href="@Model.Url("vi-VN")"><span><img src="~/images/vi-vn.png" /> </span> VN</a></li>
+
+                    }
+                }
+                else
+                {
+                    <li><a class="dropdown-item" href="@Model.Url("en-US")"><span><img src="~/images/en-us.png" /> </span> EN</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+}
