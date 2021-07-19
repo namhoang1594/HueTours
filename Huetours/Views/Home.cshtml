@@ -1,5 +1,80 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Home>
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
-	Layout = "master.cshtml";
+    Layout = "master.cshtml";
+}
+
+<section id="banner_home">
+    <img src="@(Model.BannerImage?.LocalCrops)" alt="">
+    <div class="box_content">
+        <h1 class="text_title">
+            @Html.Raw(Model.Content)
+        </h1>
+    </div>
+</section>
+
+@*@if (Model.AdvertisementImage != null)
+{ 
+    <section id="banner_ads">
+        <div class="slick-slider">
+            @{
+                foreach (var ads in Model.AdvertisementImage.MediaItem)
+                {
+                    <div class="slick-slider">
+                        <img src="@ads.LocalCrops" alt="" />
+                    </div>
+                }
+            }
+        </div>
+    </section
+}*@
+
+<section id="famous_place">
+    <div class="row">
+        @if (Model.FamousPlaceList != null)
+        {
+            foreach (var famous in Model.FamousPlaceList)
+            {
+                <div class="col-12">
+                    <div class="famous_place-item">
+                        <div class="famous_place-item_img">
+                            <a href="@(famous.FamousPlaceLink?.Url)">
+                                <img src="@(famous.FamousPlaceImage?.LocalCrops)" alt="">
+                            </a>
+                        </div>
+                        <h3 class="famous_place-item_title">
+                            <a href="@(famous.FamousPlaceLink?.Url)">@famous.FamousPlaceText</a>
+                        </h3>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</section>
+
+@*@Html.Partial("~/Views/Partials/ShowNews.cshtml")*@
+
+@if (!string.IsNullOrEmpty(Model.PartnersTitle))
+{
+    <section class="partners">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="partner_sub_title">@Model.PartnersTitle</h3>
+                </div>
+                <div class="col-12">
+                    <div class="partners_item">
+                        <div class="row list_partner align-items-center">
+                            @foreach (var partner in Model.PartnersImage)
+                            {
+                                <div class="col-2 item_partner text-center">
+                                    <img src="@(partner.LocalCrops)" alt="partner">
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 }

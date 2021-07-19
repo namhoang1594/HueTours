@@ -402,6 +402,7 @@
     <Content Include="Views\VehicleItem.cshtml" />
     <Content Include="Views\Voucher.cshtml" />
     <Content Include="Views\Partials\Language.cshtml" />
+    <Content Include="Views\Partials\ShowNews.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

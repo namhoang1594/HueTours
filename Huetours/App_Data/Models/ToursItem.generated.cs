@@ -45,6 +45,111 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
+		/// Description Image 1
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("descriptionImage1")]
+		public virtual global::Umbraco.Core.Models.MediaWithCrops DescriptionImage1 => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("descriptionImage1");
+
+		///<summary>
+		/// Description Image 2
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("descriptionImage2")]
+		public virtual global::Umbraco.Core.Models.MediaWithCrops DescriptionImage2 => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("descriptionImage2");
+
+		///<summary>
+		/// Description Image 3
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("descriptionImage3")]
+		public virtual global::Umbraco.Core.Models.MediaWithCrops DescriptionImage3 => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("descriptionImage3");
+
+		///<summary>
+		/// Description Image 4
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("descriptionImage4")]
+		public virtual global::Umbraco.Core.Models.MediaWithCrops DescriptionImage4 => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("descriptionImage4");
+
+		///<summary>
+		/// Description Text 1
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("descriptionText1")]
+		public virtual string DescriptionText1 => this.Value<string>("descriptionText1");
+
+		///<summary>
+		/// Description Text 2
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("descriptionText2")]
+		public virtual string DescriptionText2 => this.Value<string>("descriptionText2");
+
+		///<summary>
+		/// Description Text 3
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("descriptionText3")]
+		public virtual string DescriptionText3 => this.Value<string>("descriptionText3");
+
+		///<summary>
+		/// Description Text 4
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("descriptionText4")]
+		public virtual string DescriptionText4 => this.Value<string>("descriptionText4");
+
+		///<summary>
+		/// How Many Days?
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("howManyDays")]
+		public virtual int HowManyDays => this.Value<int>("howManyDays");
+
+		///<summary>
+		/// How Many Tourists?
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("howManyTourists")]
+		public virtual int HowManyTourists => this.Value<int>("howManyTourists");
+
+		///<summary>
+		/// Pin
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("pin")]
+		public virtual bool Pin => this.Value<bool>("pin");
+
+		///<summary>
+		/// Price
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("price")]
+		public virtual string Price => this.Value<string>("price");
+
+		///<summary>
+		/// Short Content
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("shortContent")]
+		public virtual global::System.Web.IHtmlString ShortContent => this.Value<global::System.Web.IHtmlString>("shortContent");
+
+		///<summary>
+		/// Start Day
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("startDay")]
+		public virtual global::Umbraco.Core.Models.MediaWithCrops StartDay => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("startDay");
+
+		///<summary>
+		/// Thumbnail Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("thumbnailImage")]
+		public virtual global::Umbraco.Core.Models.MediaWithCrops ThumbnailImage => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("thumbnailImage");
+
+		///<summary>
 		/// Content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]

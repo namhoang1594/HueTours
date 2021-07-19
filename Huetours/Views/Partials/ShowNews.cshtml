@@ -1,0 +1,48 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    var news = (News)Model.Children.FirstOrDefault(x => x.ContentType.Alias.Equals("news"));
+    var newsItems = news.Children<NewsItem>().OrderByDescending(c => c.CreateDate).Take(3);
+}
+@{
+
+    <section id="news">
+        <div class="container-wrap">
+            <div class="row">
+                <h3 class="col-md-12 col-sm-12 section-title">
+                    <span class="display-block  title-bottom">@news.PageTitle</span>
+                </h3>
+            </div>
+
+            <div class="row">
+                @foreach (var items in newsItems)
+                {
+                    <div class="col-12 col-sm-4 col-md-4">
+                        <div class="news_item">
+                            <div class="news_image">
+                                <a href="@items.Url()">
+                                    <img class="image" src="@(items.ThumbnailImage?.LocalCrops)" alt="@(items.ThumbnailImage?.LocalCrops)" />
+                                </a>
+                            </div>
+                            <div class="news_info">
+                                <h2 class="news_title">
+                                    <a href="@items.Url()">@Html.Raw(items.PageTitle)</a>
+                                </h2>
+                                <div class="news_shortcontents">
+                                    @Html.Raw(items.ShortContent)
+                                </div>
+                            </div>
+                        </div>
+                    </div>}
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="news_list text-center">
+                        <a href="@news.Url()">@Umbraco.GetDictionaryValue("Show All News")</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}

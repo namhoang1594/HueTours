@@ -207,7 +207,78 @@
             @RenderBody()
 
 
-        <footer>
+        <footer class="footer">
+            <div class="top_footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="logo">
+                                <a href="">
+                                    <img src="@logo" alt="" />
+                                </a>
+                            </div> 
+                        </div>
+
+                        <div class="col-3">
+                            <ul class="footer_menu">
+                                @if (home.FooterMenu1 != null)
+                                {
+                                    foreach (var child in home.FooterMenu1)
+                                    {
+                                        IPublishedContent content = child;
+                                        if (child.HasProperty("referencePage"))
+                                        {
+                                            content = child.Value<IPublishedContent>("referencePage");
+                                        }
+                                        <li><a href="@content.Url()">@content.Value("pageTitle")</a></li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+
+                        <div class="col-3">
+                            <ul class="footer_menu">
+                                @if (home.FooterMenu2 != null)
+                                {
+                                    foreach (var child in home.FooterMenu2)
+                                    {
+                                        IPublishedContent content = child;
+                                        if (child.HasProperty("referencePage"))
+                                        {
+                                            content = child.Value<IPublishedContent>("referencePage");
+                                        }
+                                        <li><a href="@content.Url()">@content.Value("pageTitle")</a></li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+
+                        <div class="col-3">
+                            <ul class="footer_menu">
+                                @if (home.FooterMenu3 != null)
+                                {
+                                    foreach (var child in home.FooterMenu3)
+                                    {
+                                        IPublishedContent content = child;
+                                        if (child.HasProperty("referencePage"))
+                                        {
+                                            content = child.Value<IPublishedContent>("referencePage");
+                                        }
+                                        <li><a href="@content.Url()">@content.Value("pageTitle")</a></li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_footer">
+                <div class="container">
+                    <div class="text_reserved text-center">
+                        @Html.Raw(home.Copyright)
+                    </div>
+                </div>
+            </div>
         </footer>
 
     </div>
