@@ -1,0 +1,36 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@using Umbraco.Web;
+@{
+    var site = (Home)Model.Root();
+    var selection = site.Children.Where(x => x.IsVisible()).OrderBy(x => x.SortOrder);
+
+}
+<li><a href="@site.Url()">@site.Value("pageTitle")</a></li>
+@if (selection.Any())
+{
+    foreach (var menu in selection)
+    {
+        var submenu = menu.Children.Where(y => y.IsVisible()).OrderBy(y => y.SortOrder);
+        <li class="menu_item">
+            <a href="@(menu.Url())" class="menu_links">@menu.Value("pageTitle")</a>
+            @if (submenu.Any())
+            {
+                <span class="icon_more"><img class="plus" src="~/images/plus.svg" alt=""><img class="minus" src="~/images/minus.svg" alt=""></span>
+                <ul class="sub_main_menu">
+                    @foreach (var item in submenu)
+                    {
+                        var itemUrl = item.Url();
+                        if (item.Parent.ContentType.Alias == "tours" || item.Parent.ContentType.Alias == "hotel"
+                            || item.Parent.ContentType.Alias == "vehicle" || item.Parent.ContentType.Alias == "foodAndRestaurant"
+                            || item.Parent.ContentType.Alias == "news")
+                        {
+                            itemUrl = $"{item.Parent.Url()}#{item.Name.MakePluralName()}";
+                        }
+                        <li><a href="@(itemUrl)">@item.Value("pageTitle")</a></li>
+                    }
+                </ul>
+            }
+
+        </li>
+    }
+}

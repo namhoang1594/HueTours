@@ -60,3 +60,24 @@
         text-decoration:none;
         font-weight: 500;
     }
+
+#banner_home:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 62.5%;
+    background: rgba(0,0,0,.3)
+}
+#banner_home img {
+    width: 100%;
+}
+#banner_home .box_content {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    z-index: 1
+}
+#banner_home .box_content .text_title {
+    color: #fff;
+}
