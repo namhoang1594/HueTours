@@ -80,6 +80,13 @@ namespace Umbraco.Web.PublishedModels
 		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.PublishedModels.FamousPlaceItems> FamousPlaceList => this.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.PublishedModels.FamousPlaceItems>>("famousPlaceList");
 
 		///<summary>
+		/// Famous Place Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("famousPlaceTitle")]
+		public virtual string FamousPlaceTitle => this.Value<string>("famousPlaceTitle");
+
+		///<summary>
 		/// Footer Content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]

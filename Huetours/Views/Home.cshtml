@@ -30,12 +30,15 @@
 }*@
 
 <section id="famous_place">
+    <div class="famous_place-title">
+        <h2>@Model.FamousPlaceTitle</h2>
+    </div>
     <div class="row">
         @if (Model.FamousPlaceList != null)
         {
             foreach (var famous in Model.FamousPlaceList)
             {
-                <div class="col-12">
+                <div class="col-md-2">
                     <div class="famous_place-item">
                         <div class="famous_place-item_img">
                             <a href="@(famous.FamousPlaceLink?.Url)">
@@ -52,7 +55,7 @@
     </div>
 </section>
 
-@*@Html.Partial("~/Views/Partials/ShowNews.cshtml")*@
+@Html.Partial("~/Views/Partials/ShowNews.cshtml")
 
 @if (!string.IsNullOrEmpty(Model.PartnersTitle))
 {

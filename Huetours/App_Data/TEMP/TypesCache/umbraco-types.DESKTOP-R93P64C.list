@@ -622,6 +622,7 @@ Umbraco.Web.PublishedModels.File, Huetours, Version=1.0.0.0, Culture=neutral, Pu
 Umbraco.Web.PublishedModels.Folder, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.FoodAndRestaurant, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.FoodAndRestaurantItem, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.PublishedModels.GroupTours, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Home, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Hotel, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.HotelItem, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -630,6 +631,7 @@ Umbraco.Web.PublishedModels.Member, Huetours, Version=1.0.0.0, Culture=neutral, 
 Umbraco.Web.PublishedModels.News, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.NewsItem, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Settings, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.PublishedModels.SoloTours, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Tours, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.ToursItem, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.UmbracoMediaArticle, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null

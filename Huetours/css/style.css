@@ -1,72 +1,167 @@
-﻿
+﻿body{
+    overflow-x:hidden;
+}
 
-#header a {
-    color: black;
-    border: 1px solid transparent;
-    padding: .5rem;
-    border-radius: 26px;
-}
-    #header a:hover {
-        border: 1px solid black;
-       background-color: gray;
-    }
-#header .top_header-row{
-    border-bottom: 1px solid gray;
-}
-#header .logo img{
-    /*display: block;
-    margin: auto;*/
-}
-.menu_top {
+
+#header .top_header .menu_top {
+
     display: flex;
+    justify-content: flex-end;
+    list-style: none;
     align-items: center;
+    height: 48px;
     -webkit-box-align: center;
     padding-top: 1.1rem;
 }
-    .menu_top li {
+    #header .top_header .menu_top li {
         list-style-type: none;
-        display: flex;
-        -webkit-box-align: center;
-        align-items: center;
-        flex-wrap: nowrap;
-        white-space: nowrap;
-        margin: 0 2rem;
-    }
-    .menu_top li a {
-        text-decoration: none;
-    }
-    .menu_top .signup {
-        font-weight: 500;
-    }
-    .menu_top .signin {
-        border: 1px solid black;
-        border-radius: 26px;
-        padding: .5rem;
-        font-weight: 500;
     }
 
-#menu_header .main_menu {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-around;
-    padding-top: .8rem;
-}
-#menu_header .main_menu li {
-    list-style-type: none;
-}
-    #menu_header .main_menu li a{
-        text-decoration:none;
+    #header .top_header .menu_top .signup {
         font-weight: 500;
     }
+    #header .top_header .menu_top li a {
+        display: inline-block;
+        margin-right: 2rem;
+        font-weight: 600;
+        color: black;
+        border: 1px solid transparent;
+        padding: .5rem;
+        border-radius: 26px;
+        text-decoration: none;
+    }
+
+        #header .top_header .menu_top li a:hover {
+            border: 1px solid black;
+            background-color: gray;
+        }
+
+    #header .top_header .menu_top li:first-child a {
+        color: #bf0a30;
+    }
+
+        #header .top_header .menu_top li:first-child a:hover {
+            color: #002868;
+        }
+    #header .top_header .menu_top li:last-child a {
+        text-align: center;
+        letter-spacing: 0.7px;
+        border: 1px solid black;
+        border-radius: 26px;
+        font-weight: 500;
+    }
+        #header .top_header .menu_top li:last-child a:hover{
+            background-color: orange
+        }
+        #header .top_header-row {
+            border-bottom: 1px solid gray;
+        }
+
+#header .menu_header .main_menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+    #header .menu_header .main_menu li {
+        position: relative;
+        list-style-type: none;
+    }
+
+        #header .menu_header .main_menu li a {
+            display: inline-block;
+            border: 1px solid transparent;
+            border-radius: 26px;
+            padding: .5rem;
+        }
+
+            #header .menu_header .main_menu li a:hover {
+                color: #bf0a30;
+            }
+
+        header .menu_header .main_menu li .sub_menu {
+            list-style: none;
+            padding: 0;
+            position: absolute;
+            top: 100%;
+            width: 200px;
+            background: #fff;
+            box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            margin-top: 15px;
+            visibility: hidden;
+            z-index: 9;
+            left: 0;
+        }
+
+            header .menu_header .main_menu li .sub_menu:before {
+                content: "";
+                position: absolute;
+                top: -7px;
+                left: 15px;
+                width: 0;
+                height: 0;
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+                border-bottom: 7px solid #fff;
+            }
+
+            #header .menu_header .main_menu li .sub_menu > li > a {
+                display: block;
+                padding: .5rem 1rem;
+                text-transform: capitalize;
+       
+            }
+
+    #header .menu_header .main_menu > li {
+        padding: 1rem;
+    }
+
+        header .menu_header .main_menu > li:last-child {
+            padding: 0;
+        }
+
+            header .menu_header .main_menu > li:last-child > a {
+              
+                padding: 0.25rem 1.5rem;
+                font-weight: normal;
+            }
+
+                header .menu_header .main_menu > li:last-child > a:hover {
+                    
+                }
+
+header .menu_header .main_menu > li:hover > a {
+    border: 1px solid black;
+    background-color: gray;
+}
+
+        header .menu_header .main_menu > li:hover .sub_menu {
+            visibility: visible;
+            margin-top: 0;
+            opacity: 1;
+            transition: all .5s ease;
+        }
+
+        header .menu_header .main_menu > li > a {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+
+
+
+
+
 
 #banner_home:after {
     content: "";
     position: absolute;
     left: 0;
     width: 100%;
-    height: 62.5%;
+    height: 61%;
     background: rgba(0,0,0,.3)
 }
 #banner_home img {
@@ -74,10 +169,58 @@
 }
 #banner_home .box_content {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 35%;
     z-index: 1
 }
 #banner_home .box_content .text_title {
     color: #fff;
 }
+
+
+
+
+
+#famous_place .famous_place-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+    #famous_place .famous_place-item:hover .famous_place-item_img a img {
+        transform: scale(1.3);
+    }
+
+    #famous_place .famous_place-item:hover .famous_place-item_title a {
+        color: #bf0a30;
+    }
+
+    #famous_place .famous_place-item .famous_place-item_img {
+        line-height: 0;
+    }
+
+        #famous_place .famous_place-item .famous_place-item_img a {
+            display: block;
+            overflow: hidden;
+        }
+
+            #famous_place .famous_place-item .famous_place-item_img a img {
+                width: 100%;
+                transition: all .35s;
+            }
+
+    #famous_place .famous_place-item .famous_place-item_title {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2.5rem;
+        text-align: center;
+        width: 100%;
+        text-transform: capitalize;
+    }
+
+        #famous_place .famous_place-item .famous_place-item_title a {
+            display: block;
+            color: #002868;
+            text-shadow: 0px 0px 6px #fff;
+        }
