@@ -172,26 +172,7 @@
                                     </ul>
                                 </li>
 
-                                <li>
-                                    <a href="@news.Url()">@news.PageTitle</a>
-                                    <ul class="sub_menu">
-                                        @if (tours.Children != null)
-                                        {
-                                            foreach (var child in news.Children)
-                                            {
-                                                IPublishedContent content = child;
-                                                if (child.HasProperty("referencePage"))
-                                                {
-                                                    content = child.Value<IPublishedContent>("referencePage");
-                                                }
-                                                if (content != null)
-                                                {
-                                                    <li><a href="@(content.Url())">@content.Value("pageTitle")</a></li>
-                                                }
-                                            }
-                                        }
-                                    </ul>
-                                </li>
+                                <li><a href="@news.Url()">@Umbraco.GetDictionaryValue("News").ToFirstUpper()</a></li>
 
                                 <li><a href="@contact.Url()">@Umbraco.GetDictionaryValue("Contact").ToFirstUpper()</a></li>
                                 <li><a href="@aboutus.Url()">@Umbraco.GetDictionaryValue("AboutUs").ToFirstUpper()</a></li>
@@ -205,8 +186,8 @@
             </div>
         </header>
 
- 
-            @RenderBody()
+
+        @RenderBody()
 
 
         <footer class="footer">
@@ -218,7 +199,7 @@
                                 <a href="">
                                     <img src="@logo" alt="" />
                                 </a>
-                            </div> 
+                            </div>
                         </div>
 
                         <div class="col-3">
@@ -285,5 +266,6 @@
 
     </div>
     <script type="text/javascript" src="~/js/bootstrap.js"></script>
+    <script type="text/javascript" src="~/js/style.js"></script>
 </body>
 </html>

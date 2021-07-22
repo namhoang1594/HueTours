@@ -1,5 +1,68 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.FAqs>
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
-	Layout = "master.cshtml";
+    Layout = "master.cshtml";
+    var home = (Home)Model.Root();
 }
+
+<section class="breadcrumb">
+    @*<img class="breadcrumb_background" src="@bgrImage" alt="">*@
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadcrumb_content">
+                    <ul class="breadcrumb_list">
+                        <li>
+                            <a href="/">@home.PageTitle</a>
+                        </li>
+                        <li>
+                            <a href="@Model.Parent.Url()">@(Model.Parent.Value<string>("pageTitle"))</a>
+                        </li>
+                    </ul>
+                    <h3 class="breadcrumb_title">@Model.PageTitle</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="about_us">
+    <div class="container p-0">
+        <div class="row m-0 justify-content-center">
+            <div class="col-md-10 col-mm-12">
+                <div id="@Model.Name.MakePluralName()">
+                    <div class="about_content">
+                        <h2 class="about_title">@(Model.PageTitle)</h2>
+                        <div class="row">
+                            <div class="col-md-12 col-mm-12">
+                                @if (Model.Children != null)
+                                {
+                                    foreach (FAqsItem faqItem in Model.Children)
+                                    {
+                                        <h3 class="faq_title_section">@faqItem.FAqtitle</h3>
+                                        <div class="list_faqs">
+                                            @foreach (var faqChildItem in faqItem.FAqitem)
+                                            {<div class="item_faq">
+                                                    <div class="title_faq">
+                                                        <sapn>@faqChildItem.PageTitle</sapn>
+                                                        <span class="icon_faq">
+                                                            <img class="close" src="~/images/icon_close_faq.svg" alt="">
+                                                            <img class="open" src="~/images/icon_plus_db.svg" alt="">
+                                                        </span>
+                                                    </div>
+                                                    <div class="content">
+                                                        @Html.Raw(faqChildItem.Content)
+                                                    </div>
+                                                </div>
+
+                                            }
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
