@@ -45,6 +45,20 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
+		/// Banner Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("bannerImage")]
+		public virtual global::Umbraco.Core.Models.MediaWithCrops BannerImage => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("bannerImage");
+
+		///<summary>
+		/// How Many Group Tours Should Be Shown?
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("howManyGroupToursShouldBeShown")]
+		public virtual decimal HowManyGroupToursShouldBeShown => this.Value<decimal>("howManyGroupToursShouldBeShown");
+
+		///<summary>
 		/// Content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]

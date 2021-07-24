@@ -207,6 +207,7 @@ header .menu_header .main_menu > li:hover > a {
             #famous_place .famous_place-item .famous_place-item_img a img {
                 width: 100%;
                 transition: all .35s;
+                height: 230px;
             }
 
     #famous_place .famous_place-item .famous_place-item_title {
@@ -242,12 +243,6 @@ header .menu_header .main_menu > li:hover > a {
     object-fit: cover;
 }
 
-@media (min-width: 991px) {
-    .image {
-        height: 288px;
-    }
-}
-
 .news_title {
     font-size: 24px;
     font-weight: 600;
@@ -259,15 +254,6 @@ header .menu_header .main_menu > li:hover > a {
     color: #211a0f;
 }
 
-@media(min-width: 320px) {
-    .news_title {
-        text-overflow: ellipsis;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        display: -webkit-box;
-        overflow: hidden
-    }
-}
 
 .news_title a {
     color: #211a0f;
@@ -295,13 +281,7 @@ header .menu_header .main_menu > li:hover > a {
     font-family: Taviraj-SemiBold;
 }
 
-    /*.news_list a {
-        display: inline-block;
-        padding: 15px 10px;
-        color: #000000;
-        border: 2px solid #000000;
-        margin-top: 2rem;
-    }*/
+  
 
     .news_list a {
         display: inline-block;
@@ -311,13 +291,6 @@ header .menu_header .main_menu > li:hover > a {
         padding: 7px 15px 7px 15px;
     }
 
-@media (min-width: 768px) {
-    .news_list a:hover {
-        background-color: #f5b877;
-        border-color: #fff;
-        color: #fff;
-    }
-}
 
 
 
@@ -350,11 +323,7 @@ header .menu_header .main_menu > li:hover > a {
     padding-top: 100px;
 }
 
-@media(max-width : 720px) {
-    .news_trans {
-        padding: 50px;
-    }
-}
+
 
 .page-item .page-link {
     color: #988366;
@@ -427,17 +396,7 @@ article .createdDate {
         margin-bottom: -50px
     }
 
-@media (min-width: 320px) and (max-width: 1120px) {
-    #contact .icon-contact-child {
-        padding-left: 0
-    }
-}
 
-@media (min-width: 768px) {
-    .new-image {
-        height: 602px;
-    }
-}
 
 article p img,
 .new-image {
@@ -493,18 +452,6 @@ article p img,
     width: 100%
 }
 
-@media(max-width:768px) {
-    .breadcrum p {
-        width: 677px;
-    }
-}
-
-@media(max-width:425px) {
-    .breadcrum p {
-        width: 100%;
-        text-align: center
-    }
-}
 .news_image a img,
 .news_item .image_news_xt img {
     object-fit: cover;
@@ -618,43 +565,96 @@ article p img,
         margin: 0;
     }
 
-@media (min-width: 992px) {
-    .blog_page .summary_blog {
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 4;
-        overflow: hidden;
-        margin-bottom: 1rem;
-    }
-}
-
-@media (max-width: 991px) {
-    .blog_page {
-        padding: 2rem 0;
-    }
-
-        .blog_page .item_blog {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-        }
-
-            .blog_page .item_blog .name_blog {
-                font-size: 24px;
-            }
-
-            .blog_page .item_blog .float .avatar_blog {
-                float: left;
-                margin-right: 20px;
-                width: 30%;
-            }
-
-        .blog_page .blog_detail .name_blog {
-            font-size: 24px;
-        }
-}
-
-
 
 
 
 /*FAQs*/
+#about_us .list_faqs {
+    margin-bottom: 2rem;
+}
+
+    #about_us .list_faqs .item_faq {
+        margin-bottom: 1.25rem;
+    }
+
+        #about_us .list_faqs .item_faq:last-child {
+            margin-bottom: 0rem;
+        }
+
+        #about_us .list_faqs .item_faq .title_faq {
+            padding-right: 3rem;
+            position: relative;
+            cursor: pointer;
+            position: relative;
+            line-height: 1.33;
+        }
+
+
+#about_us .list_faqs .item_faq .title_faq .icon_faq {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+}
+
+    #about_us .list_faqs .item_faq .title_faq .icon_faq img {
+        width: 20px;
+        margin-top: 4px;
+    }
+
+    #about_us .list_faqs .item_faq .title_faq .icon_faq .close {
+        display: none;
+    }
+
+#about_us .list_faqs .item_faq .active_title {
+    color: #bf0a30;
+}
+
+#about_us .list_faqs .item_faq .active_faq .open {
+    display: none;
+}
+
+#about_us .list_faqs .item_faq .active_faq .close {
+    display: inline-block !important;
+}
+
+#about_us .list_faqs .item_faq .content {
+    display: none;
+    padding-top: 1rem;
+}
+
+#about_us {
+    padding: 30px 0;
+}
+
+    #about_us .about_content {
+        margin-bottom: 2rem;
+    }
+
+        #about_us .about_content h2 {
+            font-size: 36px;
+            margin-bottom: 1rem;
+            color: #002868;
+        }
+
+        #about_us .about_content img {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        #about_us .about_content a {
+            color: #002868;
+        }
+
+            #about_us .about_content a:hover {
+                color: #bf0a30;
+            }
+
+        #about_us .about_content ul li a {
+            color: #002868;
+        }
+
+            #about_us .about_content ul li a:hover {
+                color: #bf0a30;
+            }

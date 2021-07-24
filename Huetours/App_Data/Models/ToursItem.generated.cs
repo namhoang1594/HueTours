@@ -140,7 +140,7 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
 		[ImplementPropertyType("startDay")]
-		public virtual global::Umbraco.Core.Models.MediaWithCrops StartDay => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("startDay");
+		public virtual global::System.DateTime StartDay => this.Value<global::System.DateTime>("startDay");
 
 		///<summary>
 		/// Thumbnail Image

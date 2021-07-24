@@ -33,25 +33,27 @@
     <div class="famous_place-title">
         <h2>@Model.FamousPlaceTitle</h2>
     </div>
-    <div class="row">
-        @if (Model.FamousPlaceList != null)
-        {
-            foreach (var famous in Model.FamousPlaceList)
+    <div class="container-fluid">
+        <div class="row">
+            @if (Model.FamousPlaceList != null)
             {
-                <div class="col-md-2">
-                    <div class="famous_place-item">
-                        <div class="famous_place-item_img">
-                            <a href="@(famous.FamousPlaceLink?.Url)">
-                                <img src="@(famous.FamousPlaceImage?.LocalCrops)" alt="">
-                            </a>
+                foreach (var famous in Model.FamousPlaceList)
+                {
+                    <div class="col-md-2">
+                        <div class="famous_place-item">
+                            <div class="famous_place-item_img">
+                                <a href="@(famous.FamousPlaceLink?.Url)">
+                                    <img src="@(famous.FamousPlaceImage?.LocalCrops)" alt="">
+                                </a>
+                            </div>
+                            <h3 class="famous_place-item_title">
+                                <a href="@(famous.FamousPlaceLink?.Url)">@famous.FamousPlaceText</a>
+                            </h3>
                         </div>
-                        <h3 class="famous_place-item_title">
-                            <a href="@(famous.FamousPlaceLink?.Url)">@famous.FamousPlaceText</a>
-                        </h3>
                     </div>
-                </div>
+                }
             }
-        }
+        </div>
     </div>
 </section>
 

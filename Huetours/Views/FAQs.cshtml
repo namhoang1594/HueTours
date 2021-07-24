@@ -6,7 +6,7 @@
 }
 
 <section class="breadcrumb">
-    @*<img class="breadcrumb_background" src="@bgrImage" alt="">*@
+    <img style="width: 100%" src="@(Model.BannerImage?.LocalCrops)" alt="">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -15,9 +15,9 @@
                         <li>
                             <a href="/">@home.PageTitle</a>
                         </li>
-                        <li>
-                            <a href="@Model.Parent.Url()">@(Model.Parent.Value<string>("pageTitle"))</a>
-                        </li>
+                        @*<li>
+                                <a href="@Model.Parent.Url()">@(Model.Parent.Value<string>("pageTitle"))</a>
+                            </li>*@
                     </ul>
                     <h3 class="breadcrumb_title">@Model.PageTitle</h3>
                 </div>
@@ -26,8 +26,8 @@
     </div>
 </section>
 <section id="about_us">
-    <div class="container p-0">
-        <div class="row m-0 justify-content-center">
+    <div class="container">
+        <div class="row justify-content-center">
             <div class="col-md-10 col-mm-12">
                 <div id="@Model.Name.MakePluralName()">
                     <div class="about_content">

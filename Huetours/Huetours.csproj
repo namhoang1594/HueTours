@@ -327,7 +327,8 @@
     <Content Include="images\ic-up.svg" />
     <Content Include="images\vi-vn.png" />
     <Content Include="js\bootstrap.js" />
-    <Content Include="js\style.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\libs\style.js" />
     <Content Include="Media\034cuuns\72335-song-huong-xu-hue-700x467.jpg" />
     <Content Include="Media\2uhb51el\logo_ht-resize.png" />
     <Content Include="Media\33wnlhf4\banner-du-lich-da-lat_113653910.jpg" />

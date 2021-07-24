@@ -45,13 +45,6 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// How Many Tours Should Be Show?
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
-		[ImplementPropertyType("howManyToursShouldBeShow")]
-		public virtual decimal HowManyToursShouldBeShow => this.Value<decimal>("howManyToursShouldBeShow");
-
-		///<summary>
 		/// Content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
