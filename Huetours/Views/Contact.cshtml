@@ -1,5 +1,40 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Contact>
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
-	Layout = "master.cshtml";
+    Layout = "master.cshtml";
+    var home = (Home)Model.Root();
+    var contact = (Contact)home.Children.FirstOrDefault(c => c.ContentType.Alias == "contact");
 }
+
+<section id="contact" class="wow fadeIn border-bottom border-transperent-white-light TN-contact">
+    <div class="container">
+        <div class="section-title">
+            <div class="contact-title title-bottom">
+                <span>@contact.PageTitle</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-7 form-contact">
+                @{ Html.RenderAction("RenderContact", "ContactSurface"); }
+            </div>
+            <div class="col-12 col-md-6 col-lg-5 icon-contact">
+                <div>
+                    <h2>Quý khách có thể liên hệ, góp ý với chúng tôi qua:</h2>
+                </div>
+                <div class="icon-contact-child">
+                    <img src="@(contact.GmailImage?.LocalCrops)" alt="" />
+                    <a href="@contact.GmailTextLinks.Url"><span>@contact.GmailTextLinks.Name</span></a>
+                </div>
+                <div class="icon-contact-child">
+                    <img src="@(contact.PhoneImage?.LocalCrops)" alt="" />
+                    <a href="@contact.PhoneTextLinks.Url"><span>@contact.PhoneTextLinks.Name</span></a>
+                </div>
+                <div>
+                    <p>
+                        <img src="~/images/undraw-contact.svg" alt="" style="width:100%; height:auto" />
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

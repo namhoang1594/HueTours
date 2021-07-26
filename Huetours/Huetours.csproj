@@ -322,13 +322,19 @@
     <Content Include="config\logviewer.searches.config.js" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\style.css" />
+    <Content Include="Fonts\font-poppins\SIL Open Font License.txt" />
+    <Content Include="Fonts\Merriweather\OFL.txt" />
     <Content Include="Global.asax" />
     <Content Include="images\en-us.png" />
     <Content Include="images\ic-up.svg" />
+    <Content Include="images\icon_close_faq.svg" />
+    <Content Include="images\icon_plus_db.svg" />
+    <Content Include="images\undraw-contact.svg" />
     <Content Include="images\vi-vn.png" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\libs\style.js" />
+    <Content Include="js\libs\validateForm.js" />
     <Content Include="Media\034cuuns\72335-song-huong-xu-hue-700x467.jpg" />
     <Content Include="Media\2uhb51el\logo_ht-resize.png" />
     <Content Include="Media\33wnlhf4\banner-du-lich-da-lat_113653910.jpg" />
@@ -364,6 +370,7 @@
     <Compile Include="App_Data\Models\Member.generated.cs" />
     <Compile Include="App_Data\Models\News.generated.cs" />
     <Compile Include="App_Data\Models\NewsItem.generated.cs" />
+    <Compile Include="App_Data\Models\ReceiverContact.generated.cs" />
     <Compile Include="App_Data\Models\Settings.generated.cs" />
     <Compile Include="App_Data\Models\SoloTours.generated.cs" />
     <Compile Include="App_Data\Models\Tours.generated.cs" />
@@ -375,7 +382,9 @@
     <Compile Include="App_Data\Models\Vehicle.generated.cs" />
     <Compile Include="App_Data\Models\VehicleItem.generated.cs" />
     <Compile Include="App_Data\Models\Voucher.generated.cs" />
+    <Compile Include="Controller\ContactSurfaceController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ContactViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="config\imageprocessor\security.config" />
@@ -459,6 +468,33 @@
     <Content Include="App_Data\TEMP\TypesCache\umbraco-types.3SI-L043-NAMHN.list" />
     <Content Include="App_Data\TEMP\TypesCache\umbraco-types.DESKTOP-R93P64C.hash" />
     <Content Include="App_Data\TEMP\TypesCache\umbraco-types.DESKTOP-R93P64C.list" />
+    <Content Include="Fonts\Merriweather\Merriweather-Black.ttf" />
+    <Content Include="Fonts\Merriweather\Merriweather-BlackItalic.ttf" />
+    <Content Include="Fonts\Merriweather\Merriweather-Bold.ttf" />
+    <Content Include="Fonts\Merriweather\Merriweather-BoldItalic.ttf" />
+    <Content Include="Fonts\Merriweather\Merriweather-Italic.ttf" />
+    <Content Include="Fonts\Merriweather\Merriweather-Light.ttf" />
+    <Content Include="Fonts\Merriweather\Merriweather-LightItalic.ttf" />
+    <Content Include="Fonts\Merriweather\Merriweather-Regular.ttf" />
+    <Content Include="Fonts\font-poppins\Poppins-Black.otf" />
+    <Content Include="Fonts\font-poppins\Poppins-BlackItalic.otf" />
+    <Content Include="Fonts\font-poppins\Poppins-Bold.otf" />
+    <Content Include="Fonts\font-poppins\Poppins-BoldItalic.otf" />
+    <Content Include="Fonts\font-poppins\Poppins-ExtraBold.otf" />
+    <Content Include="Fonts\font-poppins\Poppins-ExtraBoldItalic.otf" />
+    <Content Include="Fonts\font-poppins\Poppins-ExtraLight.otf" />
+    <Content Include="Fonts\font-poppins\Poppins-ExtraLightItalic.otf" />
+    <Content Include="Fonts\font-poppins\Poppins-Italic.otf" />
+    <Content Include="Fonts\font-poppins\Poppins-Light.otf" />
+    <Content Include="Fonts\font-poppins\Poppins-LightItalic.otf" />
+    <Content Include="Fonts\font-poppins\Poppins-Medium.otf" />
+    <Content Include="Fonts\font-poppins\Poppins-MediumItalic.otf" />
+    <Content Include="Fonts\font-poppins\Poppins-Regular.otf" />
+    <Content Include="Fonts\font-poppins\Poppins-SemiBold.otf" />
+    <Content Include="Fonts\font-poppins\Poppins-SemiBoldItalic.otf" />
+    <Content Include="Fonts\font-poppins\Poppins-Thin.otf" />
+    <Content Include="Fonts\font-poppins\Poppins-ThinItalic.otf" />
+    <Content Include="Fonts\FontsFree-Net-akagi3.ttf" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
@@ -497,6 +533,7 @@
     <Content Include="Views\Partials\Navigation\SubNavigation.cshtml" />
     <Content Include="Views\GroupTours.cshtml" />
     <Content Include="Views\SoloTours.cshtml" />
+    <Content Include="Views\Partials\ContactForm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

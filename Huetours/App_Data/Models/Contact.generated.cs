@@ -45,6 +45,34 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
+		/// Gmail Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("gmailImage")]
+		public virtual global::Umbraco.Core.Models.MediaWithCrops GmailImage => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("gmailImage");
+
+		///<summary>
+		/// Gmail Text/Links
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("gmailTextLinks")]
+		public virtual global::Umbraco.Web.Models.Link GmailTextLinks => this.Value<global::Umbraco.Web.Models.Link>("gmailTextLinks");
+
+		///<summary>
+		/// Phone Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("phoneImage")]
+		public virtual global::Umbraco.Core.Models.MediaWithCrops PhoneImage => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("phoneImage");
+
+		///<summary>
+		/// Phone Text/Links
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("phoneTextLinks")]
+		public virtual global::Umbraco.Web.Models.Link PhoneTextLinks => this.Value<global::Umbraco.Web.Models.Link>("phoneTextLinks");
+
+		///<summary>
 		/// Content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]

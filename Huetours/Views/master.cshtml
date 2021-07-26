@@ -48,6 +48,7 @@
 
     <link rel="stylesheet" href="~/css/bootstrap.css">
     <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -75,8 +76,8 @@
                                 <li>
                                     <a href="@home.DownloadApp.Url">@home.DownloadApp.Name</a>
                                 </li>
-                                <li><a class="signup" href="@faq.Url()">@Umbraco.GetDictionaryValue("FAQs").ToFirstUpper()</a></li>
-                                <li><a class="signin" href="@voucher.Url()">@Umbraco.GetDictionaryValue("Voucher").ToFirstUpper()</a></li>
+                                <li><a class="signup" href="@faq.Url()">@Umbraco.GetDictionaryValue("Sign up").ToFirstUpper()</a></li>
+                                <li><a class="signin" href="@voucher.Url()">@Umbraco.GetDictionaryValue("Sign in").ToFirstUpper()</a></li>
                             </ul>
                         </div>
                     </div>
@@ -176,7 +177,7 @@
                                 <li><a href="@contact.Url()">@Umbraco.GetDictionaryValue("Contact").ToFirstUpper()</a></li>
                                 <li><a href="@aboutus.Url()">@Umbraco.GetDictionaryValue("AboutUs").ToFirstUpper()</a></li>
                                 <li><a href="@faq.Url()">@Umbraco.GetDictionaryValue("FAQs").ToFirstUpper()</a></li>
-                                <li><a href="@voucher.Url()">@Umbraco.GetDictionaryValue("Voucher").ToFirstUpper()</a></li>
+                                <li><a href="@voucher.Url()"><i class="fas fa-gift"></i> <span>@Umbraco.GetDictionaryValue("Voucher").ToFirstUpper()</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -188,7 +189,10 @@
 
         @RenderBody()
 
-
+        @*<div class="alert alert-success send-message-success" role="alert">
+            @Umbraco.GetDictionaryValue("Successed")
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>*@
         <footer class="footer">
             <div class="top_footer">
                 <div class="container">
@@ -267,5 +271,7 @@
     <script type="text/javascript" src="~/js/bootstrap.js"></script>
     <script type="text/javascript" src="~/js/jquery.min.js"></script>
     <script type="text/javascript" src="~/js/libs/style.js"></script>
+    @*<script type="text/javascript" src="~/js/libs/validateForm.js"></script>*@
+
 </body>
 </html>
