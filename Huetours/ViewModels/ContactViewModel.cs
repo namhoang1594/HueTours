@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace Huetours.ViewModels
+namespace Huetours.Models
 {
     public class ContactViewModel
     {

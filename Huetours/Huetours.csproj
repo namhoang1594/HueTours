@@ -296,6 +296,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Logs\UmbracoTraceLog.3SI-L043-NAMHN.20210719.json" />
+    <Content Include="App_Data\Logs\UmbracoTraceLog.3SI-L043-NAMHN.20210720.json" />
+    <Content Include="App_Data\Logs\UmbracoTraceLog.3SI-L043-NAMHN.20210721.json" />
+    <Content Include="App_Data\Logs\UmbracoTraceLog.DESKTOP-R93P64C.20210718.json" />
+    <Content Include="App_Data\Logs\UmbracoTraceLog.DESKTOP-R93P64C.20210719.json" />
+    <Content Include="App_Data\Logs\UmbracoTraceLog.DESKTOP-R93P64C.20210721.json" />
     <Content Include="App_Data\TEMP\ClientDependency\3SI-L043-NAMHN-a7e0946862657fa1c44a559c88e2cfc3-map.xml" />
     <Content Include="App_Data\TEMP\ClientDependency\DESKTOP-R93P64C-a39eadad3f5f6e91cbf63add816de50a-map.xml" />
     <Content Include="App_Data\TEMP\DistCache\LMW3SVC2ROOT-lastsynced.txt" />
@@ -368,9 +374,11 @@
     <Compile Include="App_Data\Models\HotelItem.generated.cs" />
     <Compile Include="App_Data\Models\Image.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />
+    <Compile Include="App_Data\Models\NavigationBase.generated.cs" />
     <Compile Include="App_Data\Models\News.generated.cs" />
     <Compile Include="App_Data\Models\NewsItem.generated.cs" />
     <Compile Include="App_Data\Models\ReceiverContact.generated.cs" />
+    <Compile Include="App_Data\Models\SearchingResult.generated.cs" />
     <Compile Include="App_Data\Models\Settings.generated.cs" />
     <Compile Include="App_Data\Models\SoloTours.generated.cs" />
     <Compile Include="App_Data\Models\Tours.generated.cs" />
@@ -383,8 +391,12 @@
     <Compile Include="App_Data\Models\VehicleItem.generated.cs" />
     <Compile Include="App_Data\Models\Voucher.generated.cs" />
     <Compile Include="Controller\ContactSurfaceController.cs" />
+    <Compile Include="Controller\SeachingResultController.cs" />
+    <Compile Include="Controller\Surface\SearchSurfaceController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\ContactViewModel.cs" />
+    <Compile Include="Models\SearchContentModel.cs" />
+    <Compile Include="ViewModels\SearchingViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="config\imageprocessor\security.config" />
@@ -399,12 +411,6 @@
     <Content Include="config\ClientDependency.config" />
     <Content Include="config\BackOfficeTours\getting-started.json" />
     <Content Include="App_Data\packages\installedPackages.config" />
-    <Content Include="App_Data\Logs\UmbracoTraceLog.3SI-L043-NAMHN.20210719.json" />
-    <Content Include="App_Data\Logs\UmbracoTraceLog.3SI-L043-NAMHN.20210720.json" />
-    <Content Include="App_Data\Logs\UmbracoTraceLog.3SI-L043-NAMHN.20210721.json" />
-    <Content Include="App_Data\Logs\UmbracoTraceLog.DESKTOP-R93P64C.20210718.json" />
-    <Content Include="App_Data\Logs\UmbracoTraceLog.DESKTOP-R93P64C.20210719.json" />
-    <Content Include="App_Data\Logs\UmbracoTraceLog.DESKTOP-R93P64C.20210721.json" />
     <Content Include="App_Data\TEMP\ClientDependency\1_10bfe47a5f804b49ac7f1bc5db1407eb.cdJ" />
     <Content Include="App_Data\TEMP\ClientDependency\1_49784adef1cc4fd88117d75078f76868.cdJ" />
     <Content Include="App_Data\TEMP\ClientDependency\1_4bd1b017ab214a32be831bbe376dc374.cdC" />
@@ -495,6 +501,13 @@
     <Content Include="Fonts\font-poppins\Poppins-Thin.otf" />
     <Content Include="Fonts\font-poppins\Poppins-ThinItalic.otf" />
     <Content Include="Fonts\FontsFree-Net-akagi3.ttf" />
+    <Content Include="App_Data\Logs\UmbracoTraceLog.3SI-L043-NAMHN.20210722.json" />
+    <Content Include="App_Data\Logs\UmbracoTraceLog.3SI-L043-NAMHN.20210723.json" />
+    <Content Include="App_Data\Logs\UmbracoTraceLog.3SI-L043-NAMHN.20210726.json" />
+    <Content Include="App_Data\Logs\UmbracoTraceLog.DESKTOP-R93P64C.20210722.json" />
+    <Content Include="App_Data\Logs\UmbracoTraceLog.DESKTOP-R93P64C.20210723.json" />
+    <Content Include="App_Data\Logs\UmbracoTraceLog.DESKTOP-R93P64C.20210724.json" />
+    <Content Include="App_Data\Logs\UmbracoTraceLog.DESKTOP-R93P64C.20210725.json" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
@@ -534,6 +547,9 @@
     <Content Include="Views\GroupTours.cshtml" />
     <Content Include="Views\SoloTours.cshtml" />
     <Content Include="Views\Partials\ContactForm.cshtml" />
+    <Content Include="Views\SearchingResult.cshtml" />
+    <Content Include="Views\NavigationBase.cshtml" />
+    <Content Include="Views\Partials\SearchingForm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

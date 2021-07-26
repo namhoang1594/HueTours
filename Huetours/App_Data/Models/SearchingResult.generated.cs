@@ -19,51 +19,30 @@ using Umbraco.ModelsBuilder.Embedded;
 
 namespace Umbraco.Web.PublishedModels
 {
-	/// <summary>News</summary>
-	[PublishedModel("news")]
-	public partial class News : PublishedContentModel, IContentBase, INavigationBase
+	/// <summary>Searching Result</summary>
+	[PublishedModel("searchingResult")]
+	public partial class SearchingResult : PublishedContentModel, IContentBase, INavigationBase
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
-		public new const string ModelTypeAlias = "news";
+		public new const string ModelTypeAlias = "searchingResult";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<News, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<SearchingResult, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public News(IPublishedContent content)
+		public SearchingResult(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
-
-		///<summary>
-		/// Banner Image
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
-		[ImplementPropertyType("bannerImage")]
-		public virtual global::Umbraco.Core.Models.MediaWithCrops BannerImage => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("bannerImage");
-
-		///<summary>
-		/// How Many News Should Be Shown?
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
-		[ImplementPropertyType("howManyNewsShouldBeShown")]
-		public virtual decimal HowManyNewsShouldBeShown => this.Value<decimal>("howManyNewsShouldBeShown");
-
-		///<summary>
-		/// How Many Popular News Should Be Shown?
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
-		[ImplementPropertyType("howManyPopularNewsShouldBeShown")]
-		public virtual decimal HowManyPopularNewsShouldBeShown => this.Value<decimal>("howManyPopularNewsShouldBeShown");
 
 		///<summary>
 		/// Content

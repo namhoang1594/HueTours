@@ -1,4 +1,4 @@
-﻿using Huetours.ViewModels;
+﻿using Huetours.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
