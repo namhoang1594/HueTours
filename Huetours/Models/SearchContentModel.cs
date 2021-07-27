@@ -15,6 +15,8 @@ namespace Huetours.Models
 
         }
 
-        public SearchingViewModel SearchingViewModel { get; set; }     
+        public SearchingViewModel SearchingViewModel { get; set; }
+
+        public SearchContentModel SearchResults { get; set; }
     }
 }

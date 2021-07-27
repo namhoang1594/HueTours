@@ -1,4 +1,5 @@
 ﻿using Huetours.Models;
+using Huetours.Services;
 using Huetours.ViewModels;
 
 using System;
@@ -13,14 +14,27 @@ namespace Huetours.Controller
 {
     public class SeachingResultController : RenderMvcController
     {
+        private readonly ISearchService _searchService;
+
+        public SeachingResultController(ISearchService searchService)
+        {
+            _searchService = searchService;
+        }
         public ActionResult Index(ContentModel model, string query)
         {
             var searchResultModel = new SearchContentModel(model.Content);
             var searchingViewModel = new SearchingViewModel()
             {
-                Query = query
+                Query = query,
+                Page = page
             };
 
+            if(!int.TryParse(CurrentPage, out var pageNumber))
+            {
+                pageNumber = 1;
+            }
+
+            var searchResults = _searchService.GetPageOfContentSearchResult(query, pageNumber, out var totalItemCount, null);
             searchResultModel.SearchingViewModel = searchingViewModel;
 
             return CurrentTemplate(model);

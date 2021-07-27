@@ -9,6 +9,7 @@
                             @Html.LabelFor(m => m.Query)
                             <div class="input-group">
                                 @Html.TextBoxFor(m => m.Query, new { @class = "form-control", placeholder = "Search......." })
+                                @Html.ValidationMessageFor(m => m.Query)
                             </div>
                         </div>
 
