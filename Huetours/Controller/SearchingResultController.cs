@@ -12,11 +12,11 @@ using Umbraco.Web.Mvc;
 
 namespace Huetours.Controller
 {
-    public class SeachingResultController : RenderMvcController
+    public class SearchingResultController : RenderMvcController
     {
         private readonly ISearchService _searchService;
 
-        public SeachingResultController(ISearchService searchService)
+        public SearchingResultController(ISearchService searchService)
         {
             _searchService = searchService;
         }

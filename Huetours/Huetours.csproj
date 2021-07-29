@@ -399,7 +399,7 @@
     <Compile Include="App_Data\Models\Voucher.generated.cs" />
     <Compile Include="Composing\RegisterServiceComposer.cs" />
     <Compile Include="Controller\ContactSurfaceController.cs" />
-    <Compile Include="Controller\SeachingResultController.cs" />
+    <Compile Include="Controller\SearchingResultController.cs" />
     <Compile Include="Controller\Surface\SearchSurfaceController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ISearchService.cs" />
