@@ -21,7 +21,7 @@ namespace Umbraco.Web.PublishedModels
 {
 	/// <summary>Food and Restaurant</summary>
 	[PublishedModel("foodAndRestaurant")]
-	public partial class FoodAndRestaurant : PublishedContentModel, IContentBase
+	public partial class FoodAndRestaurant : PublishedContentModel, IContentBase, INavigationBase
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -64,5 +64,26 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
 		[ImplementPropertyType("subPageTitle")]
 		public virtual string SubPageTitle => global::Umbraco.Web.PublishedModels.ContentBase.GetSubPageTitle(this);
+
+		///<summary>
+		/// Description SEO
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("descriptionSEO")]
+		public virtual string DescriptionSeo => global::Umbraco.Web.PublishedModels.NavigationBase.GetDescriptionSeo(this);
+
+		///<summary>
+		/// Keywords
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("keywords")]
+		public virtual global::System.Collections.Generic.IEnumerable<string> Keywords => global::Umbraco.Web.PublishedModels.NavigationBase.GetKeywords(this);
+
+		///<summary>
+		/// Hide in Navigation
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("umbracoNavihide")]
+		public virtual bool UmbracoNavihide => global::Umbraco.Web.PublishedModels.NavigationBase.GetUmbracoNavihide(this);
 	}
 }

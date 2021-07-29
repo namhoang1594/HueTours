@@ -42,9 +42,8 @@
                 @{
                     if (Model.Children != null)
                     {
-                        foreach (GroupTours gtours in pagedNewsTours)
-                        {
-                            foreach (ToursItem toursItem in gtours.Children())
+                        
+                            foreach (ToursItem toursItem in pagedNewsTours)
                             {
                             <div class="item_blog">
                                 <div class="row">
@@ -69,7 +68,7 @@
                                 }
                             }
                         }
-                    }
+                    
             </div>
 
 

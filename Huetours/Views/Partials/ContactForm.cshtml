@@ -1,0 +1,43 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@using Umbraco.Web.UI
+
+<div>
+    @using (Html.BeginUmbracoForm("HandleSubmitForm", "ContactSurface", FormMethod.Post))
+    {
+        <div id="contact-form-sent" class='contact-form-sent'>
+            <input class="input" name='fullName' id="fullName" placeholder='@Umbraco.GetDictionaryValue("Full Name")'>
+            @*<p class="error-msg" data-error-for="fullName"></p>*@
+            <input class="input" name='email' id="email" placeholder='@Umbraco.GetDictionaryValue("Email")'>
+            @*<p class="error-msg" data-error-for="email"></p>*@
+            <input class="input" name='phone' id="phone" placeholder='@Umbraco.GetDictionaryValue("Phone")'>
+            @*<p class="error-msg" data-error-for="phone"></p>*@
+            <textarea class="input" name="message" id="message" placeholder="@Umbraco.GetDictionaryValue("Message")"></textarea>
+            @*<p class="error-msg" data-error-for="message"></p>*@
+            <div class='row agree'>
+                @if (TempData["ContactUsSuccess"] != null && (bool)TempData["ContactUsSuccess"])
+                {
+                    <div class="col-12 col-md-8 col-lg-8">
+                        <div class="alert alert-success alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            @Umbraco.GetDictionaryValue("Successed")
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4">
+                        <button class='animated' type='submit' value=''>
+                            <i class="far fa-paper-plane"></i>
+                            @Umbraco.GetDictionaryValue("Send Message")
+                        </button>
+                    </div>
+                }
+                else
+                {
+                    <div class="col-7 submit-button" style="flex:none; max-width: 100%; text-align:center">
+                        <button class='animated' type='submit' value=''>
+                            <i class="far fa-paper-plane"></i>
+                            @Umbraco.GetDictionaryValue("Send Message")
+                        </button>
+                    </div>}
+            </div>
+
+        </div>}
+</div>

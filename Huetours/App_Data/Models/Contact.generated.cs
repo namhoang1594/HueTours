@@ -21,7 +21,7 @@ namespace Umbraco.Web.PublishedModels
 {
 	/// <summary>Contact</summary>
 	[PublishedModel("contact")]
-	public partial class Contact : PublishedContentModel, IContentBase
+	public partial class Contact : PublishedContentModel, IContentBase, INavigationBase
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -45,6 +45,34 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
+		/// Gmail Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("gmailImage")]
+		public virtual global::Umbraco.Core.Models.MediaWithCrops GmailImage => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("gmailImage");
+
+		///<summary>
+		/// Gmail Text/Links
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("gmailTextLinks")]
+		public virtual global::Umbraco.Web.Models.Link GmailTextLinks => this.Value<global::Umbraco.Web.Models.Link>("gmailTextLinks");
+
+		///<summary>
+		/// Phone Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("phoneImage")]
+		public virtual global::Umbraco.Core.Models.MediaWithCrops PhoneImage => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("phoneImage");
+
+		///<summary>
+		/// Phone Text/Links
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("phoneTextLinks")]
+		public virtual global::Umbraco.Web.Models.Link PhoneTextLinks => this.Value<global::Umbraco.Web.Models.Link>("phoneTextLinks");
+
+		///<summary>
 		/// Content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
@@ -64,5 +92,26 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
 		[ImplementPropertyType("subPageTitle")]
 		public virtual string SubPageTitle => global::Umbraco.Web.PublishedModels.ContentBase.GetSubPageTitle(this);
+
+		///<summary>
+		/// Description SEO
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("descriptionSEO")]
+		public virtual string DescriptionSeo => global::Umbraco.Web.PublishedModels.NavigationBase.GetDescriptionSeo(this);
+
+		///<summary>
+		/// Keywords
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("keywords")]
+		public virtual global::System.Collections.Generic.IEnumerable<string> Keywords => global::Umbraco.Web.PublishedModels.NavigationBase.GetKeywords(this);
+
+		///<summary>
+		/// Hide in Navigation
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("umbracoNavihide")]
+		public virtual bool UmbracoNavihide => global::Umbraco.Web.PublishedModels.NavigationBase.GetUmbracoNavihide(this);
 	}
 }
