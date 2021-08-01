@@ -17,6 +17,6 @@ namespace Huetours.Models
 
         public SearchingViewModel SearchingViewModel { get; set; }
 
-        public SearchContentModel SearchResults { get; set; }
+        public IEnumerable<IPublishedContent> SearchResults { get; set; }
     }
 }

@@ -20,24 +20,29 @@ namespace Huetours.Controller
         {
             _searchService = searchService;
         }
-        public ActionResult Index(ContentModel model, string query)
+        public ActionResult Index(ContentModel model, string query, string page)
         {
             var searchResultModel = new SearchContentModel(model.Content);
+
             var searchingViewModel = new SearchingViewModel()
             {
                 Query = query,
                 Page = page
             };
 
-            if(!int.TryParse(CurrentPage, out var pageNumber))
+            if(!int.TryParse(page, out var pageNumber))
             {
                 pageNumber = 1;
             }
 
-            var searchResults = _searchService.GetPageOfContentSearchResult(query, pageNumber, out var totalItemCount, null);
+            var searchResults = _searchService.GetPageOfContentSearchResults(query, pageNumber, 
+                out var totalItemCount, null);
+
             searchResultModel.SearchingViewModel = searchingViewModel;
 
-            return CurrentTemplate(model);
+            searchResultModel.SearchResults = searchResults;
+
+            return CurrentTemplate(searchResultModel);
         }
     }
 }

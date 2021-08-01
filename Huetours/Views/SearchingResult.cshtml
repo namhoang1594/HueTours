@@ -8,12 +8,21 @@
 
 <section id="search">
     <div class="container">
-        <form action="/search/">
+        @*<form action="/search/">
             <input type="text" name="Query" placeholder="Search........." />
             <button>Search</button>
-        </form>
+        </form>*@
         <article>
-            @Html.Partial("~/Views/Partials/SearchingForm.cshtml", Model.SearchingViewModel)
+            @Html.Partial("Partials/SearchingForm", Model.SearchingViewModel)
+
+            <p>You search for <strong>@Model.SearchingViewModel.Query</strong> returned these results:</p>
+            @if(Model.SearchResults != null && Model.SearchResults.Any())
+            {
+                foreach(var item in Model.SearchResults)
+                {
+                    <p><a href="@item.Url()">@item.Name</a></p>
+                }
+            }
         </article>
     </div>
 

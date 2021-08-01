@@ -23,8 +23,16 @@ namespace Huetours.Controller.Surface
             {
                 queryString.Add("query", model.Query);
             }
-
+            if (!string.IsNullOrWhiteSpace(model.Page))
+            {
+                queryString.Add("page", model.Page);
+            }
             return RedirectToCurrentUmbracoPage(queryString);
+        }
+
+        public ActionResult RenderForm(SearchingViewModel model)
+        {
+            return PartialView("~/Views/Partials/SearchingForm.cshtml");
         }
     }
 }

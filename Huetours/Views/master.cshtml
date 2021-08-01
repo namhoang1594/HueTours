@@ -18,6 +18,8 @@
     var aboutus = (AboutUs)home.Children.FirstOrDefault(c => c.ContentType.Alias == "aboutUs");
     var faq = (FAqs)home.Children.FirstOrDefault(c => c.ContentType.Alias == "fAQs");
     var voucher = (Voucher)home.Children.FirstOrDefault(c => c.ContentType.Alias == "voucher");
+    var search = (SearchingResult)home.Children.FirstOrDefault(c => c.ContentType.Alias == "searchingResult");
+
 
     var lang = "vi";
     var uri = new Uri(Request.Url.AbsoluteUri);
@@ -78,6 +80,8 @@
                                 </li>
                                 <li><a class="signup" href="@faq.Url()">@Umbraco.GetDictionaryValue("Sign up").ToFirstUpper()</a></li>
                                 <li><a class="signin" href="@voucher.Url()">@Umbraco.GetDictionaryValue("Sign in").ToFirstUpper()</a></li>
+                                <li><a class="signin" href="@search.Url()">@Umbraco.GetDictionaryValue("Sign in").ToFirstUpper()</a></li>
+
                             </ul>
                         </div>
                     </div>

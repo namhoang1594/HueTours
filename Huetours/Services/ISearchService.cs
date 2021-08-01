@@ -9,10 +9,11 @@ namespace Huetours.Services
 {
     public interface ISearchService
     {
-        IEnumerable<ISearchResult> GetPageOfSearchResult(string searchTerm, out long totalItemCount,
-            string[] docTypeAliases, string searchType, int pageSize = 10);
+        IEnumerable<ISearchResult> GetPageOfSearchResults(string searchTerm, int pageNumber,
+            out long totalItemCount, string[] docTypeAliases, 
+            string searchType, int pageSize = 10);
 
-        IEnumerable<IPublishedContent> GetPageOfContentSearchResult(string searchTerm, out long totalItemCount,
-            string[] docTypeAliases, string searchType, int pageSize = 10);
+        IEnumerable<IPublishedContent> GetPageOfContentSearchResults(string searchTerm, int pageNumber,
+            out long totalItemCount, string[] docTypeAliases, int pageSize = 10);
     }
 }

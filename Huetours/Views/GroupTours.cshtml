@@ -3,6 +3,8 @@
 @{
     Layout = "master.cshtml";
     var home = (Home)Model.Root();
+    var tours = (Tours)home.Children.FirstOrDefault(c => c.ContentType.Alias == "tours");
+    var gtours = (GroupTours)tours.Children.FirstOrDefault(c => c.ContentType.Alias == "groupTours");
     var numberOfGroupTours = (int)Model.HowManyGroupToursShouldBeShown;
     var newsTours = Model.Children.OrderByDescending(c => c.CreateDate).ToList();
     var pageCount = (int)Math.Ceiling((double)newsTours.Count / numberOfGroupTours);

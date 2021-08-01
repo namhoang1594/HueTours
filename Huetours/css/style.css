@@ -238,6 +238,9 @@
 
 /*FAMOUS PLACE*/
 /*=================================================================*/
+#famous_place .famous_place-title{
+    padding: 30px 100px 10px;
+}
 #famous_place .famous_place-item {
     position: relative;
     margin-bottom: 2rem;
@@ -269,9 +272,9 @@
     #famous_place .famous_place-item .famous_place-item_title {
         position: absolute;
         left: 0;
-        top: 50%;
+        top: 87%;
         transform: translateY(-50%);
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         text-align: center;
         width: 100%;
         text-transform: capitalize;
@@ -279,8 +282,8 @@
 
         #famous_place .famous_place-item .famous_place-item_title a {
             display: block;
-            color: #002868;
-            text-shadow: 0px 0px 6px #fff;
+            color: #fff;
+            text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
         }
 
 
