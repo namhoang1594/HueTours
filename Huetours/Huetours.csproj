@@ -299,6 +299,7 @@
     <Content Include="App_Data\TEMP\ClientDependency\3SI-L043-NAMHN-a7e0946862657fa1c44a559c88e2cfc3-map.xml" />
     <Content Include="App_Data\TEMP\ClientDependency\DESKTOP-R93P64C-a39eadad3f5f6e91cbf63add816de50a-map.xml" />
     <Content Include="App_Data\TEMP\DistCache\LMW3SVC2ROOT-lastsynced.txt" />
+    <Content Include="App_Data\Umbraco.sdf" />
     <Content Include="config\grid.editors.config.js" />
     <Content Include="config\Lang\cs-CZ.user.xml" />
     <Content Include="config\Lang\da-DK.user.xml" />

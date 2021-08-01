@@ -3,28 +3,19 @@
 @{
     Layout = "master.cshtml";
     var home = (Home)Model.Root();
+    var faq = (FAqs)home.Children.FirstOrDefault(c => c.ContentType.Alias == "fAQs");
+
 }
 
 <section class="breadcrumb">
     <img style="width: 100%" src="@(Model.BannerImage?.LocalCrops)" alt="">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="breadcrumb_content">
-                    <ul class="breadcrumb_list">
-                        <li>
-                            <a href="/">@home.PageTitle</a>
-                        </li>
-                        @*<li>
-                                <a href="@Model.Parent.Url()">@(Model.Parent.Value<string>("pageTitle"))</a>
-                            </li>*@
-                    </ul>
-                    <h3 class="breadcrumb_title">@Model.PageTitle</h3>
-                </div>
-            </div>
-        </div>
+    <div class="box_content">
+        <h1 class="text_title">
+            @faq.Content
+        </h1>
     </div>
 </section>
+
 <section id="about_us">
     <div class="container">
         <div class="row justify-content-center">

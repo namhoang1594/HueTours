@@ -11,19 +11,21 @@
                                 @Html.TextBoxFor(m => m.Query, new { @class = "form-control", placeholder = "Search......." })
                                 @Html.ValidationMessageFor(m => m.Query)
                             </div>
+                            <button id="submit" class="btn btn-success btn-lock">Search</button>
+
                         </div>
 
-                        <div class="form-group col-md-6">
+                        @*<div class="form-group col-md-6">
                             @Html.LabelFor(m => m.Page)
                             <div class="input-group">
                                 @Html.TextBoxFor(m => m.Page, new { @class = "form-control", placeholder = "Search Page" })
                                 @Html.ValidationMessageFor(m => m.Page)
                             </div>
-                        </div>
+                        </div>*@
 
-                        <div class="form-group col-md-6">
+                        @*<div class="form-group col-md-6">
                             <button id="submit" class="btn btn-success btn-lock">Search</button>
-                        </div>
+                        </div>*@
                     </div>
 
                 </div>

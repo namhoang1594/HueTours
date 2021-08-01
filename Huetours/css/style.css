@@ -666,9 +666,9 @@ article p img,
         display: none;
     }
 
-#about_us .list_faqs .item_faq .active_title {
-    color: #bf0a30;
-}
+        #about_us .list_faqs .item_faq .active_title {
+            color: #cb00d4;
+        }
 
 #about_us .list_faqs .item_faq .active_faq .open {
     display: none;
@@ -720,19 +720,17 @@ article p img,
 
 
 /*CONTACT*/
-/*.icon-contact {
-    display: flex;
-    margin-top: 80px;
+#contact .section-title .title-bottom {
     font-family: 'Taviraj';
-    font-size: 20px;
     font-weight: 500;
     color: #333333;
-    min-height: 446px;
     line-height: 3.0;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    padding-left: 90px;
+}
+.icon-contact {
+    font-family: 'Taviraj';
+    font-weight: 500;
+    color: #333333;
+    line-height: 3.0;
 }
 
 
@@ -743,11 +741,6 @@ article p img,
     font-size: 20px;
     font-weight: 500;
 }
-
-.icon-contact-child {
-    padding-left: 100px;
-}
-
 
 .form-contact {
     margin-top: 60px;
@@ -761,7 +754,9 @@ form input {
     background-color: #f3f3f3 !important;
     border: unset;
     border-bottom: #f3f3f3 solid 1px !important;
-    height: 60px
+    height: 60px;
+    width: 90%;
+    margin: 10px 0;
 }
 
 form textarea {
@@ -774,6 +769,7 @@ form textarea {
     border-bottom: #f3f3f3 solid 1px !important;
     height: 150px;
     resize: none;
+    width: 90%;
 }
 
 textarea#message {
@@ -797,7 +793,7 @@ form input:focus {
 }
 
 .animated {
-    font-family: Taviraj-Medium !important;
+    font-family: Taviraj !important;
     font-size: 16px;
     font-weight: bold;
     font-stretch: normal;
@@ -806,12 +802,13 @@ form input:focus {
     letter-spacing: normal;
     text-align: center;
     color: #333333;
-    background-color: #988366;
+    background-color: #ea77ef;
     border-radius: 26px;
-    border: solid 1px rgba(51, 51, 51, 0.5);
+    border: solid 1px #ea77ef;
     width: 221px;
     height: 52px;
-    margin-top: 36px;
+    margin-top: 26px;
+    margin-left: 180px;
 }
 
 @media (max-width: 767px) {
@@ -828,4 +825,18 @@ button:disabled,
 .animated.disabled {
     opacity: .5;
     cursor: not-allowed
-}*/
+}
+
+
+/*FOOTER*/
+.footer {
+    padding-top: 50px;
+}
+
+    .footer .top_footer .footer_menu {
+        list-style-type: none;
+    }
+
+        .footer .top_footer .footer_menu li a {
+            text-decoration: none;
+        }
