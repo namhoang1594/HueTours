@@ -325,6 +325,7 @@
     <Content Include="Fonts\font-poppins\SIL Open Font License.txt" />
     <Content Include="Fonts\Merriweather\OFL.txt" />
     <Content Include="Global.asax" />
+    <Content Include="images\back-top.svg" />
     <Content Include="images\en-us.png" />
     <Content Include="images\ic-up.svg" />
     <Content Include="images\icon_close_faq.svg" />

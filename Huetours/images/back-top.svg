@@ -1,0 +1,15 @@
+<svg id="vertical_align_top-24px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: rgba(33,26,15,0.87);
+      }
+    </style>
+  </defs>
+  <path id="Path_12211" data-name="Path 12211" class="cls-1" d="M0,0H24V24H0Z"/>
+  <path id="Path_12212" data-name="Path 12212" class="cls-2" d="M9.21,11H11v9a1,1,0,0,0,2,0V11h1.79a.5.5,0,0,0,.35-.85L12.35,7.36a.5.5,0,0,0-.71,0L8.85,10.15A.5.5,0,0,0,9.21,11ZM4,4A1,1,0,0,0,5,5H19a1,1,0,0,0,0-2H5A1,1,0,0,0,4,4Z"/>
+</svg>

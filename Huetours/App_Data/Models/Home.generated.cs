@@ -73,6 +73,13 @@ namespace Umbraco.Web.PublishedModels
 		public virtual global::Umbraco.Web.Models.Link DownloadApp => this.Value<global::Umbraco.Web.Models.Link>("downloadApp");
 
 		///<summary>
+		/// Facebook
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("facebook")]
+		public virtual global::Umbraco.Web.Models.Link Facebook => this.Value<global::Umbraco.Web.Models.Link>("facebook");
+
+		///<summary>
 		/// Famous Place List
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
@@ -122,6 +129,13 @@ namespace Umbraco.Web.PublishedModels
 		public virtual string FooterTitle => this.Value<string>("footerTitle");
 
 		///<summary>
+		/// Instagram
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("instagram")]
+		public virtual global::Umbraco.Web.Models.Link Instagram => this.Value<global::Umbraco.Web.Models.Link>("instagram");
+
+		///<summary>
 		/// Logo
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
@@ -155,6 +169,20 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
 		[ImplementPropertyType("socialShareImage")]
 		public virtual global::Umbraco.Core.Models.MediaWithCrops SocialShareImage => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("socialShareImage");
+
+		///<summary>
+		/// Twitter
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("twitter")]
+		public virtual global::Umbraco.Web.Models.Link Twitter => this.Value<global::Umbraco.Web.Models.Link>("twitter");
+
+		///<summary>
+		/// Youtube
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("youtube")]
+		public virtual global::Umbraco.Web.Models.Link Youtube => this.Value<global::Umbraco.Web.Models.Link>("youtube");
 
 		///<summary>
 		/// Content

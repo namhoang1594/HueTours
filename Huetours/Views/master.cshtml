@@ -197,6 +197,11 @@
             @Umbraco.GetDictionaryValue("Successed")
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>*@
+
+    <div class="back-to-top">
+        <a id="button"><i class="fas fa-arrow-up"></i></a>
+    </div>
+
         <footer class="footer">
             <div class="top_footer">
                 <div class="container">
@@ -206,6 +211,16 @@
                                 <a href="">
                                     <img src="@logo" alt="" />
                                 </a>
+                            </div>
+                            <div class="follow_us">
+                                <p>@Umbraco.GetDictionaryValue("Follow us")</p>
+                                <ul class="follow_us_icon">
+                                    <li><a href="@home.Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="@home.Twitter"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="@home.Instagram"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="@home.Youtube"><i class="fab fa-youtube"></i></a></li>
+
+                                </ul>
                             </div>
                         </div>
 
@@ -276,6 +291,24 @@
     <script type="text/javascript" src="~/js/jquery.min.js"></script>
     <script type="text/javascript" src="~/js/libs/style.js"></script>
     @*<script type="text/javascript" src="~/js/libs/validateForm.js"></script>*@
+
+
+
+
+    <script type="text/javascript">
+            var btn = $('#button');
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 10) {
+                    btn.addClass('show');
+                } else {
+                    btn.removeClass('show');
+                }
+            });
+            btn.on('click', function (e) {
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: 0 }, '400');
+            });
+    </script>
 
 </body>
 </html>

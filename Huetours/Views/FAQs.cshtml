@@ -7,13 +7,23 @@
 
 }
 
-<section class="breadcrumb">
+<section class="breadcrumb_faq">
     <img style="width: 100%" src="@(Model.BannerImage?.LocalCrops)" alt="">
-    <div class="box_content">
-        <h1 class="text_title">
-            @faq.Content
-        </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <p><a href="@home.Url()">@home.PageTitle</a><span> / </span><a style="color: #FFCC66">@Model.PageTitle</a></p>
+            </div>
+            <div class="col-12 col-md-12">
+                <div class="box_content">
+                    <h1 class="text_title">
+                        @faq.Content
+                    </h1>
+                </div>
+            </div>
+        </div>
     </div>
+    
 </section>
 
 <section id="about_us">

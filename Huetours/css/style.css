@@ -718,6 +718,16 @@ article p img,
                 color: #bf0a30;
             }
 
+.breadcrumb_faq .box_content {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    z-index: 1
+}
+
+    .breadcrumb_faq .box_content .text_title {
+        color: #fff;
+    }
 
 /*CONTACT*/
 #contact .section-title .title-bottom {
@@ -840,3 +850,53 @@ button:disabled,
         .footer .top_footer .footer_menu li a {
             text-decoration: none;
         }
+
+
+
+
+
+
+
+
+/*BACK TO TOP*/
+#button {
+    display: inline-block;
+    background-color: #FF9800;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+    #button::after {
+        content: " ";
+        line-height: 50px;
+    }
+
+    #button:hover {
+        cursor: pointer;
+        background-color: #333;
+    }
+
+    #button:active {
+        background-color: #555;
+    }
+
+    #button.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #button i {
+        font-size: 25px;
+        color: #fff;
+        text-align: center;
+        padding-top: 13px;
+    }
