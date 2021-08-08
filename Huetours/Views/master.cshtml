@@ -80,7 +80,7 @@
                                 </li>
                                 <li><a class="signup" href="@faq.Url()">@Umbraco.GetDictionaryValue("Sign up").ToFirstUpper()</a></li>
                                 <li><a class="signin" href="@voucher.Url()">@Umbraco.GetDictionaryValue("Sign in").ToFirstUpper()</a></li>
-                                <li><a class="signin" href="@search.Url()">@Umbraco.GetDictionaryValue("Sign in").ToFirstUpper()</a></li>
+                                @*<li><a class="signin" href="@search.Url()">@Umbraco.GetDictionaryValue("Sign in").ToFirstUpper()</a></li>*@
 
                             </ul>
                         </div>
@@ -206,14 +206,14 @@
             <div class="top_footer">
                 <div class="container">
                     <div class="row">
-                        <div class="col-3">
+                        <div class="col-2">
                             <div class="logo">
                                 <a href="">
                                     <img src="@logo" alt="" />
                                 </a>
                             </div>
                             <div class="follow_us">
-                                <p>@Umbraco.GetDictionaryValue("Follow us")</p>
+                                <p>@Umbraco.GetDictionaryValue("Follow Us")</p>
                                 <ul class="follow_us_icon">
                                     <li><a href="@home.Facebook"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="@home.Twitter"><i class="fab fa-twitter"></i></a></li>
@@ -224,7 +224,7 @@
                             </div>
                         </div>
 
-                        <div class="col-3">
+                        <div class="col-2">
                             <ul class="footer_menu">
                                 @if (home.FooterMenu1 != null)
                                 {
@@ -258,7 +258,7 @@
                             </ul>
                         </div>
 
-                        <div class="col-3">
+                        <div class="col-2">
                             <ul class="footer_menu">
                                 @if (home.FooterMenu3 != null)
                                 {

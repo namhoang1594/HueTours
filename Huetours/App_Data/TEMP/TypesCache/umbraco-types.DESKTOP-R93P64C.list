@@ -89,16 +89,16 @@ Umbraco.Core.Migrations.Upgrade.V_8_0_0.ContentVariationMigration, Umbraco.Core,
 Umbraco.Core.Migrations.Upgrade.V_8_0_0.DataTypes.PreValueMigratorComposer, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Logging.Viewer.LogViewerComposer, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Services.Implement.KeyValueService+InitializeMigration, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Huetours.Controller.ContactSurfaceController, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Huetours.Controller.SearchingResultController, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Huetours.Controller.Surface.SearchSurfaceController, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Huetours.Composing.RegisterServiceComposer, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Embedded.ModelsBuilderDashboard, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Embedded.Compose.ModelsBuilderComposer, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Embedded.BackOffice.MediaTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Embedded.BackOffice.MemberTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Embedded.BackOffice.ModelsBuilderDashboardController, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Embedded.BackOffice.ContentTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Huetours.Controller.ContactSurfaceController, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-Huetours.Controller.SearchingResultController, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-Huetours.Controller.Surface.SearchSurfaceController, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-Huetours.Composing.RegisterServiceComposer, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbProfileController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbLoginStatusController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbRegisterController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -317,8 +317,8 @@ Umbraco.Core.Compose.RelateOnTrashComposer, Umbraco.Core, Version=8.0.0.0, Cultu
 Umbraco.Core.Runtime.CoreInitialComposer, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Migrations.Upgrade.V_8_0_0.DataTypes.PreValueMigratorComposer, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Logging.Viewer.LogViewerComposer, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Embedded.Compose.ModelsBuilderComposer, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Huetours.Composing.RegisterServiceComposer, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Embedded.Compose.ModelsBuilderComposer, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.SignalR.PreviewHubComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Runtime.WebInitialComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Runtime.WebFinalComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -624,6 +624,7 @@ Umbraco.Web.PublishedModels.FamousPlaceItems, Huetours, Version=1.0.0.0, Culture
 Umbraco.Core.Models.PublishedContent.PublishedContentModel
 
 Umbraco.Web.PublishedModels.AboutUs, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.PublishedModels.BachMaPark, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Contact, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.ContentBase, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.FAqs, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null

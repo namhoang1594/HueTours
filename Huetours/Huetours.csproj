@@ -353,6 +353,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Data\Models\AboutUs.generated.cs" />
+    <Compile Include="App_Data\Models\BachMaPark.generated.cs" />
     <Compile Include="App_Data\Models\Contact.generated.cs" />
     <Compile Include="App_Data\Models\ContentBase.generated.cs" />
     <Compile Include="App_Data\Models\ContentBaseWosubTitle.generated.cs" />
@@ -542,6 +543,7 @@
     <Content Include="Views\SearchingResult.cshtml" />
     <Content Include="Views\NavigationBase.cshtml" />
     <Content Include="Views\Partials\SearchingForm.cshtml" />
+    <Content Include="Views\BachMaPark.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
