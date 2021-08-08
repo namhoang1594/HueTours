@@ -364,10 +364,11 @@
     <Compile Include="App_Data\Models\Folder.generated.cs" />
     <Compile Include="App_Data\Models\FoodAndRestaurant.generated.cs" />
     <Compile Include="App_Data\Models\FoodAndRestaurantItem.generated.cs" />
-    <Compile Include="App_Data\Models\GroupTours.generated.cs" />
     <Compile Include="App_Data\Models\Home.generated.cs" />
     <Compile Include="App_Data\Models\Hotel.generated.cs" />
     <Compile Include="App_Data\Models\HotelItem.generated.cs" />
+    <Compile Include="App_Data\Models\HueCapital.generated.cs" />
+    <Compile Include="App_Data\Models\HuongRiver.generated.cs" />
     <Compile Include="App_Data\Models\Image.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />
     <Compile Include="App_Data\Models\NavigationBase.generated.cs" />
@@ -376,9 +377,11 @@
     <Compile Include="App_Data\Models\ReceiverContact.generated.cs" />
     <Compile Include="App_Data\Models\SearchingResult.generated.cs" />
     <Compile Include="App_Data\Models\Settings.generated.cs" />
-    <Compile Include="App_Data\Models\SoloTours.generated.cs" />
+    <Compile Include="App_Data\Models\ThienMuPagoda.generated.cs" />
+    <Compile Include="App_Data\Models\ThuanAnBeach.generated.cs" />
     <Compile Include="App_Data\Models\Tours.generated.cs" />
     <Compile Include="App_Data\Models\ToursItem.generated.cs" />
+    <Compile Include="App_Data\Models\TrucLamMonastery.generated.cs" />
     <Compile Include="App_Data\Models\UmbracoMediaArticle.generated.cs" />
     <Compile Include="App_Data\Models\UmbracoMediaAudio.generated.cs" />
     <Compile Include="App_Data\Models\UmbracoMediaVectorGraphics.generated.cs" />
@@ -544,6 +547,12 @@
     <Content Include="Views\NavigationBase.cshtml" />
     <Content Include="Views\Partials\SearchingForm.cshtml" />
     <Content Include="Views\BachMaPark.cshtml" />
+    <Content Include="Views\ThienMuPagoda.cshtml" />
+    <Content Include="Views\ThuanAnBeach.cshtml" />
+    <Content Include="Views\TrucLamMonastery.cshtml" />
+    <Content Include="Views\HueCapital.cshtml" />
+    <Content Include="Views\HuongRiver.cshtml" />
+    <Content Include="Views\Partials\ShowTours.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

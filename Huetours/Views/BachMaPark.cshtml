@@ -6,20 +6,12 @@
 }
 
 <section class="breadcrumb">
-    @*<img class="breadcrumb_background" src="@bgrImage" alt="">*@
+    <img style="width: 100%" src="@Model.BackgroundImage.LocalCrops" alt="">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="breadcrumb_content">
-                    <ul class="breadcrumb_list">
-                        <li>
-                            <a href="/">@home.PageTitle</a>
-                        </li>
-                        <li>
-                            <a href="@Model.Parent.Url()">@(Model.Parent.Value<string>("pageTitle"))</a>
-                        </li>
-                    </ul>
-                    <h3 class="breadcrumb_title">@Model.PageTitle</h3>
+                <div class="breadcrumb">
+                    <p><a href="@home.Url()">@home.PageTitle</a><span> / </span><a style="color: #FFCC66">@Model.PageTitle</a></p>
                 </div>
             </div>
         </div>
