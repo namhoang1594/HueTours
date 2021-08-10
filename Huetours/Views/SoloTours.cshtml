@@ -1,5 +1,122 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.SoloTours>
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
-	Layout = "master.cshtml";
+    Layout = "master.cshtml";
+    var home = (Home)Model.Root();
+    var numberOfNews = (int)Model.HowManySoloToursShouldBeShown;
+    var newsPosts = Model.Children.OrderByDescending(c => c.CreateDate).ToList();
+    var pageCount = (int)Math.Ceiling((double)newsPosts.Count / numberOfNews);
+    //gets the page from the querystring and sets it to one if it is out of range
+    var page = 1;
+    if (!string.IsNullOrEmpty(Request.QueryString["page"]))
+    {
+        int.TryParse(Request.QueryString["page"], out page);
+        if (page <= 0 || page > pageCount)
+        {
+            page = 1;
+        }
+    }
+    //Gets the blogposts for the current page
+    var pagedNews = newsPosts.Skip((page - 1) * numberOfNews).Take(numberOfNews).ToList();
 }
+
+<section id="news">
+    @*<img style="width: 100%" src="@(Model.BannerImage?.LocalCrops)" alt="">*@
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb">
+                    <p><a href="@home.Url()">@home.PageTitle</a><span> / </span><a style="color: #FFCC66">@Model.PageTitle</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="blog_page">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <div>
+                    <h1>@Umbraco.GetDictionaryValue("Hue News")</h1>
+                </div>
+                @{
+                    if (Model.Children != null)
+                    {
+                        foreach (ToursItem newsItem in pagedNews)
+                        {
+                            <div class="item_blog">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h2 class="name_blog">
+                                            <a href="@newsItem.Url()">
+                                                @newsItem.PageTitle
+                                            </a>
+                                        </h2>
+                                        <div class="time_create">@newsItem.CreateDate.ToString("MMMM dd, yyyy")</div>
+                                    </div>
+                                </div>
+                                <div class="float">
+                                    <a href="@newsItem.Url()">
+                                        <img class="avatar_blog" src="@newsItem.ThumbnailImage.LocalCrops" alt="">
+                                    </a>
+                                    <div class="summary_blog">
+                                        @newsItem.Price
+                                    </div>
+                                </div>
+                                <div class="read_more">
+                                    <a href="@newsItem.Url()">
+                                        <span>@Umbraco.GetDictionaryValue("Read More")</span>
+                                        <span>
+                                            <img src="../images/icon_right.svg" alt="">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        }
+                    }
+
+                }
+            </div>
+
+            @if (newsPosts.Count > numberOfNews)
+            {
+                <div class="col-md-9 col-mm-12">
+                    <nav id="box_pagination">
+                        <ul class="pagination">
+                            @if (page <= 1)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="javascript:;">@Umbraco.GetDictionaryValue("Prev")</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="@(Model.Url() + "?page=" + (page - 1))">@Umbraco.GetDictionaryValue("Prev")</a>
+                                </li>
+                            }
+                            @for (int i = 1; i <= pageCount; i++)
+                            {
+                                <li class="page-item @(page == i ? "active" : null)">
+                                    <a class="page-link" href="@(page == i ? "javascript:;":Model.Url() + "?page=" + i )">@i</a>
+                                </li>
+                            }
+                            @if (page == pageCount)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="javascript:;">@Umbraco.GetDictionaryValue("Next")</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="@(Model.Url() + "?page=" + (page + 1))">@Umbraco.GetDictionaryValue("Next")</a>
+                                </li>
+                            }
+                        </ul>
+                    </nav>
+                </div>
+            }
+        </div>
+    </div>
+</section>

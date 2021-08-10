@@ -1,0 +1,40 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    var hotel = (Hotel)Model.Children.FirstOrDefault(x => x.ContentType.Alias.Equals("hotel"));
+    var hotelItems = hotel.Children<HotelItem>().OrderByDescending(c => c.CreateDate).Take(9);
+}
+
+@{
+    <section id="showtours">
+        <div class="container">
+            <div class="row">
+                <h3 class="col-md-12 col-sm-12 section-title">
+                    <span class="display-block  title-bottom">@hotel.PageTitle</span>
+                </h3>
+            </div>
+
+            <div class="row slider-tours">
+                @foreach (var items in hotelItems)
+                {
+                    <div class="card col-sm-4 col-md-3">
+                        <div class="card-content news_item">
+                            <div class="news_image">
+                                <a href="@items.Url()">
+                                    <img class="image" src="@(items.ThumbnailImage?.LocalCrops)" alt=" " />
+                                </a>
+                            </div>
+                            <div class="news_info">
+                                <h2 class="news_title">
+                                    <a href="@items.Url()">@Html.Raw(items.PageTitle)</a>
+                                </h2>
+                                <div class="news_shortcontents">
+                                    @Html.Raw(items.Price)
+                                </div>
+                            </div>
+                        </div>
+                    </div>}
+            </div>
+        </div>
+    </section>
+}

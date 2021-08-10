@@ -18,20 +18,20 @@
 </section>
 
 @*@if (Model.AdvertisementImage != null)
-{ 
-    <section id="banner_ads">
-        <div class="slick-slider">
-            @{
-                foreach (var ads in Model.AdvertisementImage.MediaItem)
-                {
-                    <div class="slick-slider">
-                        <img src="@ads.LocalCrops" alt="" />
-                    </div>
+    {
+        <section id="banner_ads">
+            <div class="slick-slider">
+                @{
+                    foreach (var ads in Model.AdvertisementImage.MediaItem)
+                    {
+                        <div class="slick-slider">
+                            <img src="@ads.LocalCrops" alt="" />
+                        </div>
+                    }
                 }
-            }
-        </div>
-    </section
-}*@
+            </div>
+        </section
+    }*@
 
 <section id="famous_place">
     <div class="famous_place-title">
@@ -60,6 +60,10 @@
         </div>
     </div>
 </section>
+
+@Html.Partial("~/Views/Partials/ShowTours.cshtml")
+
+@Html.Partial("~/Views/Partials/ShowHotel.cshtml")
 
 @Html.Partial("~/Views/Partials/ShowNews.cshtml")
 

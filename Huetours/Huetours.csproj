@@ -321,6 +321,8 @@
     <Content Include="config\Lang\zh-CN.user.xml" />
     <Content Include="config\logviewer.searches.config.js" />
     <Content Include="css\bootstrap.css" />
+    <Content Include="css\slick-theme.css" />
+    <Content Include="css\slick.css" />
     <Content Include="css\style.css" />
     <Content Include="Fonts\font-poppins\SIL Open Font License.txt" />
     <Content Include="Fonts\Merriweather\OFL.txt" />
@@ -336,6 +338,7 @@
     <Content Include="js\jquery.min.js" />
     <Content Include="js\libs\style.js" />
     <Content Include="js\libs\validateForm.js" />
+    <Content Include="js\slick.min.js" />
     <Content Include="Media\034cuuns\72335-song-huong-xu-hue-700x467.jpg" />
     <Content Include="Media\2uhb51el\logo_ht-resize.png" />
     <Content Include="Media\33wnlhf4\banner-du-lich-da-lat_113653910.jpg" />
@@ -354,9 +357,11 @@
   <ItemGroup>
     <Compile Include="App_Data\Models\AboutUs.generated.cs" />
     <Compile Include="App_Data\Models\BachMaPark.generated.cs" />
+    <Compile Include="App_Data\Models\BicycleHire.generated.cs" />
     <Compile Include="App_Data\Models\Contact.generated.cs" />
     <Compile Include="App_Data\Models\ContentBase.generated.cs" />
     <Compile Include="App_Data\Models\ContentBaseWosubTitle.generated.cs" />
+    <Compile Include="App_Data\Models\CycloHire.generated.cs" />
     <Compile Include="App_Data\Models\FamousPlaceItems.generated.cs" />
     <Compile Include="App_Data\Models\FAqs.generated.cs" />
     <Compile Include="App_Data\Models\FAqsItem.generated.cs" />
@@ -364,6 +369,7 @@
     <Compile Include="App_Data\Models\Folder.generated.cs" />
     <Compile Include="App_Data\Models\FoodAndRestaurant.generated.cs" />
     <Compile Include="App_Data\Models\FoodAndRestaurantItem.generated.cs" />
+    <Compile Include="App_Data\Models\GroupTours.generated.cs" />
     <Compile Include="App_Data\Models\Home.generated.cs" />
     <Compile Include="App_Data\Models\Hotel.generated.cs" />
     <Compile Include="App_Data\Models\HotelItem.generated.cs" />
@@ -371,12 +377,14 @@
     <Compile Include="App_Data\Models\HuongRiver.generated.cs" />
     <Compile Include="App_Data\Models\Image.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />
+    <Compile Include="App_Data\Models\MotorbikeHire.generated.cs" />
     <Compile Include="App_Data\Models\NavigationBase.generated.cs" />
     <Compile Include="App_Data\Models\News.generated.cs" />
     <Compile Include="App_Data\Models\NewsItem.generated.cs" />
     <Compile Include="App_Data\Models\ReceiverContact.generated.cs" />
     <Compile Include="App_Data\Models\SearchingResult.generated.cs" />
     <Compile Include="App_Data\Models\Settings.generated.cs" />
+    <Compile Include="App_Data\Models\SoloTours.generated.cs" />
     <Compile Include="App_Data\Models\ThienMuPagoda.generated.cs" />
     <Compile Include="App_Data\Models\ThuanAnBeach.generated.cs" />
     <Compile Include="App_Data\Models\Tours.generated.cs" />
@@ -540,8 +548,6 @@
     <Content Include="Views\Partials\ShowNews.cshtml" />
     <Content Include="Views\Partials\Navigation\TopNavigation.cshtml" />
     <Content Include="Views\Partials\Navigation\SubNavigation.cshtml" />
-    <Content Include="Views\GroupTours.cshtml" />
-    <Content Include="Views\SoloTours.cshtml" />
     <Content Include="Views\Partials\ContactForm.cshtml" />
     <Content Include="Views\SearchingResult.cshtml" />
     <Content Include="Views\NavigationBase.cshtml" />
@@ -553,6 +559,12 @@
     <Content Include="Views\HueCapital.cshtml" />
     <Content Include="Views\HuongRiver.cshtml" />
     <Content Include="Views\Partials\ShowTours.cshtml" />
+    <Content Include="Views\GroupTours.cshtml" />
+    <Content Include="Views\SoloTours.cshtml" />
+    <Content Include="Views\MotorbikeHire.cshtml" />
+    <Content Include="Views\CycloHire.cshtml" />
+    <Content Include="Views\BicycleHire.cshtml" />
+    <Content Include="Views\Partials\ShowHotel.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

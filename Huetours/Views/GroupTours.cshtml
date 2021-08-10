@@ -1,13 +1,12 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.GroupTours>
 @using ContentModels = Umbraco.Web.PublishedModels;
+
 @{
     Layout = "master.cshtml";
     var home = (Home)Model.Root();
-    var tours = (Tours)home.Children.FirstOrDefault(c => c.ContentType.Alias == "tours");
-    var gtours = (GroupTours)tours.Children.FirstOrDefault(c => c.ContentType.Alias == "groupTours");
-    var numberOfGroupTours = (int)Model.HowManyGroupToursShouldBeShown;
-    var newsTours = Model.Children.OrderByDescending(c => c.CreateDate).ToList();
-    var pageCount = (int)Math.Ceiling((double)newsTours.Count / numberOfGroupTours);
+    var numberOfNews = (int)Model.HowManyGroupToursShouldBeShown;
+    var newsPosts = Model.Children.OrderByDescending(c => c.CreateDate).ToList();
+    var pageCount = (int)Math.Ceiling((double)newsPosts.Count / numberOfNews);
     //gets the page from the querystring and sets it to one if it is out of range
     var page = 1;
     if (!string.IsNullOrEmpty(Request.QueryString["page"]))
@@ -19,11 +18,11 @@
         }
     }
     //Gets the blogposts for the current page
-    var pagedNewsTours = newsTours.Skip((page - 1) * numberOfGroupTours).Take(numberOfGroupTours).ToList();
+    var pagedNews = newsPosts.Skip((page - 1) * numberOfNews).Take(numberOfNews).ToList();
 }
 
-<section id="breadcumb_group-tours">
-    <img style="width: 100%" src="@(Model.BannerImage?.LocalCrops)" alt="">
+<section id="news">
+    @*<img style="width: 100%" src="@(Model.BannerImage?.LocalCrops)" alt="">*@
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -34,47 +33,53 @@
         </div>
     </div>
 </section>
-<section id="group_tous">
+<section class="blog_page">
     <div class="container">
-        <div class="row ">
-            <div class="col-md-12">
+        <div class="row justify-content-center">
+            <div class="col-8">
                 <div>
                     <h1>@Umbraco.GetDictionaryValue("Hue News")</h1>
                 </div>
                 @{
                     if (Model.Children != null)
                     {
-                        
-                            foreach (ToursItem toursItem in pagedNewsTours)
-                            {
+                        foreach (ToursItem newsItem in pagedNews)
+                        {
                             <div class="item_blog">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <h2 class="name_blog">
-                                            <a href="@toursItem.Url()">
-                                                @toursItem.PageTitle
+                                            <a href="@newsItem.Url()">
+                                                @newsItem.PageTitle
                                             </a>
                                         </h2>
-                                        <div class="time_create">@toursItem.Price</div>
+                                        <div class="time_create">@newsItem.CreateDate.ToString("MMMM dd, yyyy")</div>
                                     </div>
                                 </div>
                                 <div class="float">
-                                    <a href="@toursItem.Url()">
-                                        <img class="avatar_blog" src="@toursItem.ThumbnailImage.LocalCrops" alt="">
+                                    <a href="@newsItem.Url()">
+                                        <img class="avatar_blog" src="@newsItem.ThumbnailImage.LocalCrops" alt="">
                                     </a>
                                     <div class="summary_blog">
-                                        @toursItem.ShortContent
+                                        @newsItem.Price
                                     </div>
                                 </div>
+                                <div class="read_more">
+                                    <a href="@newsItem.Url()">
+                                        <span>@Umbraco.GetDictionaryValue("Read More")</span>
+                                        <span>
+                                            <img src="../images/icon_right.svg" alt="">
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
-                                }
-                            }
                         }
-                    
+                    }
+
+                }
             </div>
 
-
-            @if (newsTours.Count > numberOfGroupTours)
+            @if (newsPosts.Count > numberOfNews)
             {
                 <div class="col-md-9 col-mm-12">
                     <nav id="box_pagination">

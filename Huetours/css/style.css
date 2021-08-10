@@ -1004,3 +1004,17 @@ button:disabled,
         -webkit-filter: grayscale(0);
         filter: grayscale(0);
     }
+
+
+    /*SHOWTOURS*/
+/*#showtours .card {
+    margin: 10px 0;
+}
+
+#showtours .card > .card-content {
+    background: red;
+    padding: 10px;
+    text-align: center;
+    font-size: 36px;
+    height: 350px;
+}*/
