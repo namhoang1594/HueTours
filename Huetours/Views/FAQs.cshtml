@@ -4,6 +4,7 @@
     Layout = "master.cshtml";
     var home = (Home)Model.Root();
     var faq = (FAqs)home.Children.FirstOrDefault(c => c.ContentType.Alias == "fAQs");
+    var contact = (Contact)home.Children.FirstOrDefault(x => x.ContentType.Alias.Equals("contact"));
 
 }
 
@@ -11,9 +12,6 @@
     <img style="width: 100%" src="@(Model.BannerImage?.LocalCrops)" alt="">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6">
-                <p><a href="@home.Url()">@home.PageTitle</a><span> / </span><a style="color: #FFCC66">@Model.PageTitle</a></p>
-            </div>
             <div class="col-12 col-md-12">
                 <div class="box_content">
                     <h1 class="text_title">
@@ -65,5 +63,12 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<section id="about_us_bot">
+    <div class="contact_us_link">
+        <p>Chưa tìm được câu trả lời như bạn muốn?</p>
+        <a href="@contact.Url()"><i class="fas fa-phone-alt"></i>@Umbraco.GetDictionaryValue("Contact to Us")</a>
     </div>
 </section>

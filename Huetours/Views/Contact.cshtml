@@ -3,7 +3,7 @@
 @{
     Layout = "master.cshtml";
     var home = (Home)Model.Root();
-    var contact = (Contact)home.Children.FirstOrDefault(c => c.ContentType.Alias == "contact");
+    var contact = (Contact)home.Children.FirstOrDefault(x => x.ContentType.Alias.Equals("contact"));
 }
 
 <section id="contact" class="wow fadeIn border-bottom border-transperent-white-light TN-contact">
@@ -14,20 +14,27 @@
             </div>
         </div>
         <div class="row">
+
             <div class="col-12 col-md-6 col-lg-7 form-contact">
+                <div class="alert alert-success send-message-success" role="alert">
+                    @Umbraco.GetDictionaryValue("Successed")
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
                 @{ Html.RenderAction("RenderContact", "ContactSurface"); }
+
             </div>
+            
             <div class="col-12 col-md-6 col-lg-5 icon-contact">
                 <div>
                     <h2>Quý khách có thể liên hệ, góp ý với chúng tôi qua:</h2>
                 </div>
                 <div class="icon-contact-child">
                     <img src="@(contact.GmailImage?.LocalCrops)" alt="" />
-                    <a href="@contact.GmailTextLinks.Url"><span>@contact.GmailTextLinks.Name</span></a>
+                    <a href="mailto:@contact.GmailTextLinks.Url"><span>@contact.GmailTextLinks.Name</span></a>
                 </div>
                 <div class="icon-contact-child">
                     <img src="@(contact.PhoneImage?.LocalCrops)" alt="" />
-                    <a href="@contact.PhoneTextLinks.Url"><span>@contact.PhoneTextLinks.Name</span></a>
+                    <a href="tel:@contact.PhoneTextLinks.Url"><span>@contact.PhoneTextLinks.Name</span></a>
                 </div>
                 <div>
                     <p>

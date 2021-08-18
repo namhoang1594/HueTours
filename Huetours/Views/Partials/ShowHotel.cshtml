@@ -21,14 +21,20 @@
                         <div class="card-content news_item">
                             <div class="news_image">
                                 <a href="@items.Url()">
-                                    <img class="image" src="@(items.ThumbnailImage?.LocalCrops)" alt=" " />
+                                    <img class="image" src="@(items.ThumbnailImage?.LocalCrops)" alt="@(items.ThumbnailImage?.LocalCrops)" />
                                 </a>
                             </div>
                             <div class="news_info">
                                 <h2 class="news_title">
                                     <a href="@items.Url()">@Html.Raw(items.PageTitle)</a>
                                 </h2>
-                                <div class="news_shortcontents">
+                                @*<div class="news_startday">
+                                    <p><i class="far fa-calendar-alt"></i>Ngày đi: <span style="font-weight: 600;">@Html.Raw(items.StartDay.ToString("dd/MM/yyyy"))</span></p>
+                                </div>
+                                <div class="news_startday">
+                                    <p><i class="fas fa-sort-numeric-up-alt"></i>Số ngày: <span style="font-weight: 600;">@Html.Raw(items.HowManyDays)</span></p>
+                                </div>*@
+                                <div class="news_price">
                                     @Html.Raw(items.Price)
                                 </div>
                             </div>

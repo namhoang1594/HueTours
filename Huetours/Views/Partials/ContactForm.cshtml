@@ -5,14 +5,14 @@
     @using (Html.BeginUmbracoForm("HandleSubmitForm", "ContactSurface", FormMethod.Post))
     {
         <div id="contact-form-sent" class='contact-form-sent'>
-            <input class="input" name='fullName' id="fullName" placeholder='@Umbraco.GetDictionaryValue("Full Name")'>
-            @*<p class="error-msg" data-error-for="fullName"></p>*@
-            <input class="input" name='email' id="email" placeholder='@Umbraco.GetDictionaryValue("Email")'>
-            @*<p class="error-msg" data-error-for="email"></p>*@
-            <input class="input" name='phone' id="phone" placeholder='@Umbraco.GetDictionaryValue("Phone")'>
-            @*<p class="error-msg" data-error-for="phone"></p>*@
-            <textarea class="input" name="message" id="message" placeholder="@Umbraco.GetDictionaryValue("Message")"></textarea>
-            @*<p class="error-msg" data-error-for="message"></p>*@
+            <input class="input" name='fullName' id="fullName" placeholder='@Umbraco.GetDictionaryValue("Full Name")' type='text' data-form-max="@Umbraco.GetDictionaryValue("Message characters")" data-form-error="@Umbraco.GetDictionaryValue("Message error")" data-form-missing="@Umbraco.GetDictionaryValue("Message FullName")">
+            <p class="error-msg" data-error-for="fullName"></p>
+            <input class="input" name='email' id="email" placeholder='@Umbraco.GetDictionaryValue("Email")' type='email' data-form-error="@Umbraco.GetDictionaryValue("Emailerror")" data-form-missing="@Umbraco.GetDictionaryValue("Massege email")" data-form-max="@Umbraco.GetDictionaryValue("EmailCharater")">
+            <p class="error-msg" data-error-for="email"></p>
+            <input class="input" name='phone' id="phone" placeholder='@Umbraco.GetDictionaryValue("Phone")' type='text' data-form-min-max="@Umbraco.GetDictionaryValue("Phonecharater")" data-form-error="@Umbraco.GetDictionaryValue("phoneeror")" data-form-missing="@Umbraco.GetDictionaryValue("Messagephone")">
+            <p class="error-msg" data-error-for="phone"></p>
+            <textarea class="input" name="message" id="message" placeholder="@Umbraco.GetDictionaryValue("Message")" type='text' data-form-missing="@Umbraco.GetDictionaryValue("Mensegercharacter")" data-form-max="@Umbraco.GetDictionaryValue("Mensengereror")"></textarea>
+            <p class="error-msg" data-error-for="message"></p>
             <div class='row agree'>
                 @if (TempData["ContactUsSuccess"] != null && (bool)TempData["ContactUsSuccess"])
                 {
@@ -31,8 +31,8 @@
                 }
                 else
                 {
-                    <div class="col-7 submit-button" style="flex:none; max-width: 100%; text-align:center">
-                        <button class='animated' type='submit' value=''>
+                    <div class="col-12 submit-button" style="flex:none; max-width: 90%; text-align:center">
+                        <button class='animated' type='submit' value='' disabled>
                             <i class="far fa-paper-plane"></i>
                             @Umbraco.GetDictionaryValue("Send Message")
                         </button>
@@ -40,4 +40,5 @@
             </div>
 
         </div>}
+
 </div>

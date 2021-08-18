@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="breadcrumb">
-                    <p><a href="@home.Url()">@home.PageTitle</a><span> / </span><a style="color: #FFCC66">@Model.PageTitle</a></p>
+                    <p><a href="@home.Url()">@home.PageTitle</a><span> / </span><a style="color: #aa96da">@Model.PageTitle</a></p>
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@
 <section class="blog_page">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-8">
+            <div class="col-7">
                 <div>
                     <h1>@Umbraco.GetDictionaryValue("Hue News")</h1>
                 </div>
@@ -65,14 +65,6 @@
                                         @newsItem.ShortContent
                                     </div>
                                 </div>
-                                <div class="read_more">
-                                    <a href="@newsItem.Url()">
-                                        <span>@Umbraco.GetDictionaryValue("Read More")</span>
-                                        <span>
-                                            <img src="../images/icon_right.svg" alt="">
-                                        </span>
-                                    </a>
-                                </div>
                             </div>
                         }
                     }
@@ -80,7 +72,7 @@
                 }
             </div>
 
-            <div id="popular_news" class="col-md-3 col-offset-md-1">
+            <div id="popular_news" class="col-md-4 col-offset-md-1">
                 <div>
                     <h1>@Umbraco.GetDictionaryValue("Popular News")</h1>
                 </div>
@@ -101,9 +93,6 @@
                                     </div>
                                 </div>
                                 <div class="float">
-                                    <a href="@newsItem.Url()">
-                                        <img class="avatar_blog_popular" src="@newsItem.ThumbnailImage.LocalCrops" alt="">
-                                    </a>
                                     <div class="summary_blog_popular">
                                         @newsItem.ShortContent
                                     </div>
@@ -117,7 +106,7 @@
 
             @if (newsPosts.Count > numberOfNews)
             {
-                <div class="col-md-9 col-mm-12">
+                <div class="col-md-7 col-mm-12">
                     <nav id="box_pagination">
                         <ul class="pagination">
                             @if (page <= 1)
