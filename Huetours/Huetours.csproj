@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.5\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="ClientDependency.Core, Version=1.9.9.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ClientDependency.1.9.9\lib\net45\ClientDependency.Core.dll</HintPath>
     </Reference>
@@ -150,6 +153,9 @@
     <Reference Include="NPoco, Version=3.9.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\NPoco.3.9.4\lib\net45\NPoco.dll</HintPath>
     </Reference>
+    <Reference Include="OD.Licensing, Version=0.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OD.Licensing.0.3.2\lib\net45\OD.Licensing.dll</HintPath>
+    </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
@@ -206,6 +212,9 @@
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.IO" />
+    <Reference Include="System.Linq.Dynamic.Core, Version=1.1.1.0, Culture=neutral, PublicKeyToken=0f07ec44de6ac832, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.Core.1.1.1\lib\net46\System.Linq.Dynamic.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System.Linq.Expressions" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
@@ -294,12 +303,153 @@
     <Reference Include="Umbraco.Web.UI, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UmbracoCms.Web.8.15.0\lib\net472\Umbraco.Web.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Vendr.Core, Version=1.8.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vendr.Core.1.8.5\lib\net472\Vendr.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Vendr.Core.Web, Version=1.8.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vendr.Core.Web.1.8.5\lib\net472\Vendr.Core.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Vendr.PaymentProviders.Invoicing, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vendr.PaymentProviders.Invoicing.1.1.0\lib\net472\Vendr.PaymentProviders.Invoicing.dll</HintPath>
+    </Reference>
+    <Reference Include="Vendr.Web, Version=1.8.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vendr.Web.1.8.5\lib\net472\Vendr.Web.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\TEMP\ClientDependency\3SI-L043-NAMHN-a7e0946862657fa1c44a559c88e2cfc3-map.xml" />
     <Content Include="App_Data\TEMP\ClientDependency\DESKTOP-R93P64C-a39eadad3f5f6e91cbf63add816de50a-map.xml" />
     <Content Include="App_Data\TEMP\DistCache\LMW3SVC2ROOT-lastsynced.txt" />
     <Content Include="App_Data\Umbraco.sdf" />
+    <Content Include="App_Plugins\Vendr\assets\fonts\vendr.svg" />
+    <Content Include="App_Plugins\Vendr\assets\images\vendr-bg.png" />
+    <Content Include="App_Plugins\Vendr\assets\images\vendr-logo.png" />
+    <Content Include="App_Plugins\Vendr\config\analytics.dashboard.config.default..js" />
+    <Content Include="App_Plugins\Vendr\config\analytics.dashboard.config.js" />
+    <Content Include="App_Plugins\Vendr\config\order.editor.config.default..js" />
+    <Content Include="App_Plugins\Vendr\config\order.editor.config.js" />
+    <Content Include="App_Plugins\Vendr\css\vendr.css" />
+    <Content Include="App_Plugins\Vendr\js\vendr.controllers.js" />
+    <Content Include="App_Plugins\Vendr\js\vendr.decorators.js" />
+    <Content Include="App_Plugins\Vendr\js\vendr.directives.js" />
+    <Content Include="App_Plugins\Vendr\js\vendr.extensions.js" />
+    <Content Include="App_Plugins\Vendr\js\vendr.filters.js" />
+    <Content Include="App_Plugins\Vendr\js\vendr.interceptors.js" />
+    <Content Include="App_Plugins\Vendr\js\vendr.modules.js" />
+    <Content Include="App_Plugins\Vendr\js\vendr.providers.js" />
+    <Content Include="App_Plugins\Vendr\js\vendr.resources.js" />
+    <Content Include="App_Plugins\Vendr\js\vendr.services.js" />
+    <Content Include="App_Plugins\Vendr\js\vendr.vendor.js" />
+    <Content Include="App_Plugins\Vendr\lang\en-US.xml" />
+    <Content Include="App_Plugins\Vendr\lang\en.xml" />
+    <Content Include="App_Plugins\Vendr\views\analytics\dialogs\timeframe.html" />
+    <Content Include="App_Plugins\Vendr\views\analytics\view.html" />
+    <Content Include="App_Plugins\Vendr\views\analytics\widgets\avgordervalue.html" />
+    <Content Include="App_Plugins\Vendr\views\analytics\widgets\cartconversionrates.html" />
+    <Content Include="App_Plugins\Vendr\views\analytics\widgets\repeatcustomerrates.html" />
+    <Content Include="App_Plugins\Vendr\views\analytics\widgets\topsellingproducts.html" />
+    <Content Include="App_Plugins\Vendr\views\analytics\widgets\totalorders.html" />
+    <Content Include="App_Plugins\Vendr\views\analytics\widgets\totalrevenue.html" />
+    <Content Include="App_Plugins\Vendr\views\apps\variantsapp\variantsapp.html" />
+    <Content Include="App_Plugins\Vendr\views\common\nostorefound.html" />
+    <Content Include="App_Plugins\Vendr\views\country\create.html" />
+    <Content Include="App_Plugins\Vendr\views\country\edit.html" />
+    <Content Include="App_Plugins\Vendr\views\country\list.html" />
+    <Content Include="App_Plugins\Vendr\views\country\subviews\regions.html" />
+    <Content Include="App_Plugins\Vendr\views\country\subviews\settings.html" />
+    <Content Include="App_Plugins\Vendr\views\currency\edit.html" />
+    <Content Include="App_Plugins\Vendr\views\currency\list.html" />
+    <Content Include="App_Plugins\Vendr\views\dashboards\commerce.dashboard.html" />
+    <Content Include="App_Plugins\Vendr\views\dialogs\custompricingedit.html" />
+    <Content Include="App_Plugins\Vendr\views\dialogs\dictionaryedit.html" />
+    <Content Include="App_Plugins\Vendr\views\dialogs\discountrewardproviderpicker.html" />
+    <Content Include="App_Plugins\Vendr\views\dialogs\discountruleproviderpicker.html" />
+    <Content Include="App_Plugins\Vendr\views\dialogs\elementtypepicker.html" />
+    <Content Include="App_Plugins\Vendr\views\dialogs\emailtemplatepicker.html" />
+    <Content Include="App_Plugins\Vendr\views\dialogs\export.html" />
+    <Content Include="App_Plugins\Vendr\views\dialogs\exporttemplatepicker.html" />
+    <Content Include="App_Plugins\Vendr\views\dialogs\iframe.html" />
+    <Content Include="App_Plugins\Vendr\views\dialogs\orderstatuspicker.html" />
+    <Content Include="App_Plugins\Vendr\views\dialogs\printoptions.html" />
+    <Content Include="App_Plugins\Vendr\views\dialogs\productattributepicker.html" />
+    <Content Include="App_Plugins\Vendr\views\dialogs\sendemail.html" />
+    <Content Include="App_Plugins\Vendr\views\dialogs\settingseditor.html" />
+    <Content Include="App_Plugins\Vendr\views\dialogs\storeentitypicker.html" />
+    <Content Include="App_Plugins\Vendr\views\dialogs\storepicker.html" />
+    <Content Include="App_Plugins\Vendr\views\dialogs\taxclasspicker.html" />
+    <Content Include="App_Plugins\Vendr\views\dialogs\translatedvalueeditor.html" />
+    <Content Include="App_Plugins\Vendr\views\directives\vendr-color-picker.html" />
+    <Content Include="App_Plugins\Vendr\views\directives\vendr-dictionary-input.html" />
+    <Content Include="App_Plugins\Vendr\views\directives\vendr-item-picker.html" />
+    <Content Include="App_Plugins\Vendr\views\directives\vendr-license-check.html" />
+    <Content Include="App_Plugins\Vendr\views\directives\vendr-message.html" />
+    <Content Include="App_Plugins\Vendr\views\directives\vendr-table-view.html" />
+    <Content Include="App_Plugins\Vendr\views\directives\vendr-table.html" />
+    <Content Include="App_Plugins\Vendr\views\directives\vendr-toggle-list.html" />
+    <Content Include="App_Plugins\Vendr\views\directives\vendr-toggle.html" />
+    <Content Include="App_Plugins\Vendr\views\discount\edit.html" />
+    <Content Include="App_Plugins\Vendr\views\discount\list.html" />
+    <Content Include="App_Plugins\Vendr\views\discount\rewards\labelViews\orderAmountDiscountReward.html" />
+    <Content Include="App_Plugins\Vendr\views\discount\rewards\labelViews\orderLineAmountDiscountReward.html" />
+    <Content Include="App_Plugins\Vendr\views\discount\rewards\labelViews\productOrderLineAmountDiscountReward.html" />
+    <Content Include="App_Plugins\Vendr\views\discount\rules\labelViews\memberGroupDiscountRule.html" />
+    <Content Include="App_Plugins\Vendr\views\discount\rules\labelViews\orderAmountDiscountRule.html" />
+    <Content Include="App_Plugins\Vendr\views\discount\rules\labelViews\orderLineAmountDiscountRule.html" />
+    <Content Include="App_Plugins\Vendr\views\discount\rules\labelViews\orderLineProductDiscountRule.html" />
+    <Content Include="App_Plugins\Vendr\views\discount\rules\labelViews\orderLineQuantityDiscountRule.html" />
+    <Content Include="App_Plugins\Vendr\views\discount\rules\labelViews\paymentMethodDiscountRule.html" />
+    <Content Include="App_Plugins\Vendr\views\discount\rules\labelViews\propertyDiscountRule.html" />
+    <Content Include="App_Plugins\Vendr\views\discount\rules\labelViews\shippingMethodDiscountRule.html" />
+    <Content Include="App_Plugins\Vendr\views\emailTemplate\edit.html" />
+    <Content Include="App_Plugins\Vendr\views\emailTemplate\list.html" />
+    <Content Include="App_Plugins\Vendr\views\entity\delete.html" />
+    <Content Include="App_Plugins\Vendr\views\entity\sort.html" />
+    <Content Include="App_Plugins\Vendr\views\exportTemplate\edit.html" />
+    <Content Include="App_Plugins\Vendr\views\exportTemplate\list.html" />
+    <Content Include="App_Plugins\Vendr\views\giftCard\edit.html" />
+    <Content Include="App_Plugins\Vendr\views\giftCard\list.html" />
+    <Content Include="App_Plugins\Vendr\views\orderStatus\edit.html" />
+    <Content Include="App_Plugins\Vendr\views\orderStatus\list.html" />
+    <Content Include="App_Plugins\Vendr\views\order\dialogs\customerinfo.html" />
+    <Content Include="App_Plugins\Vendr\views\order\dialogs\editcustomerdetails.html" />
+    <Content Include="App_Plugins\Vendr\views\order\dialogs\editproperties.html" />
+    <Content Include="App_Plugins\Vendr\views\order\dialogs\transactioninfo.html" />
+    <Content Include="App_Plugins\Vendr\views\order\edit.html" />
+    <Content Include="App_Plugins\Vendr\views\order\list.html" />
+    <Content Include="App_Plugins\Vendr\views\order\subviews\edit.html" />
+    <Content Include="App_Plugins\Vendr\views\paymentMethod\create.html" />
+    <Content Include="App_Plugins\Vendr\views\paymentMethod\edit.html" />
+    <Content Include="App_Plugins\Vendr\views\paymentMethod\list.html" />
+    <Content Include="App_Plugins\Vendr\views\prevalueeditors\elementtypepicker\elementtypepicker.html" />
+    <Content Include="App_Plugins\Vendr\views\prevalueeditors\storeconfig\storeconfig.html" />
+    <Content Include="App_Plugins\Vendr\views\printTemplate\edit.html" />
+    <Content Include="App_Plugins\Vendr\views\printTemplate\list.html" />
+    <Content Include="App_Plugins\Vendr\views\productAttributePreset\edit.html" />
+    <Content Include="App_Plugins\Vendr\views\productAttributePreset\list.html" />
+    <Content Include="App_Plugins\Vendr\views\productattribute\edit.html" />
+    <Content Include="App_Plugins\Vendr\views\productattribute\list.html" />
+    <Content Include="App_Plugins\Vendr\views\propertyEditors\conditionalinput\conditionalinput.html" />
+    <Content Include="App_Plugins\Vendr\views\propertyEditors\dictionaryinput\dictionaryinput.html" />
+    <Content Include="App_Plugins\Vendr\views\propertyEditors\dropdown\dropdown.html" />
+    <Content Include="App_Plugins\Vendr\views\propertyEditors\pricesincludetax\pricesincludetax.html" />
+    <Content Include="App_Plugins\Vendr\views\propertyEditors\price\price.html" />
+    <Content Include="App_Plugins\Vendr\views\propertyEditors\stock\stock.html" />
+    <Content Include="App_Plugins\Vendr\views\propertyEditors\storeentitypicker\storeentitypicker.html" />
+    <Content Include="App_Plugins\Vendr\views\propertyEditors\storepicker\storepicker.html" />
+    <Content Include="App_Plugins\Vendr\views\propertyEditors\taxclasspicker\taxclasspicker.html" />
+    <Content Include="App_Plugins\Vendr\views\propertyEditors\umbracomembergroupspicker\umbracomembergroupspicker.html" />
+    <Content Include="App_Plugins\Vendr\views\propertyEditors\variantseditor\variantseditor.html" />
+    <Content Include="App_Plugins\Vendr\views\region\edit.html" />
+    <Content Include="App_Plugins\Vendr\views\region\list.html" />
+    <Content Include="App_Plugins\Vendr\views\settings\view.html" />
+    <Content Include="App_Plugins\Vendr\views\shippingMethod\edit.html" />
+    <Content Include="App_Plugins\Vendr\views\shippingMethod\list.html" />
+    <Content Include="App_Plugins\Vendr\views\store\edit.html" />
+    <Content Include="App_Plugins\Vendr\views\store\subviews\permissions.html" />
+    <Content Include="App_Plugins\Vendr\views\store\subviews\settings.html" />
+    <Content Include="App_Plugins\Vendr\views\store\view.html" />
+    <Content Include="App_Plugins\Vendr\views\taxClass\edit.html" />
+    <Content Include="App_Plugins\Vendr\views\taxClass\list.html" />
     <Content Include="config\grid.editors.config.js" />
     <Content Include="config\Lang\cs-CZ.user.xml" />
     <Content Include="config\Lang\da-DK.user.xml" />
@@ -346,8 +496,18 @@
     <Content Include="Media\2uhb51el\logo_ht-resize.png" />
     <Content Include="Media\33wnlhf4\banner-du-lich-da-lat_113653910.jpg" />
     <Content Include="Media\4pununyo\bien-thuan-an.jpg" />
+    <Content Include="Media\an1lqbgt\mask-group-1.png" />
+    <Content Include="Media\b4ycfbf1\icon_duration_wp4vbf-removebg-preview.png" />
+    <Content Include="Media\btop1cwj\icon_voucher-900_jpa51y-removebg-preview.png" />
     <Content Include="Media\g2mneblm\thien-vien-truc-lam-bach-ma-768x513.png" />
     <Content Include="Media\gvwhaxke\download.jpg" />
+    <Content Include="Media\ij1ndm20\dai-noi-hue-1.jpg" />
+    <Content Include="Media\j1xjjwze\icon_transfer_color-gray-900_guqi0a-removebg-preview.png" />
+    <Content Include="Media\llrlu55h\icon_language_color-gray-900_iiwq13-removebg-preview.png" />
+    <Content Include="Media\lvgnk0ea\icon_group_type_color-gray-900_u1tj2h-removebg-preview.png" />
+    <Content Include="Media\mp2fa2ny\stephen-phillips-hostreviews-co-uk-3mhgvrk4tjm-unsplash.jpg" />
+    <Content Include="Media\p3cnxww1\mask-group-2.png" />
+    <Content Include="Media\qzsfxqtl\icon_cancellation_oe139y-removebg-preview.png" />
     <Content Include="Media\sunopstl\kinh-thanh-hue-du-lich-960_1.jpg" />
     <Content Include="Media\vb0ijj54\logo_ht.png" />
     <Content Include="Media\vm3ly55e\banner-du-lich-nu-cuoi-hue-dlh.jpg" />
@@ -355,6 +515,7 @@
     <Content Include="Media\vt5fps2g\pngtree-square-frame-1727475-png-image_1731517.jpg" />
     <Content Include="Media\wgaj5xdb\vqg-bach-ma-4-1577937781-8143-6630-9703-1580280027.jpg" />
     <Content Include="Media\xsof3jba\baner-giam-gia-tour-du-lich_113653707.jpg" />
+    <Content Include="Media\yl3bq2px\pha-tam-giang01.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -515,6 +676,11 @@
     <Content Include="Fonts\font-poppins\Poppins-Thin.otf" />
     <Content Include="Fonts\font-poppins\Poppins-ThinItalic.otf" />
     <Content Include="Fonts\FontsFree-Net-akagi3.ttf" />
+    <Content Include="App_Plugins\Vendr\assets\fonts\vendr.eot" />
+    <Content Include="App_Plugins\Vendr\assets\fonts\vendr.ttf" />
+    <Content Include="App_Plugins\Vendr\assets\fonts\vendr.woff" />
+    <Content Include="App_Plugins\Vendr\assets\fonts\vendr.woff2" />
+    <Content Include="App_Plugins\Vendr\package.manifest" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
@@ -568,6 +734,14 @@
     <Content Include="Views\CycloHire.cshtml" />
     <Content Include="Views\BicycleHire.cshtml" />
     <Content Include="Views\Partials\ShowHotel.cshtml" />
+    <Content Include="Views\Vendr\Emails\GiftCardEmail.cshtml" />
+    <Content Include="Views\Vendr\Emails\OrderConfirmationEmail.cshtml" />
+    <Content Include="Views\Vendr\Emails\OrderErrorEmail.cshtml" />
+    <Content Include="Views\Vendr\Exporting\OrderCsvExport.cshtml" />
+    <Content Include="Views\Vendr\Printing\OrderPackingSlip.cshtml" />
+    <Content Include="Views\Vendr\Printing\OrderReceipt.cshtml" />
+    <Content Include="Views\Vendr\Web.config" />
+    <Content Include="Views\Vendr\_ViewStart.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

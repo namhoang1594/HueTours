@@ -22,66 +22,62 @@
 }
 
 <section id="news">
-    @*<img style="width: 100%" src="@(Model.BannerImage?.LocalCrops)" alt="">*@
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="breadcrumb">
-                    <p><a href="@home.Url()">@home.PageTitle</a><span> / </span><a style="color: #FFCC66">@Model.PageTitle</a></p>
-                </div>
-            </div>
-        </div>
+    <img style="width: 100%" src="@(Model.BackgroundImage?.LocalCrops)" alt="">
+    <div class="box_content">
+        <h1 class="text_title">
+            @Html.Raw(Model.Content)
+        </h1>
     </div>
 </section>
-<section class="blog_page">
+
+<section id="showtours">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-8">
+        <div class="row">
+            <div class="col-md-12">
                 <div>
                     <h1>@Umbraco.GetDictionaryValue("Hue News")</h1>
                 </div>
-                @{
-                    if (Model.Children != null)
-                    {
-                        foreach (ToursItem newsItem in pagedNews)
+                <div class="row">
+                    @{
+                        if (Model.Children != null)
                         {
-                            <div class="item_blog">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h2 class="name_blog">
-                                            <a href="@newsItem.Url()">
-                                                @newsItem.PageTitle
-                                            </a>
-                                        </h2>
-                                        <div class="time_create">@newsItem.CreateDate.ToString("MMMM dd, yyyy")</div>
+                            foreach (ToursItem toursItem in pagedNews)
+                            {
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="card item-card">
+                                        <div class="card-content news_item">
+                                            <div class="news_image">
+                                                <a href="@toursItem.Url()">
+                                                    <img class="image" src="@(toursItem.ThumbnailImage?.LocalCrops)" alt="@(toursItem.ThumbnailImage?.LocalCrops)" />
+                                                </a>
+                                            </div>
+                                            <div class="news_info">
+                                                <h2 class="news_title">
+                                                    <a href="@toursItem.Url()">@Html.Raw(toursItem.PageTitle)</a>
+                                                </h2>
+                                                <div class="news_startday">
+                                                    <p><i class="far fa-calendar-alt"></i>Ngày đi: <span style="font-weight: 600;">@Html.Raw(toursItem.StartDay.ToString("dd/MM/yyyy"))</span></p>
+                                                </div>
+                                                <div class="news_startday">
+                                                    <p><i class="fas fa-sort-numeric-up-alt"></i>Số ngày: <span style="font-weight: 600;">@Html.Raw(toursItem.HowManyDays)</span></p>
+                                                </div>
+                                                <div class="news_price">
+                                                    @Html.Raw(toursItem.Price)
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="float">
-                                    <a href="@newsItem.Url()">
-                                        <img class="avatar_blog" src="@newsItem.ThumbnailImage.LocalCrops" alt="">
-                                    </a>
-                                    <div class="summary_blog">
-                                        @newsItem.Price
-                                    </div>
-                                </div>
-                                <div class="read_more">
-                                    <a href="@newsItem.Url()">
-                                        <span>@Umbraco.GetDictionaryValue("Read More")</span>
-                                        <span>
-                                            <img src="../images/icon_right.svg" alt="">
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
+                            }
                         }
-                    }
 
-                }
+                    }
+                </div>
             </div>
 
             @if (newsPosts.Count > numberOfNews)
             {
-                <div class="col-md-9 col-mm-12">
+                <div class="col-md-12 col-mm-12">
                     <nav id="box_pagination">
                         <ul class="pagination">
                             @if (page <= 1)

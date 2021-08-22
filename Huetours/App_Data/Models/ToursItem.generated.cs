@@ -101,6 +101,13 @@ namespace Umbraco.Web.PublishedModels
 		public virtual string DescriptionText4 => this.Value<string>("descriptionText4");
 
 		///<summary>
+		/// Discount
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("discount")]
+		public virtual string Discount => this.Value<string>("discount");
+
+		///<summary>
 		/// How Many Days?
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
@@ -126,7 +133,7 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
 		[ImplementPropertyType("price")]
-		public virtual string Price => this.Value<string>("price");
+		public virtual global::Vendr.Web.Models.PricePropertyValue Price => this.Value<global::Vendr.Web.Models.PricePropertyValue>("price");
 
 		///<summary>
 		/// Short Content
@@ -148,6 +155,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
 		[ImplementPropertyType("thumbnailImage")]
 		public virtual global::Umbraco.Core.Models.MediaWithCrops ThumbnailImage => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("thumbnailImage");
+
+		///<summary>
+		/// Tour Images
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("tourImages")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Core.Models.MediaWithCrops> TourImages => this.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Core.Models.MediaWithCrops>>("tourImages");
 
 		///<summary>
 		/// Content
