@@ -148,4 +148,20 @@
       <file name="/umbraco/lib/tinymce/plugins/noneditable/plugin.min.js" />
     </files>
   </item>
+  <item key="L0FwcF9QbHVnaW5zL3ZlbmRyL2pzL3ZlbmRyLm1vZHVsZXMuanM7L0FwcF9QbHVnaW5zL3ZlbmRyL2pzL3ZlbmRyLnByb3ZpZGVycy5qczsvQXBwX1BsdWdpbnMvdmVuZHIvanMvdmVuZHIuaW50ZXJjZXB0b3JzLmpzOy9BcHBfUGx1Z2lucy92ZW5kci9qcy92ZW5kci5kZWNvcmF0b3JzLmpzOy9BcHBfUGx1Z2lucy92ZW5kci9qcy92ZW5kci5maWx0ZXJzLmpzOy9BcHBfUGx1Z2lucy92ZW5kci9qcy92ZW5kci5kaXJlY3RpdmVzLmpzOy9BcHBfUGx1Z2lucy92ZW5kci9qcy92ZW5kci5yZXNvdXJjZXMuanM7L0FwcF9QbHVnaW5zL3ZlbmRyL2pzL3ZlbmRyLnNlcnZpY2VzLmpzOy9BcHBfUGx1Z2lucy92ZW5kci9qcy92ZW5kci5jb250cm9sbGVycy5qczsvQXBwX1BsdWdpbnMvVmVuZHJDaGVja291dC9iYWNrb2ZmaWNlL3Jlc291cmNlcy92ZW5kcmNoZWNrb3V0LnJlc291cmNlLmpzOy9BcHBfUGx1Z2lucy9WZW5kckNoZWNrb3V0L2JhY2tvZmZpY2Uvdmlld3MvZGFzaGJvYXJkcy9pbnN0YWxsZXIuY29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVmVuZHJDaGVja291dC9iYWNrb2ZmaWNlL3ZpZXdzL2RpYWxvZ3MvaW5zdGFsbGVyLmNvbnRyb2xsZXIuanM7" file="F:\Final Project\Hue-tours\Huetours\Huetours\App_Data\TEMP\ClientDependency\2_169e57a35a1e4f149c0104e55da43895.cdJ" compression="gzip" version="2">
+    <files>
+      <file name="/App_Plugins/vendr/js/vendr.modules.js" />
+      <file name="/App_Plugins/vendr/js/vendr.providers.js" />
+      <file name="/App_Plugins/vendr/js/vendr.interceptors.js" />
+      <file name="/App_Plugins/vendr/js/vendr.decorators.js" />
+      <file name="/App_Plugins/vendr/js/vendr.filters.js" />
+      <file name="/App_Plugins/vendr/js/vendr.directives.js" />
+      <file name="/App_Plugins/vendr/js/vendr.resources.js" />
+      <file name="/App_Plugins/vendr/js/vendr.services.js" />
+      <file name="/App_Plugins/vendr/js/vendr.controllers.js" />
+      <file name="/App_Plugins/VendrCheckout/backoffice/resources/vendrcheckout.resource.js" />
+      <file name="/App_Plugins/VendrCheckout/backoffice/views/dashboards/installer.controller.js" />
+      <file name="/App_Plugins/VendrCheckout/backoffice/views/dialogs/installer.controller.js" />
+    </files>
+  </item>
 </map>

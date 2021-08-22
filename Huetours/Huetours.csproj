@@ -303,6 +303,9 @@
     <Reference Include="Umbraco.Web.UI, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UmbracoCms.Web.8.15.0\lib\net472\Umbraco.Web.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Vendr.Checkout, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vendr.Checkout.1.2.0\lib\net472\Vendr.Checkout.dll</HintPath>
+    </Reference>
     <Reference Include="Vendr.Core, Version=1.8.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Vendr.Core.1.8.5\lib\net472\Vendr.Core.dll</HintPath>
     </Reference>
@@ -321,6 +324,14 @@
     <Content Include="App_Data\TEMP\ClientDependency\DESKTOP-R93P64C-a39eadad3f5f6e91cbf63add816de50a-map.xml" />
     <Content Include="App_Data\TEMP\DistCache\LMW3SVC2ROOT-lastsynced.txt" />
     <Content Include="App_Data\Umbraco.sdf" />
+    <Content Include="App_Plugins\VendrCheckout\BackOffice\resources\vendrcheckout.resource.js" />
+    <Content Include="App_Plugins\VendrCheckout\BackOffice\views\dashboards\installer.controller.js" />
+    <Content Include="App_Plugins\VendrCheckout\BackOffice\views\dashboards\installer.html" />
+    <Content Include="App_Plugins\VendrCheckout\BackOffice\views\dialogs\installer.controller.js" />
+    <Content Include="App_Plugins\VendrCheckout\BackOffice\views\dialogs\installer.html" />
+    <Content Include="App_Plugins\VendrCheckout\Config\vendrcheckout.order.editor.config.js" />
+    <Content Include="App_Plugins\VendrCheckout\Lang\en-US.xml" />
+    <Content Include="App_Plugins\VendrCheckout\Scripts\vendrcheckout.js" />
     <Content Include="App_Plugins\Vendr\assets\fonts\vendr.svg" />
     <Content Include="App_Plugins\Vendr\assets\images\vendr-bg.png" />
     <Content Include="App_Plugins\Vendr\assets\images\vendr-logo.png" />
@@ -522,6 +533,7 @@
     <Compile Include="App_Data\Models\AboutUs.generated.cs" />
     <Compile Include="App_Data\Models\BachMaPark.generated.cs" />
     <Compile Include="App_Data\Models\BicycleHire.generated.cs" />
+    <Compile Include="App_Data\Models\Cart.generated.cs" />
     <Compile Include="App_Data\Models\Contact.generated.cs" />
     <Compile Include="App_Data\Models\ContentBase.generated.cs" />
     <Compile Include="App_Data\Models\ContentBaseWosubTitle.generated.cs" />
@@ -560,6 +572,10 @@
     <Compile Include="App_Data\Models\UmbracoMediaVideo.generated.cs" />
     <Compile Include="App_Data\Models\Vehicle.generated.cs" />
     <Compile Include="App_Data\Models\VehicleItem.generated.cs" />
+    <Compile Include="App_Data\Models\VendrCheckoutBasePage.generated.cs" />
+    <Compile Include="App_Data\Models\VendrCheckoutCheckoutPage.generated.cs" />
+    <Compile Include="App_Data\Models\VendrCheckoutCheckoutStepPage.generated.cs" />
+    <Compile Include="App_Data\Models\VendrStoreDetails.generated.cs" />
     <Compile Include="App_Data\Models\Voucher.generated.cs" />
     <Compile Include="Composing\RegisterServiceComposer.cs" />
     <Compile Include="Controller\ContactSurfaceController.cs" />
@@ -681,6 +697,21 @@
     <Content Include="App_Plugins\Vendr\assets\fonts\vendr.woff" />
     <Content Include="App_Plugins\Vendr\assets\fonts\vendr.woff2" />
     <Content Include="App_Plugins\Vendr\package.manifest" />
+    <Content Include="App_Plugins\VendrCheckout\package.manifest" />
+    <Content Include="App_Plugins\VendrCheckout\Views\Emails\VendrCheckoutGiftCardEmail.cshtml" />
+    <Content Include="App_Plugins\VendrCheckout\Views\Emails\VendrCheckoutOrderConfirmationEmail.cshtml" />
+    <Content Include="App_Plugins\VendrCheckout\Views\Emails\VendrCheckoutOrderErrorEmail.cshtml" />
+    <Content Include="App_Plugins\VendrCheckout\Views\Partials\VendrCheckoutOrderInfo.cshtml" />
+    <Content Include="App_Plugins\VendrCheckout\Views\Partials\VendrCheckoutPrevNext.cshtml" />
+    <Content Include="App_Plugins\VendrCheckout\Views\VendrCheckoutConfirmationPage.cshtml" />
+    <Content Include="App_Plugins\VendrCheckout\Views\VendrCheckoutInformationPage.cshtml" />
+    <Content Include="App_Plugins\VendrCheckout\Views\VendrCheckoutMaster.cshtml" />
+    <Content Include="App_Plugins\VendrCheckout\Views\VendrCheckoutPage.cshtml" />
+    <Content Include="App_Plugins\VendrCheckout\Views\VendrCheckoutPaymentMethodPage.cshtml" />
+    <Content Include="App_Plugins\VendrCheckout\Views\VendrCheckoutPaymentPage.cshtml" />
+    <Content Include="App_Plugins\VendrCheckout\Views\VendrCheckoutReviewPage.cshtml" />
+    <Content Include="App_Plugins\VendrCheckout\Views\VendrCheckoutShippingMethodPage.cshtml" />
+    <Content Include="App_Plugins\VendrCheckout\Views\Web.config" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
@@ -742,6 +773,8 @@
     <Content Include="Views\Vendr\Printing\OrderReceipt.cshtml" />
     <Content Include="Views\Vendr\Web.config" />
     <Content Include="Views\Vendr\_ViewStart.cshtml" />
+    <Content Include="Views\Partials\cartCount.cshtml" />
+    <Content Include="Views\Cart.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -753,6 +786,12 @@
     <Folder Include="App_Data\TEMP\FileUploads\" />
     <Folder Include="App_Data\TEMP\Install\" />
     <Folder Include="Views\MacroPartials\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Huetours.Core\Huetours.Core.csproj">
+      <Project>{e111bc6a-766f-49eb-806c-be6cba5b3dd4}</Project>
+      <Name>Huetours.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

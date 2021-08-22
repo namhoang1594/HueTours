@@ -1,10 +1,14 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.ToursItem>
 @using ContentModels = Umbraco.Web.PublishedModels;
+@using Huetours.Core.Extensions;
+@using Vendr.Core;
 @{
     Layout = "master.cshtml";
     var home = (Home)Model.Root();
     var tours = (Tours)home.Children.FirstOrDefault(x => x.ContentType.Alias.Equals("tours"));
     var gtours = (GroupTours)tours.Children.FirstOrDefault(x => x.ContentType.Alias.Equals("groupTours"));
+    var cart = (Cart)home.Children.FirstOrDefault(x => x.ContentType.Alias.Equals("cart"));
+
 }
 
 <section class="breadcrumb">
@@ -58,11 +62,46 @@
 
                 <div class="tourItem_contents">
                     <div class="tourItem_contents_child">
-                    @Umbraco.GetDictionaryValue("What to expect")
-                        </div>
+                        @Umbraco.GetDictionaryValue("What to expect")
+                    </div>
                     @Html.Raw(Model.Content)
                 </div>
+            </div>
+
+            <div class="col-md-4">
+                @using (Html.BeginUmbracoForm("AddToCart", "CartSurface", null, htmlAttributes: new { id = "addToCart" }))
+                {
+                    @Html.Hidden("productReference", Model.GetProductReference())
+
+                    <div class="input">
+                        @Html.TextBox("quantity", 1, new { @type = "number", @class = "form-control input-number" })
+                    </div>
+                    <div class="input-group-btn">
+                        <button class="btn btn-warning">@Umbraco.GetDictionaryValue("Add to cart")<i class="fas fa-cart-plus"></i></button>
+                    </div>
+                }
             </div>
         </div>
     </div>
 </section>
+
+@section ScriptsBottom
+{
+    @if (!(TempData["addedProductReference"]?.ToString()).IsNullOrWhiteSpace())
+    {
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Toastify({
+                    text: @Umbraco.GetDictionaryValue("Product added to cart successfully"),
+                    duration: 0,
+                    destination: "@cart.Url()",
+                    newWindow: false,
+                    gravity: "bottom",
+                    position: "center",
+                    close: true,
+                    stopOnFocus: true,
+                }).showToast();
+            });
+        </script>
+    }
+}

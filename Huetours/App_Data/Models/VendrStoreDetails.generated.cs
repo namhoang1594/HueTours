@@ -19,9 +19,18 @@ using Umbraco.ModelsBuilder.Embedded;
 
 namespace Umbraco.Web.PublishedModels
 {
+	// Mixin Content Type with alias "vendrStoreDetails"
+	/// <summary>Vendr Store Details</summary>
+	public partial interface IVendrStoreDetails : IPublishedContent
+	{
+		/// <summary>Store</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		global::Vendr.Core.Models.StoreReadOnly Store { get; }
+	}
+
 	/// <summary>Vendr Store Details</summary>
 	[PublishedModel("vendrStoreDetails")]
-	public partial class VendrStoreDetails : PublishedContentModel
+	public partial class VendrStoreDetails : PublishedContentModel, IVendrStoreDetails
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -49,6 +58,10 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
 		[ImplementPropertyType("store")]
-		public virtual global::Vendr.Core.Models.StoreReadOnly Store => this.Value<global::Vendr.Core.Models.StoreReadOnly>("store");
+		public virtual global::Vendr.Core.Models.StoreReadOnly Store => GetStore(this);
+
+		/// <summary>Static getter for Store</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		public static global::Vendr.Core.Models.StoreReadOnly GetStore(IVendrStoreDetails that) => that.Value<global::Vendr.Core.Models.StoreReadOnly>("store");
 	}
 }
