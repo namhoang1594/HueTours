@@ -21,7 +21,7 @@ namespace Umbraco.Web.PublishedModels
 {
 	/// <summary>Home</summary>
 	[PublishedModel("home")]
-	public partial class Home : PublishedContentModel, IContentBase, INavigationBase
+	public partial class Home : PublishedContentModel, IContentBase, INavigationBase, IVendrStoreDetails
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -225,5 +225,12 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
 		[ImplementPropertyType("umbracoNavihide")]
 		public virtual bool UmbracoNavihide => global::Umbraco.Web.PublishedModels.NavigationBase.GetUmbracoNavihide(this);
+
+		///<summary>
+		/// Store
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("store")]
+		public virtual global::Vendr.Core.Models.StoreReadOnly Store => global::Umbraco.Web.PublishedModels.VendrStoreDetails.GetStore(this);
 	}
 }

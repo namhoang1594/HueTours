@@ -18,6 +18,7 @@
     var aboutus = (AboutUs)home.Children.FirstOrDefault(c => c.ContentType.Alias == "aboutUs");
     var faq = (FAqs)home.Children.FirstOrDefault(c => c.ContentType.Alias == "fAQs");
     var voucher = (Voucher)home.Children.FirstOrDefault(c => c.ContentType.Alias == "voucher");
+    var cart = (Cart)home.Children.FirstOrDefault(c => c.ContentType.Alias == "cart");
     var search = (SearchingResult)home.Children.FirstOrDefault(c => c.ContentType.Alias == "searchingResult");
 
 
@@ -54,7 +55,7 @@
     <link rel="stylesheet" href="~/css/slick.css" />
     <link rel="stylesheet" href="~/css/slick-theme.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"  />
 </head>
 
 <body>
@@ -81,6 +82,7 @@
                                 <li>
                                     <a href="@home.DownloadApp.Url">@home.DownloadApp.Name</a>
                                 </li>
+                                <li><a class="cart" href="@cart.Url()">@Umbraco.GetDictionaryValue("Cart") @Html.Action("CartCount", "CartSurface")</a></li>
                                 <li><a class="signup" href="@faq.Url()">@Umbraco.GetDictionaryValue("Sign up").ToFirstUpper()</a></li>
                                 <li><a class="signin" href="@voucher.Url()">@Umbraco.GetDictionaryValue("Sign in").ToFirstUpper()</a></li>
                                 @*<li><a class="signin" href="@search.Url()">@Umbraco.GetDictionaryValue("Sign in").ToFirstUpper()</a></li>*@
@@ -120,25 +122,25 @@
 
 
                                 @*<li>
-            <a href="@hotel.Url()">@hotel.PageTitle</a>
-            <ul class="sub_menu">
-                @if (tours.Children != null)
-                {
-                    foreach (var child in hotel.Children)
-                    {
-                        IPublishedContent content = child;
-                        if (child.HasProperty("referencePage"))
-                        {
-                            content = child.Value<IPublishedContent>("referencePage");
-                        }
-                        if (content != null)
-                        {
-                            <li><a href="@(content.Url())">@content.Value("pageTitle")</a></li>
-                        }
-                    }
-                }
-            </ul>
-        </li>*@
+                                        <a href="@hotel.Url()">@hotel.PageTitle</a>
+                                        <ul class="sub_menu">
+                                            @if (tours.Children != null)
+                                            {
+                                                foreach (var child in hotel.Children)
+                                                {
+                                                    IPublishedContent content = child;
+                                                    if (child.HasProperty("referencePage"))
+                                                    {
+                                                        content = child.Value<IPublishedContent>("referencePage");
+                                                    }
+                                                    if (content != null)
+                                                    {
+                                                        <li><a href="@(content.Url())">@content.Value("pageTitle")</a></li>
+                                                    }
+                                                }
+                                            }
+                                        </ul>
+                                    </li>*@
 
                                 <li>
                                     <a style="cursor: pointer">@vehicle.PageTitle</a>
@@ -315,6 +317,7 @@
     <script type="text/javascript" src="~/js/libs/style.js"></script>
     <script type="text/javascript" src="~/js/slick.min.js"></script>
     <script type="text/javascript" src="~/js/libs/validateForm.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 
     <script>
@@ -350,6 +353,7 @@
             $('html, body').animate({ scrollTop: 0 }, '400');
         });
     </script>
+    @RenderSection("ScriptsBottom", false)
 
 </body>
 </html>

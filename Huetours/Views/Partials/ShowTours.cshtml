@@ -1,5 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Home>
 @using ContentModels = Umbraco.Web.PublishedModels;
+@using Huetours.Core.Extensions;
+@using Vendr.Core;
 @{
     var tours = (Tours)Model.Children.FirstOrDefault(x => x.ContentType.Alias.Equals("tours"));
     var gtours = (GroupTours)tours.Children.FirstOrDefault(x => x.ContentType.Alias.Equals("groupTours"));
@@ -40,7 +42,7 @@
                                     @Html.Raw(items.Discount)
                                 </div>
                                 <div class="news_price">
-                                    @Html.Raw(items.Price)
+                                    @Html.Raw(items.CalculatePrice()?.Formatted())
                                 </div>
                             </div>
                         </div>

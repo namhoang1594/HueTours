@@ -1,6 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.GroupTours>
 @using ContentModels = Umbraco.Web.PublishedModels;
-
+@using Huetours.Core.Extensions;
+@using Vendr.Core;
 @{
     Layout = "master.cshtml";
     var home = (Home)Model.Root();
@@ -62,7 +63,15 @@
                                                     <p><i class="fas fa-sort-numeric-up-alt"></i>Số ngày: <span style="font-weight: 600;">@Html.Raw(toursItem.HowManyDays)</span></p>
                                                 </div>
                                                 <div class="news_price">
-                                                    @Html.Raw(toursItem.Price)
+                                                    @Html.Raw(toursItem.CalculatePrice().Formatted())   
+                                                    
+                                                    @*@using(Html.BeginUmbracoForm("AddToCart", "CartSurface"))
+                                                     {
+                                                        @Html.Hidden("toursReference", Model.GetTourReferece())
+                                                        @Html.TextBox("quantity", 1)
+
+                                                        <button class="btn btn-warning">@Umbraco.GetDictionaryValue("Add to cart")<i class="fas fa-cart-plus"></i></button>
+                                                     }*@
                                                 </div>
                                             </div>
                                         </div>
