@@ -2,17 +2,23 @@
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
     Layout = "master.cshtml";
+    var home = (Home)Model.Root();
+    var search = (SearchingResult)home.Children.FirstOrDefault(c => c.ContentType.Alias == "searchingResult");
 }
 
 <section id="banner_home">
-    <img src="@(Model.BannerImage?.LocalCrops)" alt="">
+    <div class="home_bannerimage">
+        @foreach (var item in home.BannerImage)
+        {
+            <img src="@(item.LocalCrops)" alt="">
+        }
+    </div>
     <div class="box_content">
-        <h1 class="text_title">
             @Html.Raw(Model.Content)
-        </h1>
-        <form action="/vi/tim-kiem">
-            <input type="text" name="Query" placeholder="Search........." />
-            <button>Search</button>
+      
+        <form action="@search.Url()" class="home_searching">
+            <input type="text" name="Query" placeholder="@Umbraco.GetDictionaryValue("Searching")" />
+            <button class="btn btn-home_searching"><span>@Umbraco.GetDictionaryValue("Search")</span></button>
         </form>
     </div>
 </section>
