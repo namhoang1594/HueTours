@@ -72,12 +72,23 @@
                 @using (Html.BeginUmbracoForm("AddToCart", "CartSurface", null, htmlAttributes: new { id = "addToCart" }))
                 {
                     @Html.Hidden("productReference", Model.GetProductReference())
-
-                    <div class="input">
-                        @Html.TextBox("quantity", 1, new { @type = "number", @class = "form-control input-number" })
-                    </div>
-                    <div class="input-group-btn">
-                        <button class="btn btn-warning">@Umbraco.GetDictionaryValue("Add to cart")<i class="fas fa-cart-plus"></i></button>
+                    <div class="order_tours">
+                        <div class="order_tours_title"><p>@Umbraco.GetDictionaryValue("Order tours")</p></div>
+                        <div class="order_tours_startday">
+                            <p>@Umbraco.GetDictionaryValue("Start Day")</p>
+                            <input type="date" />
+                        </div>
+                        <div class="order_tours_price">
+                            <p>@Umbraco.GetDictionaryValue("Price")</p>
+                            @Html.Raw(Model.CalculatePrice().Formatted())
+                           </div>
+                        <div class="input order_tours_numbertourist">
+                            <p>@Umbraco.GetDictionaryValue("Number Tourist")</p>
+                            @Html.TextBox("quantity", 1, new { @type = "number", @class = "form-control input-number" })
+                        </div>
+                        <div class="input-group-btn">
+                            <button class="btn btn-warning">@Umbraco.GetDictionaryValue("Add to cart")<i class="fas fa-cart-plus"></i></button>
+                        </div>
                     </div>
                 }
             </div>

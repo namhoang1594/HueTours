@@ -1244,3 +1244,36 @@ button:disabled,
         border-radius: 3px;
         background-color: #ff5722;
     }
+
+    #toursItem .order_tours{
+    }
+        #toursItem .order_tours .order_tours_title {
+            font-weight: 600;
+            line-height: 40px;
+            font-size: 32px;
+        }
+
+        #toursItem .order_tours .order_tours_startday {
+            font-size: 15px;
+        }
+
+            #toursItem .order_tours .order_tours_startday input {
+                width: 100%;
+                border-bottom: unset !important;
+                height: 40px;
+            }
+
+        #toursItem .order_tours .order_tours_price {
+            padding-top: 15px;
+        }
+
+        #toursItem .order_tours .order_tours_numbertourist {
+            padding-top: 10px;
+        }
+        #toursItem .order_tours .order_tours_numbertourist input{
+            height: 40px;
+        }
+
+#toursItem .order_tours .input-group-btn {
+    padding: 15px 0;
+}

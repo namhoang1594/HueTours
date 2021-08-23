@@ -73,6 +73,27 @@ namespace Umbraco.Web.PublishedModels
 		public virtual global::Umbraco.Core.Models.MediaWithCrops Favicon => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("favicon");
 
 		///<summary>
+		/// Google Analytics Id
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("googleAnalyticsId")]
+		public virtual string GoogleAnalyticsId => this.Value<string>("googleAnalyticsId");
+
+		///<summary>
+		/// Google Credentials
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("googleCredentials")]
+		public virtual string GoogleCredentials => this.Value<string>("googleCredentials");
+
+		///<summary>
+		/// Google Spread Sheet Id
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("googleSpreadSheetId")]
+		public virtual string GoogleSpreadSheetId => this.Value<string>("googleSpreadSheetId");
+
+		///<summary>
 		/// Host
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
