@@ -20,6 +20,8 @@
     var voucher = (Voucher)home.Children.FirstOrDefault(c => c.ContentType.Alias == "voucher");
     var cart = (Cart)home.Children.FirstOrDefault(c => c.ContentType.Alias == "cart");
     var search = (SearchingResult)home.Children.FirstOrDefault(c => c.ContentType.Alias == "searchingResult");
+    var register = (RegisterMember)home.Children.FirstOrDefault(c => c.ContentType.Alias == "registerMember");
+    var login = (LoginMember)home.Children.FirstOrDefault(c => c.ContentType.Alias == "loginMember");
 
 
     var lang = "vi";
@@ -83,9 +85,9 @@
                                     <a href="@home.DownloadApp.Url">@home.DownloadApp.Name</a>
                                 </li>
                                 <li><a class="cart" href="@cart.Url()">@Umbraco.GetDictionaryValue("Cart") @Html.Action("CartCount", "CartSurface")</a></li>
-                                <li><a class="signup" href="@faq.Url()">@Umbraco.GetDictionaryValue("Sign up").ToFirstUpper()</a></li>
-                                <li><a class="signin" href="@voucher.Url()">@Umbraco.GetDictionaryValue("Sign in").ToFirstUpper()</a></li>
-                                @*<li><a class="signin" href="@search.Url()">@Umbraco.GetDictionaryValue("Sign in").ToFirstUpper()</a></li>*@
+                                <li><a class="signup" href="@register.Url()">@Umbraco.GetDictionaryValue("Sign up").ToFirstUpper()</a></li>
+                                <li><a class="signin" href="@login.Url()">@Umbraco.GetDictionaryValue("Sign in").ToFirstUpper()</a></li>
+                                <li>@Html.Partial("~/Views/Partials/Login Status.cshtml")</li>
 
                             </ul>
                         </div>

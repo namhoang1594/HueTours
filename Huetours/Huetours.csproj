@@ -553,12 +553,15 @@
     <Compile Include="App_Data\Models\HueCapital.generated.cs" />
     <Compile Include="App_Data\Models\HuongRiver.generated.cs" />
     <Compile Include="App_Data\Models\Image.generated.cs" />
+    <Compile Include="App_Data\Models\LoginMember.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />
     <Compile Include="App_Data\Models\MotorbikeHire.generated.cs" />
     <Compile Include="App_Data\Models\NavigationBase.generated.cs" />
     <Compile Include="App_Data\Models\News.generated.cs" />
     <Compile Include="App_Data\Models\NewsItem.generated.cs" />
+    <Compile Include="App_Data\Models\Page.generated.cs" />
     <Compile Include="App_Data\Models\ReceiverContact.generated.cs" />
+    <Compile Include="App_Data\Models\RegisterMember.generated.cs" />
     <Compile Include="App_Data\Models\SearchingResult.generated.cs" />
     <Compile Include="App_Data\Models\Settings.generated.cs" />
     <Compile Include="App_Data\Models\SoloTours.generated.cs" />
@@ -580,6 +583,7 @@
     <Compile Include="App_Data\Models\Voucher.generated.cs" />
     <Compile Include="Composing\RegisterServiceComposer.cs" />
     <Compile Include="Controller\ContactSurfaceController.cs" />
+    <Compile Include="Controller\MemberSurfaceController.cs" />
     <Compile Include="Controller\SearchingResultController.cs" />
     <Compile Include="Controller\Surface\SearchSurfaceController.cs" />
     <Compile Include="Extensions\StringArrayExtensions.cs" />
@@ -776,6 +780,12 @@
     <Content Include="Views\Vendr\_ViewStart.cshtml" />
     <Content Include="Views\Partials\cartCount.cshtml" />
     <Content Include="Views\Cart.cshtml" />
+    <Content Include="Views\LoginMember.cshtml" />
+    <Content Include="Views\RegisterMember.cshtml" />
+    <Content Include="Views\MacroPartials\Login.cshtml" />
+    <Content Include="Views\MacroPartials\Register.cshtml" />
+    <Content Include="Views\Partials\Login Status.cshtml" />
+    <Content Include="Views\404Page.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -786,7 +796,6 @@
   <ItemGroup>
     <Folder Include="App_Data\TEMP\FileUploads\" />
     <Folder Include="App_Data\TEMP\Install\" />
-    <Folder Include="Views\MacroPartials\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Huetours.Core\Huetours.Core.csproj">
