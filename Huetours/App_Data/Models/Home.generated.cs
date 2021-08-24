@@ -52,6 +52,13 @@ namespace Umbraco.Web.PublishedModels
 		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Core.Models.MediaWithCrops> AdvertisementImage => this.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Core.Models.MediaWithCrops>>("advertisementImage");
 
 		///<summary>
+		/// Advertisement Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("advertisementTitle")]
+		public virtual string AdvertisementTitle => this.Value<string>("advertisementTitle");
+
+		///<summary>
 		/// Banner Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]

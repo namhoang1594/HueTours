@@ -89,6 +89,60 @@ Umbraco.Core.Migrations.Upgrade.V_8_0_0.ContentVariationMigration, Umbraco.Core,
 Umbraco.Core.Migrations.Upgrade.V_8_0_0.DataTypes.PreValueMigratorComposer, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Logging.Viewer.LogViewerComposer, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Services.Implement.KeyValueService+InitializeMigration, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Trees.SettingsTreeController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Trees.StoresTreeController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.PackageActions.InstallNuGetPackage, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.PropertyEditors.Stock.StockComposer, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.PropertyEditors.VariantsEditor.VariantsEditorComposer, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.PropertyEditors.VariantsEditor.VariantsEditorPropertyEditor, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Converters.StockPropertyValueConverter, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Converters.StoreEntityPickerValueConverter, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Converters.TaxClassPickerValueConverter, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Converters.StorePickerValueConverter, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Converters.VariantsEditorValueConverter, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Converters.PricePropertyValueConverter, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.ActivityLogController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.AnalyticsController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.CountryController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.CultureController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.CurrencyController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.DictionaryController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.ExportTemplateController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.PrintTemplateController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.GiftCardController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.DiscountController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.EmailController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.EmailTemplateController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.EntityController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.LicensingController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.OrderController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.ProductAttributeController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.OrderStatusController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.ProductController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.PaymentMethodController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.ShippingMethodController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.TaxController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.UtilsController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.StoreController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Composing.VendrWebComposer, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.ExportTemplateCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.StockCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.CountryCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.CurrencyCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.PrintTemplateCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.GiftCardCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.DiscountCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.EmailTemplateCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.OrderCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.OrderStatusCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.PaymentMethodCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.ProductAttributePresetCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.RegionCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.ShippingMethodCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.ProductAttributeCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.StoreCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.TaxClassCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.VendrCacheRefresherComposer, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbProfileController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbLoginStatusController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbRegisterController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -297,15 +351,101 @@ Umbraco.Web.Cache.MemberGroupCacheRefresher, Umbraco.Web, Version=8.0.0.0, Cultu
 Umbraco.Web.Cache.PublicAccessCacheRefresher, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Cache.TemplateCacheRefresher, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Cache.UserCacheRefresher, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Huetours.Controller.ContactSurfaceController, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-Huetours.Controller.SeachingResultController, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-Huetours.Controller.Surface.SearchSurfaceController, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Web.Controllers.VendrPaymentController, Vendr.Core.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Web.Composing.VendrCoreWebComposer, Vendr.Core.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Embedded.ModelsBuilderDashboard, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Embedded.Compose.ModelsBuilderComposer, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Embedded.BackOffice.MediaTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Embedded.BackOffice.MemberTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Embedded.BackOffice.ModelsBuilderDashboardController, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Embedded.BackOffice.ContentTypeModelValidator, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Huetours.Controller.ContactSurfaceController, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Huetours.Controller.SearchingResultController, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Huetours.Controller.Surface.SearchSurfaceController, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Huetours.Composing.RegisterServiceComposer, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Huetours.Core.Controller.Surface.CartSurfaceController, Huetours.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Composing.VendrCoreComposer, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_2_0.AddGiftCardRemainingAmountColumnDefault, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_2_0.AddGiftCardIsActiveColumn, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_2_0.AddEmailTemplateCategoryColumn, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_2_0.AddStoreGiftCardPropertyAliasesColumn, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_2_0.AddStoreDefaultGiftCardEmailTemplateIdColumn, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_2_0.AddStoreGiftCardActivationOrderStatusIdColumn, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_2_0.AddStoreGiftCardActivationMethodColumn, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_2_0.CreateGiftCardPropertyTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_1_4.ChangeOrderLineTableQuantityDbTypeToDecimal184, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_1_2.AddDiscountCodeDeletedTimestampColumn, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_1_0.AddDiscountCodeIsUnlimitedColumn, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_1.ChangeStockTableStockDbTypeToDecimal186, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.AddAppliedGiftCardGiftCardIdColumn, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.AddAppliedDiscountCodeDiscountIdColumn, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.DropStockTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.AddDiscountRewardsColumn, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.AddDiscountRulesColumn, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.AddDiscountAliasColumn, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.DropDiscountConfigTables, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.RenameDiscountBlockFurtherDiscountsColumn, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateFrozenPriceTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateStoreAllowedUserTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateStoreAllowedUserRoleTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateOrderAppliedGiftCardTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateOrderAppliedDiscountCodeTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateOrderAppliedDiscountTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateGiftCardTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateDiscountCodeTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateDiscountTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateOrderLineTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateOrderLinePropertyTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateOrderPropertyTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateStoreTableConstraints, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreatePaymentMethodPaymentProviderSettingTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateTaxClassCountryRegionTaxRateTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateShippingMethodCountryRegionPriceTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreatePaymentMethodCountryRegionPriceTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreatePaymentMethodAllowedCountryRegionTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateShippingMethodAllowedCountryRegionTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateCurrencyAllowedCountryTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateEmailTemplateTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateStockTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateOrderStatusTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateShippingMethodTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateTaxClassTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreatePaymentMethodTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateRegionTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateCountryTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateCurrencyTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateOrderTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_0_0.CreateStoreTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_3_0.AddBaseCurrencyExchangeRateColumnToOrderTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_3_0.AddBaseCurrencyIdColumnToStoreTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_3_0.CreateActivityLogTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_6_0.CreatePrintTemplateTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_5_0.AddProductVariantReferenceColumnToOrderLineTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_5_0.AddProductVariantReferenceColumnToStockTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_5_0.CreateOrderLineAttributeTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_5_0.CreateProductAttributePresetAllowedAttributeTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_5_0.CreateProductAttributePresetTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_5_0.CreateTranslatedValueTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_5_0.CreateProductAttributeValueTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_5_0.CreateProductAttributeTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_4_0.AddNameColumnToOrderAmountAdjustmentTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_4_0.ConvertAppliedGiftCardsToAmountAdjustments, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_4_0.CreateOrderAmountAdjustmentTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_4_0.ConvertAppliedDiscountsToPriceAdjustments, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_4_0.AddNameColumnToOrderPriceAdjustmentTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_4_0.CreateOrderPriceAdjustmentTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_2_6.AddTypeToAppliedDiscountUniqueConstraint, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_2_5.ChangeDiscountRulesDbTypeToNvarcharMax, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_2_5.ChangeDiscountRewardsDbTypeToNvarcharMax, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_2_5.FixAmountsIncludeTaxSpellingMistake, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_8_3.AddReplyToAddressesColumnToEmailTemplateTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Migrations.V_1_8_0.CreateExportTemplateTable, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Checkout.Web.Controllers.VendrCheckoutApiController, Vendr.Checkout, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Checkout.Web.Controllers.VendrCheckoutCheckoutStepPageController, Vendr.Checkout, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Checkout.Web.Controllers.VendrCheckoutCheckoutPageController, Vendr.Checkout, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Checkout.Web.Controllers.VendrCheckoutSurfaceController, Vendr.Checkout, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Checkout.Web.Composing.VendrCheckoutWebComposer, Vendr.Checkout, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Checkout.Composing.VendrCheckoutComposer, Vendr.Checkout, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Core.Composing.IComposer
 
@@ -316,6 +456,10 @@ Umbraco.Core.Compose.RelateOnTrashComposer, Umbraco.Core, Version=8.0.0.0, Cultu
 Umbraco.Core.Runtime.CoreInitialComposer, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Migrations.Upgrade.V_8_0_0.DataTypes.PreValueMigratorComposer, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Logging.Viewer.LogViewerComposer, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.PropertyEditors.Stock.StockComposer, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.PropertyEditors.VariantsEditor.VariantsEditorComposer, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Composing.VendrWebComposer, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.VendrCacheRefresherComposer, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.SignalR.PreviewHubComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Runtime.WebInitialComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Runtime.WebFinalComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -335,7 +479,12 @@ Umbraco.Web.Compose.NotificationsComposer, Umbraco.Web, Version=8.0.0.0, Culture
 Umbraco.Web.Compose.PublicAccessComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Compose.NestedContentPropertyComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Cache.DistributedCacheBinderComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Web.Composing.VendrCoreWebComposer, Vendr.Core.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Embedded.Compose.ModelsBuilderComposer, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Huetours.Composing.RegisterServiceComposer, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Composing.VendrCoreComposer, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Checkout.Web.Composing.VendrCheckoutWebComposer, Vendr.Checkout, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Checkout.Composing.VendrCheckoutComposer, Vendr.Checkout, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Core.PropertyEditors.IPropertyValueConverter
 
@@ -360,6 +509,12 @@ Umbraco.Core.PropertyEditors.ValueConverters.TextStringValueConverter, Umbraco.C
 Umbraco.Core.PropertyEditors.ValueConverters.TinyMceValueConverter, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.PropertyEditors.ValueConverters.UploadPropertyConverter, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.PropertyEditors.ValueConverters.YesNoValueConverter, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Converters.StockPropertyValueConverter, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Converters.StoreEntityPickerValueConverter, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Converters.TaxClassPickerValueConverter, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Converters.StorePickerValueConverter, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Converters.VariantsEditorValueConverter, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Converters.PricePropertyValueConverter, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PropertyEditors.ValueConverters.BlockListPropertyValueConverter, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PropertyEditors.ValueConverters.MediaPickerWithCropsValueConverter, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PropertyEditors.ValueConverters.MultiUrlPickerValueConverter, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -382,14 +537,43 @@ Umbraco.Web.Controllers.UmbRegisterController, Umbraco.Web, Version=8.0.0.0, Cul
 Umbraco.Web.Controllers.UmbLoginController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Huetours.Controller.ContactSurfaceController, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Huetours.Controller.Surface.SearchSurfaceController, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Huetours.Core.Controller.Surface.CartSurfaceController, Huetours.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Checkout.Web.Controllers.VendrCheckoutSurfaceController, Vendr.Checkout, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Web.Mvc.IRenderMvcController
 
 Umbraco.Web.Mvc.RenderMvcController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Huetours.Controller.SeachingResultController, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Huetours.Controller.SearchingResultController, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Checkout.Web.Controllers.VendrCheckoutCheckoutStepPageController, Vendr.Checkout, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Checkout.Web.Controllers.VendrCheckoutCheckoutPageController, Vendr.Checkout, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Web.WebApi.UmbracoApiController
 
+Vendr.Web.Trees.SettingsTreeController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Trees.StoresTreeController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.ActivityLogController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.AnalyticsController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.CountryController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.CultureController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.CurrencyController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.DictionaryController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.ExportTemplateController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.PrintTemplateController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.GiftCardController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.DiscountController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.EmailController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.EmailTemplateController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.EntityController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.LicensingController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.OrderController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.ProductAttributeController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.OrderStatusController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.ProductController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.PaymentMethodController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.ShippingMethodController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.TaxController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.UtilsController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Controllers.StoreController, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Trees.LogViewerTreeController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Trees.FilesTreeController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Trees.ContentBlueprintTreeController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -462,7 +646,9 @@ Umbraco.Web.Editors.ContentTypeController, Umbraco.Web, Version=8.0.0.0, Culture
 Umbraco.Web.Editors.MediaTypeController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Editors.SectionController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Editors.MediaController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Core.Web.Controllers.VendrPaymentController, Vendr.Core.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
 Umbraco.ModelsBuilder.Embedded.BackOffice.ModelsBuilderDashboardController, Umbraco.ModelsBuilder.Embedded, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Checkout.Web.Controllers.VendrCheckoutApiController, Vendr.Checkout, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Web.Mvc.SurfaceController
 
@@ -472,6 +658,8 @@ Umbraco.Web.Controllers.UmbRegisterController, Umbraco.Web, Version=8.0.0.0, Cul
 Umbraco.Web.Controllers.UmbLoginController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Huetours.Controller.ContactSurfaceController, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Huetours.Controller.Surface.SearchSurfaceController, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Huetours.Core.Controller.Surface.CartSurfaceController, Huetours.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Checkout.Web.Controllers.VendrCheckoutSurfaceController, Vendr.Checkout, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Core.Dashboards.IDashboard
 
@@ -491,6 +679,7 @@ Umbraco.ModelsBuilder.Embedded.ModelsBuilderDashboard, Umbraco.ModelsBuilder.Emb
 Umbraco.Core.PropertyEditors.IDataEditor
 
 Umbraco.Core.PropertyEditors.LabelPropertyEditor, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.PropertyEditors.VariantsEditor.VariantsEditorPropertyEditor, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PropertyEditors.BlockListPropertyEditor, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PropertyEditors.EyeDropperColorPickerPropertyEditor, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PropertyEditors.MediaPicker3PropertyEditor, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -533,6 +722,23 @@ Umbraco.Web.PropertyEditors.ParameterEditors.PropertyTypeParameterEditor, Umbrac
 
 Umbraco.Core.Cache.ICacheRefresher
 
+Vendr.Web.Cache.ExportTemplateCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.StockCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.CountryCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.CurrencyCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.PrintTemplateCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.GiftCardCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.DiscountCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.EmailTemplateCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.OrderCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.OrderStatusCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.PaymentMethodCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.ProductAttributePresetCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.RegionCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.ShippingMethodCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.ProductAttributeCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.StoreCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Cache.TaxClassCacheRefresher, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Cache.ContentCacheRefresher, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Cache.UserGroupCacheRefresher, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Cache.UserGroupPermissionsCacheRefresher, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -555,6 +761,7 @@ Umbraco.Core.PackageActions.IPackageAction
 
 Umbraco.Core.PackageActions.AllowDoctype, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.PackageActions.PublishRootDocument, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.PackageActions.InstallNuGetPackage, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Web.Trees.ISearchableTree
 
@@ -614,6 +821,29 @@ Umbraco.Web.HealthCheck.NotificationMethods.IHealthCheckNotificationMethod
 
 Umbraco.Web.HealthCheck.NotificationMethods.EmailNotificationMethod, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 
+Vendr.Core.Discounts.Rules.IDiscountRuleProvider
+Vendr.Core.Discounts.Rules.DiscountRuleProviderAttribute
+Vendr.Core.Discounts.Rules.GroupDiscountRuleProvider, Vendr.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Discounts.Rules.OrderAmountDiscountRuleProvider, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Discounts.Rules.OrderLineAmountDiscountRuleProvider, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Discounts.Rules.OrderLineQuantityDiscountRuleProvider, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Discounts.Rules.OrderLineProductDiscountRuleProvider, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Discounts.Rules.PropertyDiscountRuleProvider, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Discounts.Rules.MemberGroupDiscountRuleProvider, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Discounts.Rules.ShippingMethodDiscountRuleProvider, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Discounts.Rules.PaymentMethodDiscountRuleProvider, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+
+Vendr.Core.Discounts.Rewards.IDiscountRewardProvider
+Vendr.Core.Discounts.Rewards.DiscountRewardProviderAttribute
+Vendr.Web.Discounts.Rewards.OrderAmountDiscountRewardProvider, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Discounts.Rewards.OrderLineAmountDiscountRewardProvider, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.Web.Discounts.Rewards.ProductOrderLineAmountDiscountRewardProvider, Vendr.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+
+Vendr.Core.Web.PaymentProviders.IPaymentProvider
+Vendr.Core.Web.PaymentProviders.PaymentProviderAttribute
+Vendr.Core.Web.PaymentProviders.ZeroValuePaymentProvider, Vendr.Core.Web, Version=1.8.5.0, Culture=neutral, PublicKeyToken=null
+Vendr.PaymentProviders.Invoicing.InvoicingPaymentProvider, Vendr.PaymentProviders.Invoicing, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null
+
 Umbraco.Core.Models.PublishedContent.PublishedElementModel
 
 Umbraco.Web.PublishedModels.ContentBaseWosubTitle, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -622,8 +852,12 @@ Umbraco.Web.PublishedModels.FamousPlaceItems, Huetours, Version=1.0.0.0, Culture
 Umbraco.Core.Models.PublishedContent.PublishedContentModel
 
 Umbraco.Web.PublishedModels.AboutUs, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.PublishedModels.BachMaPark, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.PublishedModels.BicycleHire, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.PublishedModels.Cart, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Contact, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.ContentBase, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.PublishedModels.CycloHire, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.FAqs, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.FAqsItem, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.File, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -634,8 +868,11 @@ Umbraco.Web.PublishedModels.GroupTours, Huetours, Version=1.0.0.0, Culture=neutr
 Umbraco.Web.PublishedModels.Home, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Hotel, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.HotelItem, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.PublishedModels.HueCapital, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.PublishedModels.HuongRiver, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Image, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Member, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.PublishedModels.MotorbikeHire, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.NavigationBase, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.News, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.NewsItem, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -643,14 +880,21 @@ Umbraco.Web.PublishedModels.ReceiverContact, Huetours, Version=1.0.0.0, Culture=
 Umbraco.Web.PublishedModels.SearchingResult, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Settings, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.SoloTours, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.PublishedModels.ThienMuPagoda, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.PublishedModels.ThuanAnBeach, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Tours, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.ToursItem, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.PublishedModels.TrucLamMonastery, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.UmbracoMediaArticle, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.UmbracoMediaAudio, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.UmbracoMediaVectorGraphics, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.UmbracoMediaVideo, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Vehicle, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.VehicleItem, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.PublishedModels.VendrCheckoutBasePage, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.PublishedModels.VendrCheckoutCheckoutPage, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.PublishedModels.VendrCheckoutCheckoutStepPage, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.PublishedModels.VendrStoreDetails, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedModels.Voucher, Huetours, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Core.Deploy.IServiceConnector

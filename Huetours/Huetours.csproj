@@ -489,6 +489,7 @@
     <Content Include="Fonts\font-poppins\SIL Open Font License.txt" />
     <Content Include="Fonts\Merriweather\OFL.txt" />
     <Content Include="Global.asax" />
+    <Content Include="images\white-left-arrow.png" />
     <Content Include="images\back-top.svg" />
     <Content Include="images\chevorl-left.svg" />
     <Content Include="images\en-us.png" />

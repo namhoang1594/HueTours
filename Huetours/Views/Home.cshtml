@@ -10,34 +10,40 @@
     <div class="home_bannerimage">
         @foreach (var item in home.BannerImage)
         {
-            <img src="@(item.LocalCrops)" alt="">
-        }
+            <div class="slick-slider">
+                <img src="@(item.LocalCrops)" alt="">
+            </div>
+            }
     </div>
     <div class="box_content">
-            @Html.Raw(Model.Content)
-      
+        @Html.Raw(Model.Content)
+
         <form action="@search.Url()" class="home_searching">
+            <i class="fas fa-search"></i>
             <input type="text" name="Query" placeholder="@Umbraco.GetDictionaryValue("Searching")" />
             <button class="btn btn-home_searching"><span>@Umbraco.GetDictionaryValue("Search")</span></button>
         </form>
     </div>
 </section>
 
-@*@if (Model.AdvertisementImage != null)
-    {
-        <section id="banner_ads">
-            <div class="slick-slider">
-                @{
-                    foreach (var ads in Model.AdvertisementImage.MediaItem)
-                    {
-                        <div class="slick-slider">
-                            <img src="@ads.LocalCrops" alt="" />
-                        </div>
-                    }
+
+<section id="banner_ads">
+    <div class="container">
+        <div class="banner_title">
+            <h2>@home.AdvertisementTitle</h2>
+        </div>
+        <div class="banner_advertisement">
+            @{
+                foreach (var ads in home.AdvertisementImage)
+                {
+                    <div class="slick-slider">
+                        <img src="@(ads.LocalCrops)" alt="" />
+                    </div>
                 }
-            </div>
-        </section
-    }*@
+            }
+        </div>
+    </div>
+</section>
 
 <section id="famous_place">
     <div class="famous_place-title">
@@ -75,7 +81,7 @@
 
 @if (!string.IsNullOrEmpty(Model.PartnersTitle))
 {
-    <section class="partners">
+    <section class="partners" style="background-color: #eceff3">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

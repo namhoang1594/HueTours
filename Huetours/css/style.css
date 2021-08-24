@@ -37,7 +37,7 @@
     }
 
         #header .top_header .menu_top li a:hover {
-            background-color: rgba(0, 0, 0, 0.2);
+            background-color: #f5f5f5;
         }
 
     #header .top_header .menu_top li:first-child a {
@@ -45,7 +45,9 @@
     }
 
         #header .top_header .menu_top li:first-child a:hover {
-            color: #bf0a30;
+            border-radius: unset;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;          
         }
 #header .top_header .menu_top li:last-child a {
     text-align: center;
@@ -66,6 +68,12 @@
     bottom: 30px
 }
 
+    #header .top_header .menu_top .box-language .dropdown-menu{
+        min-width: unset;
+        padding:unset;
+        border: none;
+    }
+
     #header .top_header .menu_top .box-language .dropdown-toggle {
         color: red !important
     }
@@ -81,11 +89,25 @@
         #header .top_header .menu_top .box-language .dropdown-toggle:after {
             display: none
         }
-
-    #header .top_header .menu_top .box-language .dropdown-menu .dropdown-item:hover {
-        background: 0 0;
-        opacity: .5
+    #header .top_header .menu_top .box-language .dropdown-menu .dropdown-item {
+        background-color: #f5f5f5 !important;
+        border: #f5f5f5;
+        border-radius: unset;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        color: #000000;
     }
+
+        #header .top_header .menu_top .box-language .dropdown-menu .dropdown-item span {
+            margin-right: 5px;
+            margin-left: -12px;
+        }
+
+        #header .top_header .menu_top .box-language .dropdown-menu .dropdown-item:hover {
+            background: 0 0;
+            opacity: .5
+        }
 
     #header .top_header .menu_top .box-language a {
         color: #fff
@@ -196,9 +218,9 @@
                 #header .menu_header .main_menu > li:last-child > a:hover {
                 }
 
-#header .menu_header .main_menu > li:hover > a {
-    background-color: rgba(0, 0, 0, 0.2);
-}
+        #header .menu_header .main_menu > li:hover > a {
+            background-color: #f5f5f5;
+        }
 
         #header .menu_header .main_menu > li:hover .sub_menu {
             visibility: visible;
@@ -236,9 +258,7 @@
     left: 22%;
     z-index: 1
 }
-#banner_home .box_content .text_title {
-    color: #fff;
-}
+
 
 #banner_home .home_searching {
     display: flex;
@@ -249,9 +269,14 @@
     margin-right: auto;
     width: 100%;
 }
+    #banner_home .home_searching i {
+        position: absolute;
+        padding: 20px 0 0 9px;
+        font-size: 25px;
+    }
 
     #banner_home .home_searching input {
-        padding: 30px 20px;
+        padding: 20px 40px;
         -webkit-border-top-left-radius: 25px;
         -webkit-border-bottom-left-radius: 25px;
         -moz-border-radius-topleft: 25px;
@@ -285,18 +310,93 @@
 
     #banner_home .home_searching span {
         margin-left: 50px;
-        padding: 24px 45px;
-        font-size: 0.9em;
+        padding: 12px 40px;
+        font-size: 16px;
         font-weight: 300;
         color: #fff;
-        background-color: #F54E59;
+        background-color: #aa96da;
         border-radius: 20px;
         box-shadow: 2px 4px 6px rgb(0 0 0 / 19%);
     }
 
+    #banner_home .home_searching input::placeholder{
+        color: #000000 !important;
+    }
+
+#banner_home .home_bannerimage .slick-arrow {
+    width: 100px;
+    height: 50px;
+    background: url('/images/white-left-arrow.png') left no-repeat;
+    text-indent: -9999em;
+    overflow: hidden;
+    z-index: 99;
+    background-position: center;
+}
+
+#banner_home .home_bannerimage .slick-arrow.slick-prev:before {
+    content: none;
+}
+
+#banner_home .home_bannerimage .slick-arrow.slick-next {
+    transform: rotate(180deg);
+    top: 225px;
+}
+
+    #banner_home .home_bannerimage .slick-arrow.slick-next:before {
+        content: none;
+    }
+
+
+    /*BANNER ADVERTISEMENT*/
+    #banner_ads {
+        padding-top: 20px;
+        background-color: #f5f5f5;
+    }
+
+    #banner_ads .banner_title {
+        text-align: center;
+    }
+
+        #banner_ads .banner_advertisement .slick-slider img {
+            width: 100%;
+            height: 150px;
+            object-position: center;
+            object-fit: cover;
+        }
+#banner_ads .banner_advertisement .slick-arrow {
+    width: 50px;
+    height: 50px;
+    background: url('/images/Mask Group 10.png') left no-repeat white;
+    text-indent: -9999em;
+    overflow: hidden;
+    z-index: 99;
+    border-radius: 50%;
+    background-position: center;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
+    background-size: 20px;
+}
+
+    #banner_ads .banner_advertisement .slick-arrow.slick-prev:before {
+        content: none;
+    }
+
+    #banner_ads .banner_advertisement .slick-arrow.slick-next {
+        transform: rotate(180deg);
+        top: 50px;
+    }
+
+        #banner_ads .banner_advertisement .slick-arrow.slick-next:before {
+            content: none;
+        }
+
+
+
 
     /*FAMOUS PLACE*/
     /*=================================================================*/
+    #famous_place {
+        background-color: #f5f5f5;
+    }
     #famous_place .famous_place-title {
         padding: 30px 100px 10px;
     }
@@ -1037,10 +1137,11 @@ button:disabled,
 
         .footer .top_footer .footer_menu li a {
             text-decoration: none;
-            color: #333
+            color: #ffffff;
         }
-    .footer .top_footer .follow_us p{
+    .footer .top_footer .follow_us p {
         font-size: 15px;
+        color: #ffffff;
     }
     .footer .top_footer .follow_us .follow_us_icon {
         display: flex;
@@ -1122,6 +1223,10 @@ button:disabled,
 
 
     /*SHOWTOURS*/
+#showtours {
+    background-color: #eceff3;
+    padding-top: 10px;
+}
 #showtours .card {
     display: flex;
     flex-direction: column;
@@ -1145,7 +1250,7 @@ button:disabled,
         flex-direction: column;
     }
         #showtours .card .card-content .news_title {
-            font-size: 18px;
+            font-size: 20px;
             padding: 0 5px;
             text-overflow: ellipsis;
             -webkit-line-clamp: 2;
@@ -1154,7 +1259,7 @@ button:disabled,
             overflow: hidden;
         }
         #showtours .card .card-content .news_startday {
-            font-size: 14px;
+            font-size: 12px;
             padding-left: 5px;
         }
             #showtours .card .card-content .news_startday i{
@@ -1191,6 +1296,7 @@ button:disabled,
     background-position: center;
     box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
     background-size: 20px;
+    top: 198px;
 }
     #showtours .slider-tours .slick-arrow.slick-prev:before {
         content: none;
@@ -1330,4 +1436,14 @@ button:disabled,
 
 #toursItem .order_tours .input-group-btn {
     padding: 15px 0;
+}
+
+
+
+/*GROUP TOURS*/
+#news .box_content {
+    position: absolute;
+    top: 50%;
+    left: 22%;
+    z-index: 1
 }
