@@ -8,7 +8,6 @@
     var tours = (Tours)home.Children.FirstOrDefault(x => x.ContentType.Alias.Equals("tours"));
     var gtours = (GroupTours)tours.Children.FirstOrDefault(x => x.ContentType.Alias.Equals("groupTours"));
     var cart = (Cart)home.Children.FirstOrDefault(x => x.ContentType.Alias.Equals("cart"));
-
 }
 
 <section class="breadcrumb">
@@ -59,7 +58,12 @@
                         <span>@Model.DescriptionText4</span>
                     </div>
                 </div>
-
+                <div class="tourItem_contents">
+                    <div class="tourItem_contents_child">
+                        @Umbraco.GetDictionaryValue("Highlights of the tour")
+                    </div>
+                    @Html.Raw(Model.ShortContent)
+                </div>
                 <div class="tourItem_contents">
                     <div class="tourItem_contents_child">
                         @Umbraco.GetDictionaryValue("What to expect")

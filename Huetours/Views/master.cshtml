@@ -321,7 +321,20 @@
     <script type="text/javascript" src="~/js/libs/validateForm.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
-
+    <script type="text/javascript">
+        var btn = $('#button');
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 400) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '400');
+        });
+    </script>
     <script>
         $(window).scroll(function () {
             $('.slider-tours').slick({
@@ -356,20 +369,7 @@
         });
     </script>
 
-    <script type="text/javascript">
-        var btn = $('#button');
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > 500) {
-                btn.addClass('show');
-            } else {
-                btn.removeClass('show');
-            }
-        });
-        btn.on('click', function (e) {
-            e.preventDefault();
-            $('html, body').animate({ scrollTop: 0 }, '400');
-        });
-    </script>
+
     @RenderSection("ScriptsBottom", false)
 
 </body>
