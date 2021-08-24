@@ -227,7 +227,7 @@
             <a id="button"><i class="fas fa-arrow-up"></i></a>
         </div>
 
-        <footer class="footer">
+        <footer class="footer" style="background-color: #000000c2">
             <div class="top_footer">
                 <div class="container">
                     <div class="row">
@@ -302,9 +302,9 @@
                     </div>
                 </div>
             </div>
-            <div class="bottom_footer">
+            <div class="bottom_footer" style="background-color: #000000">
                 <div class="container">
-                    <div class="text_reserved text-center">
+                    <div class="text_reserved text-center" style="color: #ffffff; ">
                         @Html.Raw(home.Copyright)
                     </div>
                 </div>
@@ -326,6 +326,21 @@
                 infinite: true,
                 slidesToShow: 5,
                 slidesToScroll: 1
+            });
+
+            $('.home_bannerimage').slick({
+                arrows: true,
+                centerPadding: "0px",
+                slidesToShow: 1,
+                infinite: true,
+                autoplay: true
+            });
+
+            $('.banner_advertisement').slick({
+                arrows: true,
+                centerPadding: "0px",
+                slidesToShow: 1,
+                infinite: true,
             });
 
             $('.single_image_tours').slick({

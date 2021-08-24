@@ -13,9 +13,9 @@
     <section id="showtours">
         <div class="container">
             <div class="row">
-                <h3 class="col-md-12 col-sm-12 section-title">
+                <h2 class="col-md-12 col-sm-12 section-title">
                     <span class="display-block  title-bottom">@tours.PageTitle</span>
-                </h3>
+                </h2>
             </div>
 
             <div class="row slider-tours">
@@ -37,6 +37,9 @@
                                 </div>
                                 <div class="news_startday">
                                     <p><i class="fas fa-sort-numeric-up-alt"></i>@Umbraco.GetDictionaryValue("Number Day") <span style="font-weight: 600;">@Html.Raw(items.HowManyDays)</span></p>
+                                </div>
+                                <div class="news_startday">
+                                    <p><i class="fas fa-user-friends"></i>@Umbraco.GetDictionaryValue("Number Tourist")<span style="font-weight: 600;">@Html.Raw(items.HowManyTourists)</span></p>
                                 </div>
                                 <div class="news_discount">
                                     @Html.Raw(items.Discount)

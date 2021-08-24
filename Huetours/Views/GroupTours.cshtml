@@ -25,9 +25,7 @@
 <section id="news">
     <img style="width: 100%" src="@(Model.BackgroundImage?.LocalCrops)" alt="">
     <div class="box_content">
-        <h1 class="text_title">
             @Html.Raw(Model.Content)
-        </h1>
     </div>
 </section>
 
@@ -36,7 +34,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div>
-                    <h1>@Umbraco.GetDictionaryValue("Hue News")</h1>
+                    <h1>@Umbraco.GetDictionaryValue("Group Tours")</h1>
                 </div>
                 <div class="row">
                     @{
@@ -57,21 +55,19 @@
                                                     <a href="@toursItem.Url()">@Html.Raw(toursItem.PageTitle)</a>
                                                 </h2>
                                                 <div class="news_startday">
-                                                    <p><i class="far fa-calendar-alt"></i>Ngày đi: <span style="font-weight: 600;">@Html.Raw(toursItem.StartDay.ToString("dd/MM/yyyy"))</span></p>
+                                                    <p><i class="far fa-calendar-alt"></i>@Umbraco.GetDictionaryValue("Start Day")<span style="font-weight: 600;">@Html.Raw(toursItem.StartDay.ToString("dd/MM/yyyy"))</span></p>
                                                 </div>
                                                 <div class="news_startday">
-                                                    <p><i class="fas fa-sort-numeric-up-alt"></i>Số ngày: <span style="font-weight: 600;">@Html.Raw(toursItem.HowManyDays)</span></p>
+                                                    <p><i class="fas fa-sort-numeric-up-alt"></i>@Umbraco.GetDictionaryValue("Number Day")<span style="font-weight: 600;">@Html.Raw(toursItem.HowManyDays)</span></p>
+                                                </div>
+                                                <div class="news_startday">
+                                                    <p><i class="fas fa-user-friends"></i>@Umbraco.GetDictionaryValue("Number Tourist")<span style="font-weight: 600;">@Html.Raw(toursItem.HowManyTourists)</span></p>
+                                                </div>
+                                                <div class="news_discount">
+                                                    @Html.Raw(toursItem.Discount)
                                                 </div>
                                                 <div class="news_price">
-                                                    @Html.Raw(toursItem.CalculatePrice().Formatted())   
-                                                    
-                                                    @*@using(Html.BeginUmbracoForm("AddToCart", "CartSurface"))
-                                                     {
-                                                        @Html.Hidden("toursReference", Model.GetTourReferece())
-                                                        @Html.TextBox("quantity", 1)
-
-                                                        <button class="btn btn-warning">@Umbraco.GetDictionaryValue("Add to cart")<i class="fas fa-cart-plus"></i></button>
-                                                     }*@
+                                                    @Html.Raw(toursItem.CalculatePrice().Formatted())
                                                 </div>
                                             </div>
                                         </div>
