@@ -1,45 +1,121 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.HotelItem>
 @using ContentModels = Umbraco.Web.PublishedModels;
+@using Huetours.Core.Extensions;
+@using Vendr.Core;
 @{
     Layout = "master.cshtml";
     var home = (Home)Model.Root();
+    var hotel = (Hotel)home.Children.FirstOrDefault(x => x.ContentType.Alias.Equals("hotel"));
+    var cart = (Cart)home.Children.FirstOrDefault(x => x.ContentType.Alias.Equals("cart"));
 }
 
 <section class="breadcrumb">
-    @*<img class="breadcrumb_background" src="@bgrImage" alt="">*@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="breadcrumb_content">
-                    <ul class="breadcrumb_list">
-                        <li>
-                            <a href="/">@home.PageTitle</a>
-                        </li>
-                        <li>
-                            <a href="@Model.Parent.Url()">@(Model.Parent.Value<string>("pageTitle"))</a>
-                        </li>
-                    </ul>
-                    <h3 class="breadcrumb_title">@Model.PageTitle</h3>
+                <div class="single_image_tours">
+                    @foreach (var item in Model.HotelImages)
+                    {
+                        <div class="tourItem_images">
+                            <img src="@(item.LocalCrops)" alt=" " />
+                        </div>
+                    }
+                </div>
+                <div class="breadcrumb">
+                    <p><a href="@home.Url()">@home.PageTitle</a><span> > </span><a href="@hotel.Url()">@hotel.PageTitle</a><span> > </span><a style="color: #aa96da">@Model.PageTitle</a></p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="blog_page">
+
+<section id="toursItem">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-10">
-                <div class="blog_detail">
-                    <h2 class="name_blog">
-                        @Model.PageTitle
-                    </h2>
-                    <div class="time_create">@Model.CreateDate.ToString("MMM dd, yyyy")</div>
-                    <div class="content_detail">
-                        <h2>@Model.SubPageTitle</h2>
-                        @Html.Raw(Model.Content)
+        <div class="row">
+            <div class="col-md-8">
+                <div class="tourItem_title">
+                    <h3>@Model.PageTitle</h3>
+                </div>
+                <div class="tourItem_subtitle">
+                    <p>@Model.SubPageTitle</p>
+                </div>
+                <div class="tourItem_services">
+                    <div class="tourItem_services_child">
+                        <img src="@Model.DescriptionImage1.LocalCrops" alt=" " />
+                        <span>@Model.DescriptionText1</span>
+                    </div>
+                    <div class="tourItem_services_child">
+                        <img src="@Model.DescriptionImage2.LocalCrops" alt=" " />
+                        <span>@Model.DescriptionText2</span>
+                    </div>
+                    <div class="tourItem_services_child">
+                        <img src="@Model.DescriptionImage3.LocalCrops" alt=" " />
+                        <span>@Model.DescriptionText3</span>
+                    </div>
+                    <div class="tourItem_services_child">
+                        <img src="@Model.DescriptionImage4.LocalCrops" alt=" " />
+                        <span>@Model.DescriptionText4</span>
                     </div>
                 </div>
+                <div class="tourItem_contents">
+                    <div class="tourItem_contents_child">
+                        @Umbraco.GetDictionaryValue("Highlights of the tour")
+                    </div>
+                    @Html.Raw(Model.ShortContent)
+                </div>
+                <div class="tourItem_contents">
+                    <div class="tourItem_contents_child">
+                        @Umbraco.GetDictionaryValue("What to expect")
+                    </div>
+                    @Html.Raw(Model.Content)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                @using (Html.BeginUmbracoForm("AddToCart", "CartSurface", null, htmlAttributes: new { id = "addToCart" }))
+                {
+                    @Html.Hidden("productReference", Model.GetProductReference())
+                    <div class="order_tours">
+                        <div class="order_tours_title"><p>@Umbraco.GetDictionaryValue("Order tours")</p></div>
+                        <div class="order_tours_startday">
+                            <p>@Umbraco.GetDictionaryValue("Start Day")</p>
+                            <input type="date" />
+                        </div>
+                        <div class="order_tours_price">
+                            <p>@Umbraco.GetDictionaryValue("Price")</p>
+                            @Html.Raw(Model.CalculatePrice().Formatted())
+                        </div>
+                        <div class="input order_tours_numbertourist">
+                            <p>@Umbraco.GetDictionaryValue("Number Tourist")</p>
+                            @Html.TextBox("quantity", 1, new { @type = "number", @class = "form-control input-number" })
+                        </div>
+                        <div class="input-group-btn">
+                            <button class="btn btn-warning">@Umbraco.GetDictionaryValue("Add to cart")<i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                }
             </div>
         </div>
     </div>
 </section>
+
+@section ScriptsBottom
+{
+    @if (!(TempData["addedProductReference"]?.ToString()).IsNullOrWhiteSpace())
+    {
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Toastify({
+                    text: @Umbraco.GetDictionaryValue("Product added to cart successfully"),
+                    duration: 0,
+                    destination: "@cart.Url()",
+                    newWindow: false,
+                    gravity: "bottom",
+                    position: "center",
+                    close: true,
+                    stopOnFocus: true,
+                }).showToast();
+            });
+        </script>
+    }
+}
