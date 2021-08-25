@@ -1,5 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Home>
 @using ContentModels = Umbraco.Web.PublishedModels;
+@using Huetours.Core.Extensions;
+@using Vendr.Core;
 @{
     var hotel = (Hotel)Model.Children.FirstOrDefault(x => x.ContentType.Alias.Equals("hotel"));
     var hotelItems = hotel.Children<HotelItem>().OrderByDescending(c => c.CreateDate).Take(9);
@@ -9,9 +11,9 @@
     <section id="showtours">
         <div class="container">
             <div class="row">
-                <h3 class="col-md-12 col-sm-12 section-title">
+                <h2 class="col-md-12 col-sm-12 section-title">
                     <span class="display-block  title-bottom">@hotel.PageTitle</span>
-                </h3>
+                </h2>
             </div>
 
             <div class="row slider-tours">
@@ -25,21 +27,31 @@
                                 </a>
                             </div>
                             <div class="news_info">
+                                <div class="news_startday" style="color: #b93c00; margin-bottom: -15px; ">
+                                    <p>@items.Stars</p>
+                                </div>
                                 <h2 class="news_title">
                                     <a href="@items.Url()">@Html.Raw(items.PageTitle)</a>
                                 </h2>
-                                @*<div class="news_startday">
-                                    <p><i class="far fa-calendar-alt"></i>Ngày đi: <span style="font-weight: 600;">@Html.Raw(items.StartDay.ToString("dd/MM/yyyy"))</span></p>
-                                </div>
                                 <div class="news_startday">
-                                    <p><i class="fas fa-sort-numeric-up-alt"></i>Số ngày: <span style="font-weight: 600;">@Html.Raw(items.HowManyDays)</span></p>
-                                </div>*@
+                                    <p><i class="fas fa-book"></i>@Umbraco.GetDictionaryValue("Order") <span style="font-weight: 600;">@Html.Raw(items.Order)</span></p>
+                                </div>
+                                <div class="news_discount" style="text-decoration:none; font-size: 15px;">
+                                    <p><span>@Umbraco.GetDictionaryValue("Discount"):</span> @Html.Raw(items.Discount)</p>
+                                </div>
                                 <div class="news_price">
-                                    @Html.Raw(items.Price)
+                                    <p><span style="color: black; font-size: small; font-weight: normal;">@Umbraco.GetDictionaryValue("From")</span> @Html.Raw(items.CalculatePrice()?.Formatted())</p>
                                 </div>
                             </div>
                         </div>
                     </div>}
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="news_list text-center">
+                        <a href="@hotel.Url()">@Umbraco.GetDictionaryValue("Show All")</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

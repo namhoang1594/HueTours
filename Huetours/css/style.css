@@ -139,9 +139,11 @@
 #header .menu_header .main_menu {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     list-style: none;
-    padding: 0;
+    /*padding: 0;*/
+    margin-top: -10px;
+    margin-bottom: -10px;
 }
 
     #header .menu_header .main_menu li {
@@ -170,7 +172,7 @@
             list-style: none;
             padding: 0;
             position: absolute;
-            top: 100%;
+            top: 86%;
             width: 200px;
             background: #fff;
             box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
@@ -255,7 +257,7 @@
 #banner_home .box_content {
     position: absolute;
     top: 40%;
-    left: 22%;
+    left: 24%;
     z-index: 1
 }
 
@@ -348,22 +350,22 @@
 
 
     /*BANNER ADVERTISEMENT*/
-    #banner_ads {
-        padding-top: 20px;
+    #banner_qc {
+        padding-top: 40px;
         background-color: #f5f5f5;
     }
 
-    #banner_ads .banner_title {
+    #banner_qc .banner_title {
         text-align: center;
     }
 
-        #banner_ads .banner_advertisement .slick-slider img {
+        #banner_qc .banner_advertisement .slick-slider img {
             width: 100%;
             height: 150px;
             object-position: center;
             object-fit: cover;
         }
-#banner_ads .banner_advertisement .slick-arrow {
+#banner_qc .banner_advertisement .slick-arrow {
     width: 50px;
     height: 50px;
     background: url('/images/Mask Group 10.png') left no-repeat white;
@@ -376,16 +378,16 @@
     background-size: 20px;
 }
 
-    #banner_ads .banner_advertisement .slick-arrow.slick-prev:before {
+    #banner_qc .banner_advertisement .slick-arrow.slick-prev:before {
         content: none;
     }
 
-    #banner_ads .banner_advertisement .slick-arrow.slick-next {
+    #banner_qc .banner_advertisement .slick-arrow.slick-next {
         transform: rotate(180deg);
         top: 50px;
     }
 
-        #banner_ads .banner_advertisement .slick-arrow.slick-next:before {
+        #banner_qc .banner_advertisement .slick-arrow.slick-next:before {
             content: none;
         }
 
@@ -395,10 +397,12 @@
     /*FAMOUS PLACE*/
     /*=================================================================*/
     #famous_place {
+        padding-top: 10px;
         background-color: #f5f5f5;
     }
     #famous_place .famous_place-title {
         padding: 30px 100px 10px;
+        text-align:center
     }
 #famous_place .famous_place-item {
     position: relative;
@@ -505,15 +509,16 @@
     font-family: Taviraj-SemiBold;
 }
 
-  
+
 
     .news_list a {
         display: inline-block;
-        color: #211a0f;
-        border: solid 1px rgba(51, 51, 51, 0.5);
+        color: rgb(51 51 51 / 85%);
+        border: solid 2px rgba(51, 51, 51, 0.5);
         margin-top: 2rem;
-        padding: 7px 15px 7px 15px;
-        text-decoration:none;
+        padding: 7px 85px 7px 85px;
+        border-radius: 5px;
+        font-size: 17px;
     }
         .news_list a:hover {
             background-color: darkviolet;
@@ -883,6 +888,9 @@ article p img,
             cursor: pointer;
             position: relative;
             line-height: 1.33;
+            font-size: 20px;
+            font-weight: 600;
+            color: #000000b8;
         }
 
       #about_us .about_title{
@@ -908,7 +916,7 @@ article p img,
     }
 
         #about_us .list_faqs .item_faq .active_title {
-            color: #cb00d4;
+            color: darkviolet;
         }
 
 #about_us .list_faqs .item_faq .active_faq .open {
@@ -922,6 +930,7 @@ article p img,
 #about_us .list_faqs .item_faq .content {
     display: none;
     padding-top: 1rem;
+    color: black;
 }
 
 #about_us {
@@ -1225,7 +1234,10 @@ button:disabled,
     /*SHOWTOURS*/
 #showtours {
     background-color: #eceff3;
-    padding-top: 10px;
+    padding-top: 30px;
+}
+#showtours .section-title{
+    text-align:center;
 }
 #showtours .card {
     display: flex;

@@ -1,5 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Hotel>
 @using ContentModels = Umbraco.Web.PublishedModels;
+@using Huetours.Core.Extensions;
+@using Vendr.Core;
 @{
     Layout = "master.cshtml";
     var home = (Home)Model.Root();
@@ -24,65 +26,62 @@
 
 <section id="news">
     <img style="width: 100%" src="@(Model.BackgroundImage?.LocalCrops)" alt="">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="breadcrumb">
-                    <p><a href="@home.Url()">@home.PageTitle</a><span> / </span><a style="color: #FFCC66">@Model.PageTitle</a></p>
-                </div>
-            </div>
-        </div>
+    <div class="box_content">
+        @Html.Raw(Model.Content)
     </div>
 </section>
-<section class="blog_page">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-8">
-                <div>
-                    <h1>@Umbraco.GetDictionaryValue("Hue News")</h1>
-                </div>
-                @{
-                    if (Model.Children != null)
-                    {
-                        foreach (HotelItem newsItem in pagedNews)
-                        {
-                            <div class="item_blog">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h2 class="name_blog">
-                                            <a href="@newsItem.Url()">
-                                                @newsItem.PageTitle
-                                            </a>
-                                        </h2>
-                                        @*<div class="time_create">@newsItem.CreateDate.ToString("MMMM dd, yyyy")</div>*@
-                                    </div>
-                                </div>
-                                <div class="float">
-                                    @*<a href="@newsItem.Url()">
-                                        <img class="avatar_blog" src="@newsItem.ThumbnailImage.LocalCrops" alt="">
-                                    </a>*@
-                                    <div class="summary_blog">
-                                        @newsItem.Content
-                                    </div>
-                                </div>
-                                <div class="read_more">
-                                    <a href="@newsItem.Url()">
-                                        <span>@Umbraco.GetDictionaryValue("Read More")</span>
-                                        <span>
-                                            <img src="../images/icon_right.svg" alt="">
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        }
-                    }
 
-                }
+<section id="showtours">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <h1>@Model.PageTitle</h1>
+                </div>
+                <div class="row">
+                    @{
+                        if (Model.Children != null)
+                        {
+                            foreach (HotelItem items in pagedNews)
+                            {
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="card item-card">
+                                        <div class="card-content news_item">
+                                            <div class="news_image">
+                                                <a href="@items.Url()">
+                                                    <img class="image" src="@(items.ThumbnailImage?.LocalCrops)" alt="@(items.ThumbnailImage?.LocalCrops)" />
+                                                </a>
+                                            </div>
+                                            <div class="news_info">
+                                                <div class="news_startday" style="color: #b93c00; margin-bottom: -15px; ">
+                                                    <p>@items.Stars</p>
+                                                </div>
+                                                <h2 class="news_title">
+                                                    <a href="@items.Url()">@Html.Raw(items.PageTitle)</a>
+                                                </h2>
+                                                <div class="news_startday">
+                                                    <p><i class="fas fa-book"></i>@Umbraco.GetDictionaryValue("Order") <span style="font-weight: 600;">@Html.Raw(items.Order)</span></p>
+                                                </div>
+                                                <div class="news_discount" style="text-decoration:none; font-size: 15px;">
+                                                    <p><span>@Umbraco.GetDictionaryValue("Discount"):</span> @Html.Raw(items.Discount)</p>
+                                                </div>
+                                                <div class="news_price">
+                                                    <p><span style="color: black; font-size: small; font-weight: normal;">@Umbraco.GetDictionaryValue("From")</span> @Html.Raw(items.CalculatePrice()?.Formatted())</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+
+                    }
+                </div>
             </div>
 
             @if (newsPosts.Count > numberOfNews)
             {
-                <div class="col-md-9 col-mm-12">
+                <div class="col-md-12 col-mm-12">
                     <nav id="box_pagination">
                         <ul class="pagination">
                             @if (page <= 1)
@@ -129,32 +128,36 @@
             <div class="col-md-10 col-mm-12">
                 <div id="@Model.Name.MakePluralName()">
                     <div class="about_content">
-                        <h2 class="about_title">@(Model.PageTitle)</h2>
                         <div class="row">
-                            <div class="col-md-12 col-mm-12">
-                          
-                                    @foreach (var faqItem in faqItems)
-                                    {
-                                        <h3 class="faq_title_section">@faqItem.FAqtitle</h3>
-                                        <div class="list_faqs">
-                                            @foreach (var faqChildItem in faqItem.FAqitem)
-                                            {<div class="item_faq">
-                                                    <div class="title_faq">
-                                                        <sapn>@faqChildItem.PageTitle</sapn>
-                                                        <span class="icon_faq">
-                                                            <img class="close" src="~/images/icon_close_faq.svg" alt="">
-                                                            <img class="open" src="~/images/icon_plus_db.svg" alt="">
-                                                        </span>
-                                                    </div>
-                                                    <div class="content">
-                                                        @Html.Raw(faqChildItem.Content)
-                                                    </div>
-                                                </div>
+                            <div class="col-md-7">
 
-                                            }
-                                        </div>
-                                    }
-                                
+                                @foreach (var faqItem in faqItems)
+                                {
+                                    <h2 class="faq_title_section">@faqItem.FAqtitle</h2>
+                                    <div class="list_faqs">
+                                        @foreach (var faqChildItem in faqItem.FAqitem)
+                                        {<div class="item_faq">
+                                                <div class="title_faq">
+                                                    <sapn>@faqChildItem.PageTitle</sapn>
+                                                    <span class="icon_faq">
+                                                        <img class="close" src="~/images/icon_close_faq.svg" alt="">
+                                                        <img class="open" src="~/images/icon_plus_db.svg" alt="">
+                                                    </span>
+                                                </div>
+                                                <div class="content">
+                                                    @Html.Raw(faqChildItem.Content)
+                                                </div>
+                                            </div>
+
+                                        }
+                                    </div>
+                                }
+
+                            </div>
+                            <div class="col-md-5">
+                                <div>
+                                    <img src="@Model.FAqsImage.LocalCrops" alt=" " />
+                                </div>
                             </div>
                         </div>
                     </div>

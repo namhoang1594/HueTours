@@ -52,6 +52,13 @@ namespace Umbraco.Web.PublishedModels
 		public virtual global::Umbraco.Core.Models.MediaWithCrops BackgroundImage => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("backgroundImage");
 
 		///<summary>
+		/// FAQs Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("fAQsImage")]
+		public virtual global::Umbraco.Core.Models.MediaWithCrops FAqsImage => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("fAQsImage");
+
+		///<summary>
 		/// How Many Hotel Should Be Shown?
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
