@@ -38,7 +38,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-7">
-                <div>
+                <div style="padding-bottom: 20px;">
                     <h1>@Umbraco.GetDictionaryValue("Hue News")</h1>
                 </div>
                 @{
@@ -72,8 +72,8 @@
                 }
             </div>
 
-            <div id="popular_news" class="col-md-4 col-offset-md-1">
-                <div>
+            <div id="popular_news" class="col-md-4 col-offset-md-1" style="padding-left: 50px;">
+                <div style="padding-bottom: 20px;">
                     <h1>@Umbraco.GetDictionaryValue("Popular News")</h1>
                 </div>
                 @{
@@ -106,7 +106,7 @@
 
             @if (newsPosts.Count > numberOfNews)
             {
-                <div class="col-md-7 col-mm-12">
+                <div class="col-md-7 col-mm-12" style="display:flex;">
                     <nav id="box_pagination">
                         <ul class="pagination">
                             @if (page <= 1)
