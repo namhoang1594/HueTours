@@ -505,6 +505,7 @@
     <Content Include="js\libs\validateForm.js" />
     <Content Include="js\slick.min.js" />
     <Content Include="Media\034cuuns\72335-song-huong-xu-hue-700x467.jpg" />
+    <Content Include="Media\0e1pnxuh\checkin-hue-dlh.jpg" />
     <Content Include="Media\0fimb2bc\tour-hue-1-e1471683519556.jpg" />
     <Content Include="Media\0igdnglj\tour-hue-e1471683464282.jpg" />
     <Content Include="Media\2uhb51el\logo_ht-resize.png" />
@@ -520,6 +521,7 @@
     <Content Include="Media\btop1cwj\icon_voucher-900_jpa51y-removebg-preview.png" />
     <Content Include="Media\bzwpsy12\midtown-hotel-hue.jpg" />
     <Content Include="Media\dkxdgnwj\ash-lobby.jpg" />
+    <Content Include="Media\dr4aq3y4\qiongru-194629034628-kmihqgqw-1.jpeg" />
     <Content Include="Media\edeh1qpq\unnamed.jpg" />
     <Content Include="Media\g2mneblm\thien-vien-truc-lam-bach-ma-768x513.png" />
     <Content Include="Media\ghpfw3z4\05fb4e0841c600c379593ffe0612f5ca.jpg" />
@@ -527,6 +529,7 @@
     <Content Include="Media\gvwhaxke\download.jpg" />
     <Content Include="Media\hxplnojc\tham-lang-que-xu-hue-bang-xich-lo.jpg" />
     <Content Include="Media\ij1ndm20\dai-noi-hue-1.jpg" />
+    <Content Include="Media\iy0f0qlj\di-dao-pho-dem-hue-768x506.jpg" />
     <Content Include="Media\j1xjjwze\icon_transfer_color-gray-900_guqi0a-removebg-preview.png" />
     <Content Include="Media\k0efe3rv\den-pha-tam-giang-kham-pha-dam-nuoc-lo-noi-tieng3.jpg" />
     <Content Include="Media\llrlu55h\icon_language_color-gray-900_iiwq13-removebg-preview.png" />
@@ -536,11 +539,16 @@
     <Content Include="Media\nwwos2dr\219899547.jpg" />
     <Content Include="Media\oqphm4ft\257004719.jpg" />
     <Content Include="Media\otwb4uzo\54013-emm-hotel-hue-6-700x525.jpg" />
+    <Content Include="Media\ozckvzll\9684f063_z.webp" />
     <Content Include="Media\p3cnxww1\mask-group-2.png" />
     <Content Include="Media\p5dligbd\hình-3-2-1.jpg" />
+    <Content Include="Media\phliei1i\hoa-sen-xu-hue-1.jpg" />
     <Content Include="Media\pqplvgx4\pngtree-square-frame-1727475-png-image_1731517.jpg" />
     <Content Include="Media\q0unlykq\den-pha-tam-giang-kham-pha-dam-nuoc-lo-noi-tieng2.jpg" />
     <Content Include="Media\qzsfxqtl\icon_cancellation_oe139y-removebg-preview.png" />
+    <Content Include="Media\rald0m0e\download.jpg" />
+    <Content Include="Media\rrlncn1e\dien-hon-chen.jpg" />
+    <Content Include="Media\s4qlvqxt\van-mieu-quoc-tu-giam-hue-dlh.jpg" />
     <Content Include="Media\strn0ypj\icon_24_6.png" />
     <Content Include="Media\sunopstl\kinh-thanh-hue-du-lich-960_1.jpg" />
     <Content Include="Media\t4qaw5xk\masks_vorxch.png" />
@@ -749,7 +757,6 @@
     <Content Include="App_Plugins\VendrCheckout\Views\VendrCheckoutReviewPage.cshtml" />
     <Content Include="App_Plugins\VendrCheckout\Views\VendrCheckoutShippingMethodPage.cshtml" />
     <Content Include="App_Plugins\VendrCheckout\Views\Web.config" />
-    <Content Include="Media\ozckvzll\9684f063_z.webp" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />

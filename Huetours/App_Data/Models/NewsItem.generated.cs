@@ -45,6 +45,13 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
+		/// Author
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("author")]
+		public virtual string Author => this.Value<string>("author");
+
+		///<summary>
 		/// Pin
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
@@ -57,6 +64,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
 		[ImplementPropertyType("publishedDate")]
 		public virtual global::System.DateTime PublishedDate => this.Value<global::System.DateTime>("publishedDate");
+
+		///<summary>
+		/// Reference Site
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("referenceSite")]
+		public virtual string ReferenceSite => this.Value<string>("referenceSite");
 
 		///<summary>
 		/// Short Content
