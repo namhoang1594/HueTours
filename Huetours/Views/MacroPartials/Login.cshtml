@@ -24,7 +24,7 @@
 {
     @Html.HiddenFor(m => loginModel.RedirectUrl)
     <fieldset>
-        <legend>Login</legend>
+        <legend>Đăng nhập</legend>
 
         @Html.ValidationSummary("loginModel", true)
 
@@ -38,6 +38,6 @@
         @Html.ValidationMessageFor(m => loginModel.Password)
         <br />
 
-        <button>Login</button>
+        <button>Login</button> <button><a href="">Đăng ký</a></button>
     </fieldset>
 }

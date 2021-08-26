@@ -28,7 +28,7 @@
 
     <input type="hidden" name="nextStep" value="@(nextStepPage?.Id)" />
 
-    <h3 class="text-xl font-medium mb-4 mt-8">Payment Method</h3>
+    <h3 class="text-xl font-medium mb-4 mt-8">Phương thức thanh toán</h3>
 
     if (currentOrder.TotalPrice.Value.WithTax > 0 || zeroValuePaymentMethod == null)
     {
@@ -49,7 +49,7 @@
     else
     {
         <input type="hidden" name="paymentMethod" value="@(zeroValuePaymentMethod.Id)" />
-        <div class="border border-gray-300 rounded py-4 px-4 text-center">It looks like today is your lucky day, there is nothing for you to pay 🎉</div>
+        <div class="border border-gray-300 rounded py-4 px-4 text-center">Có vẻ như hôm nay là ngày may mắn của bạn, bạn không phải tốn bất cứ chi phí nào 🎉</div>
     }
 
     @Html.VendrCheckoutPartial("VendrCheckoutPrevNext")

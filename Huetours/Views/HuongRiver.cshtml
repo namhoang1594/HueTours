@@ -1,5 +1,38 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.HuongRiver>
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
-	Layout = "master.cshtml";
+    Layout = "master.cshtml";
+    var home = (Home)Model.Root();
+
 }
+
+<section class="breadcrumb">
+    <img style="width: 100%" src="@Model.BackgroundImage.LocalCrops" alt="">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb" style="padding-top: 15px; padding-left: 90px;">
+                    <p><a href="@home.Url()" style="color: #b50f0f"><span>@Umbraco.GetDictionaryValue("Home")</span></a><span> > </span><span style="color: #aa96da">@Model.PageTitle</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="blog_page">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="blog_detail">
+                    <h2 class="name_blog">
+                        @Model.PageTitle
+                    </h2>
+                    <div class="time_create">@Model.CreateDate.ToString("MMMM dd, yyyy")</div>
+                    <div class="content_detail">
+                        <h2>@Model.SubPageTitle</h2>
+                        @Html.Raw(Model.Content)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -23,12 +23,12 @@
                     <table class="table table-shopping">
                         <thead>
                             <tr>
-                                <th>Product</th>
+                                <th>Sản Phẩm</th>
                                 <th></th>
                                 <th></th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th>Amount</th>
+                                <th>Giá</th>
+                                <th>Số Người</th>
+                                <th>Thành Tiền</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -74,16 +74,16 @@
                             }
                             <tr>
                                 <td></td>
-                                <td colspan="2">Total</td>
+                                <td colspan="2">Tổng: </td>
                                 <td class="td-price">
                                     @(order.SubtotalPrice.Value.Formatted())
                                 </td>
                                 <td></td>
                                 <td>
-                                    <button class="btn btn-success btn-round" title="Refresh Cart">Update Cart <i class="fas fa-sync"></i></button>
+                                    <button class="btn btn-success btn-round" title="Refresh Cart">Cập nhật  <i class="fas fa-sync"></i></button>
                                 </td>
                                 <td class="text-right">
-                                    <a href="@checkout.Url()" class="btn btn-info btn-round">Go to checkout <i class="fas fa-shopping-cart"></i></a>
+                                    <a href="@checkout.Url()" class="btn btn-info btn-round">Thanh Toán <i class="fas fa-shopping-cart"></i></a>
                                 </td>
                             </tr>
                         </tbody>
@@ -95,10 +95,10 @@
         {
             var shopPage = Model.Root().ChildrenOfType("groupTours").FirstOrDefault();
 
-            <p>Your cart is empty</p>
+            <p>Giỏ hàng của bạn đang trống</p>
             if (shopPage != null)
             {
-                <p>Go to the <a href="@shopPage">@shopPage.Name</a>to add some more</p>
+                <p>Quay về <a href="@shopPage">@shopPage.Name</a>để đặt sản phẩm!</p>
             }
         }
     </div>

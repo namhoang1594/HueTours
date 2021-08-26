@@ -13,7 +13,8 @@
         var registerModel = Members.CreateRegistrationModel("Custom Member");
     *@
 
-    var registerModel = Members.CreateRegistrationModel();
+        var registerModel = Members.CreateRegistrationModel();
+        registerModel.RedirectUrl = "https://localhost:44308/";
 
     @*
         Configurable here:
@@ -47,7 +48,7 @@
 @if (success)
 {
     @* This message will show if registerModel.RedirectUrl is not defined (default) *@
-    <p>Registration succeeded.</p>
+    <p>Đăng ký thành công</p>
 }
 else
 {
@@ -55,7 +56,7 @@ else
     {
             @Html.AntiForgeryToken()
         <fieldset>
-            <legend>Register Member</legend>
+            <legend>Đăng ký</legend>
 
             @Html.ValidationSummary("registerModel", true)
 
@@ -99,7 +100,7 @@ else
             @Html.HiddenFor(m => registerModel.RedirectUrl)
             @Html.HiddenFor(m => registerModel.UsernameIsEmail)
 
-            <button>Register</button>
+            <button>Đăng ký</button>
         </fieldset>
     }
 }
