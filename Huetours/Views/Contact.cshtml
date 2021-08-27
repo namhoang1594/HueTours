@@ -7,6 +7,7 @@
 }
 
 <section id="contact" class="wow fadeIn border-bottom border-transperent-white-light TN-contact">
+    <img src="@contact.BannerImage.LocalCrops" alt=" " />
     <div class="container">
         <div class="section-title">
             <div class="contact-title title-bottom">
@@ -16,10 +17,10 @@
         <div class="row">
 
             <div class="col-12 col-md-6 col-lg-7 form-contact">
-                <div class="alert alert-success send-message-success" role="alert">
+                @*<div class="alert alert-success send-message-success" role="alert">
                     @Umbraco.GetDictionaryValue("Successed")
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
+                </div>*@
                 @{ Html.RenderAction("RenderContact", "ContactSurface"); }
 
             </div>

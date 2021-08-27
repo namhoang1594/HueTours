@@ -52,7 +52,7 @@ namespace Huetours.Core.Controller.Surface
             }
             catch (ValidationException ex)
             {
-                ModelState.AddModelError("productReference", "Failed to add product to cart");
+                ModelState.AddModelError("productReference", "Không thể thêm sản phẩm vào giỏ hàng");
                 return CurrentUmbracoPage();
             }
 
@@ -85,7 +85,7 @@ namespace Huetours.Core.Controller.Surface
             }
             catch (ValidationException ex)
             {
-                ModelState.AddModelError("productReference", "Failed to update cart");
+                ModelState.AddModelError("productReference", "Không thể cập nhật giỏ hàng");
                 return CurrentUmbracoPage();
             }
 
@@ -111,7 +111,7 @@ namespace Huetours.Core.Controller.Surface
             }
             catch (ValidationException ex)
             {
-                ModelState.AddModelError("productReference", "Failed to remove item from cart");
+                ModelState.AddModelError("productReference", "Không thể xóa sản phẩm khỏi giỏ hàng");
                 return CurrentUmbracoPage();
             }
 

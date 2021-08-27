@@ -7,10 +7,11 @@
 }
 
 <section class="breadcrumb">
+        @*<img src="#" alt="Alternate Text" />*@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="breadcrumb">
+                    <div class="breadcrumb" style="padding-top: 15px; padding-left: 90px;">
                         <p><a href="@home.Url()" style="color: #b50f0f"><span>@Umbraco.GetDictionaryValue("Home")</span></a><span> > </span><a href="@news.Url()" style="color: #b50f0f">@news.PageTitle</a><span> > </span><span style="color: #aa96da">@Model.PageTitle</span></p>
                     </div>
                 </div>
@@ -25,11 +26,13 @@
                     <h2 class="name_blog">
                         @Model.PageTitle
                     </h2>
-                    <div class="time_create">@Model.CreateDate.ToString("MMM dd, yyyy")</div>
+                    <div>@Model.ReferenceSite</div>
+                    <div class="time_create">@Model.CreateDate.ToString("MMMM dd, yyyy")</div>
                     <div class="content_detail">
                         <h2>@Model.SubPageTitle</h2>
                         @Html.Raw(Model.Content)
                     </div>
+                    <div>@Model.Author</div>
                 </div>
             </div>
         </div>

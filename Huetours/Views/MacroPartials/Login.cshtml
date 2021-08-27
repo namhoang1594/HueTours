@@ -7,37 +7,84 @@
 
 
 @{
+
     var loginModel = new LoginModel();
-    loginModel.RedirectUrl = HttpContext.Current.Request.Url.AbsolutePath;
+    //loginModel.RedirectUrl = HttpContext.Current.Request.Url.AbsolutePath;
+    loginModel.RedirectUrl = "https://localhost:44308/vi/gio-hang/";
+
 
     Html.EnableClientValidation();
+    Html.RequiresCss("~/css/login-register-style.css");
+    Html.RequiresCss("https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css");
     Html.EnableUnobtrusiveJavaScript();
     Html.RequiresJs("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js");
     Html.RequiresJs("https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js");
     Html.RequiresJs("https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js");
 }
-
+@Html.RenderCssHere()
 @* NOTE: This RenderJsHere code should be put on your main template page where the rest of your script tags are placed *@
 @Html.RenderJsHere()
+<section class="sign-in">
 
-@using (Html.BeginUmbracoForm<UmbLoginController>("HandleLogin"))
-{
-    @Html.HiddenFor(m => loginModel.RedirectUrl)
-    <fieldset>
-        <legend>Login</legend>
+    @using (Html.BeginUmbracoForm<UmbLoginController>("HandleLogin"))
+    {
+        @Html.HiddenFor(m => loginModel.RedirectUrl)
+        @*<fieldset>
+                <legend>Đăng nhập</legend>
 
-        @Html.ValidationSummary("loginModel", true)
+                @Html.ValidationSummary("loginModel", true)
 
-        @Html.LabelFor(m => loginModel.Username)
-        @Html.TextBoxFor(m => loginModel.Username)
-        @Html.ValidationMessageFor(m => loginModel.Username)
-        <br />
+                @Html.LabelFor(m => loginModel.Username)
+                @Html.TextBoxFor(m => loginModel.Username)
+                @Html.ValidationMessageFor(m => loginModel.Username)
+                <br />
 
-        @Html.LabelFor(m => loginModel.Password)
-        @Html.PasswordFor(m => loginModel.Password)
-        @Html.ValidationMessageFor(m => loginModel.Password)
-        <br />
+                @Html.LabelFor(m => loginModel.Password)
+                @Html.PasswordFor(m => loginModel.Password)
+                @Html.ValidationMessageFor(m => loginModel.Password)
+                <br />
 
-        <button>Login</button>
-    </fieldset>
-}
+                <button>Login</button> <button><a href="">Đăng ký</a></button>
+            </fieldset>*@
+        <div class="container">
+            <div class="signin-content">
+                <div class="signin-image">
+                    <figure><img src="~/images/signin-image.jpg" alt="sing up image"></figure>
+                    <a href="https://localhost:44308/vi/register-member/" class="signup-image-link">Bạn chưa có tài khoản? Đăng ký ngay</a>
+                </div>
+
+                <div class="signin-form">
+                    <h2 class="form-title">Đăng nhập</h2>
+                    @Html.ValidationSummary("loginModel", true)
+
+                    <div class="input-group">
+                        @Html.TextBoxFor(m => loginModel.Username, new { @class = "signin-form", placeholder = "Tên tài khoản" })
+                        @Html.ValidationMessageFor(m => loginModel.Username)
+                    </div>
+
+                    <br />
+                    <div class="input-group" >
+                        @Html.PasswordFor(m => loginModel.Password, new { @class = "signin-form", placeholder = "Mật khẩu" })
+                        @Html.ValidationMessageFor(m => loginModel.Password)
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                            <label for="remember-me" class="label-agree-term"><span><span></span></span>Nhớ tài khoản</label>
+                        </div>
+                        <button class="form-submit" style="border:none!important">Đăng nhập</button>
+                        <div class="social-login">
+                            <span class="social-label">Hoặc đăng nhập bằng</span>
+                            <ul class="socials">
+                                <li><a href="#"><i class="zmdi zmdi-facebook" style="display: inline-flex !important; justify-content: center; align-items: center;"></i></a></li>
+                                <li><a href="#"><i class="zmdi zmdi-twitter" style="display: inline-flex !important; justify-content: center; align-items: center;"></i></a></li>
+                                <li><a href="#"><i class="zmdi zmdi-google" style="display: inline-flex !important; justify-content: center; align-items: center;"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    }
+</section>
+
+

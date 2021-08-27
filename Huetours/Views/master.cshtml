@@ -87,9 +87,10 @@
                                 <li><a class="cart" href="@cart.Url()">@Umbraco.GetDictionaryValue("Cart") @Html.Action("CartCount", "CartSurface")</a></li>
                                 <li><a class="signup" href="@register.Url()">@Umbraco.GetDictionaryValue("Sign up").ToFirstUpper()</a></li>
                                 <li><a class="signin" href="@login.Url()">@Umbraco.GetDictionaryValue("Sign in").ToFirstUpper()</a></li>
-                                <li>@Html.Partial("~/Views/Partials/Login Status.cshtml")</li>
-
+                                <li>  @Html.Partial("~/Views/Partials/Login Status.cshtml")</li>
                             </ul>
+                          
+
                         </div>
                     </div>
                 </div>

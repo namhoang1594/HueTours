@@ -482,6 +482,8 @@
     <Content Include="config\Lang\zh-CN.user.xml" />
     <Content Include="config\logviewer.searches.config.js" />
     <Content Include="css\bootstrap.css" />
+    <Content Include="css\login-register-style.css" />
+    <Content Include="css\material-design-iconic-font.min.css" />
     <Content Include="css\normalize.css" />
     <Content Include="css\slick-theme.css" />
     <Content Include="css\slick.css" />
@@ -489,6 +491,8 @@
     <Content Include="Fonts\font-poppins\SIL Open Font License.txt" />
     <Content Include="Fonts\Merriweather\OFL.txt" />
     <Content Include="Global.asax" />
+    <Content Include="images\signin-image.jpg" />
+    <Content Include="images\signup-image.jpg" />
     <Content Include="images\white-left-arrow.png" />
     <Content Include="images\back-top.svg" />
     <Content Include="images\chevorl-left.svg" />
@@ -514,6 +518,7 @@
     <Content Include="Media\4pununyo\bien-thuan-an.jpg" />
     <Content Include="Media\5f3jahf1\2453526_v2.jpeg" />
     <Content Include="Media\5oihnh21\den-pha-tam-giang-kham-pha-dam-nuoc-lo-noi-tieng5.jpg" />
+    <Content Include="Media\acuf200e\kinh-thanh-hue.png" />
     <Content Include="Media\af2llg5p\pvh-ow.jpg" />
     <Content Include="Media\an1lqbgt\mask-group-1.png" />
     <Content Include="Media\b1vfxrss\icon_24_7.png" />
@@ -522,7 +527,9 @@
     <Content Include="Media\bzwpsy12\midtown-hotel-hue.jpg" />
     <Content Include="Media\dkxdgnwj\ash-lobby.jpg" />
     <Content Include="Media\dr4aq3y4\qiongru-194629034628-kmihqgqw-1.jpeg" />
+    <Content Include="Media\dulliesw\song-huong-duoi-cau-truong-tien.jpg" />
     <Content Include="Media\edeh1qpq\unnamed.jpg" />
+    <Content Include="Media\g1oogcdb\doi-bo-song-huong-820x410.jpg" />
     <Content Include="Media\g2mneblm\thien-vien-truc-lam-bach-ma-768x513.png" />
     <Content Include="Media\ghpfw3z4\05fb4e0841c600c379593ffe0612f5ca.jpg" />
     <Content Include="Media\gmndbf0c\icon_24_15.png" />
