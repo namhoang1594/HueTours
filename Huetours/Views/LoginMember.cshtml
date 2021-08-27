@@ -1,10 +1,10 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.LoginMember>
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
-	Layout = null;
+	Layout = "master.cshtml";
 }
 
-<section>
+<section style="background-color: #f5f5f5">
     <div>
         @Html.Raw(Model.Content)
     </div>

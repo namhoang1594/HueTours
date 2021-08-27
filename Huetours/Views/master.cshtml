@@ -125,25 +125,25 @@
 
 
                                 @*<li>
-                                        <a href="@hotel.Url()">@hotel.PageTitle</a>
-                                        <ul class="sub_menu">
-                                            @if (tours.Children != null)
-                                            {
-                                                foreach (var child in hotel.Children)
-                                                {
-                                                    IPublishedContent content = child;
-                                                    if (child.HasProperty("referencePage"))
-                                                    {
-                                                        content = child.Value<IPublishedContent>("referencePage");
-                                                    }
-                                                    if (content != null)
-                                                    {
-                                                        <li><a href="@(content.Url())">@content.Value("pageTitle")</a></li>
-                                                    }
-                                                }
-                                            }
-                                        </ul>
-                                    </li>*@
+            <a href="@hotel.Url()">@hotel.PageTitle</a>
+            <ul class="sub_menu">
+                @if (tours.Children != null)
+                {
+                    foreach (var child in hotel.Children)
+                    {
+                        IPublishedContent content = child;
+                        if (child.HasProperty("referencePage"))
+                        {
+                            content = child.Value<IPublishedContent>("referencePage");
+                        }
+                        if (content != null)
+                        {
+                            <li><a href="@(content.Url())">@content.Value("pageTitle")</a></li>
+                        }
+                    }
+                }
+            </ul>
+        </li>*@
 
                                 <li>
                                     <a style="cursor: pointer">@vehicle.PageTitle</a>
@@ -165,27 +165,28 @@
                                         }
                                     </ul>
                                 </li>
+                                <li><a href="@food.Url()">@Umbraco.GetDictionaryValue("Food").ToFirstUpper()</a></li>
 
-                                <li>
-                                    <a style="cursor: pointer">@food.PageTitle</a>
-                                    <ul class="sub_menu">
-                                        @if (tours.Children != null)
-                                        {
-                                            foreach (var child in food.Children)
-                                            {
-                                                IPublishedContent content = child;
-                                                if (child.HasProperty("referencePage"))
-                                                {
-                                                    content = child.Value<IPublishedContent>("referencePage");
-                                                }
-                                                if (content != null)
-                                                {
-                                                    <li><a href="@(content.Url())">@content.Value("pageTitle")</a></li>
-                                                }
-                                            }
-                                        }
-                                    </ul>
-                                </li>
+                                @*<li>
+            <a style="cursor: pointer">@food.PageTitle</a>
+            <ul class="sub_menu">
+                @if (tours.Children != null)
+                {
+                    foreach (var child in food.Children)
+                    {
+                        IPublishedContent content = child;
+                        if (child.HasProperty("referencePage"))
+                        {
+                            content = child.Value<IPublishedContent>("referencePage");
+                        }
+                        if (content != null)
+                        {
+                            <li><a href="@(content.Url())">@content.Value("pageTitle")</a></li>
+                        }
+                    }
+                }
+            </ul>
+        </li>*@
 
                                 <li><a href="@news.Url()">@Umbraco.GetDictionaryValue("News").ToFirstUpper()</a></li>
 
@@ -335,6 +336,7 @@
             e.preventDefault();
             $('html, body').animate({ scrollTop: 0 }, '400');
         });
+
     </script>
     <script>
         $(window).scroll(function () {

@@ -1,0 +1,376 @@
+﻿@using Umbraco.Core.PropertyEditors
+@inherits UmbracoViewPage
+@{
+    Layout = null;
+    var home = (Home)Model.Root();
+    var settings = (Settings)Umbraco.Content(1077);
+    var siteName = home.SiteName;
+    var logo = home.Logo?.LocalCrops;
+    var sharedContent = Model.Name;
+    var favicon = settings.Favicon?.LocalCrops;
+    var sharedImage = home.SocialShareImage?.Url(null, UrlMode.Absolute);
+    var tours = (Tours)home.Children.FirstOrDefault(c => c.ContentType.Alias == "tours");
+    var hotel = (Hotel)home.Children.FirstOrDefault(c => c.ContentType.Alias == "hotel");
+    var vehicle = (Vehicle)home.Children.FirstOrDefault(c => c.ContentType.Alias == "vehicle");
+    var food = (FoodAndRestaurant)home.Children.FirstOrDefault(c => c.ContentType.Alias == "foodAndRestaurant");
+    var news = (News)home.Children.FirstOrDefault(c => c.ContentType.Alias == "news");
+    var contact = (Contact)home.Children.FirstOrDefault(c => c.ContentType.Alias == "contact");
+    var aboutus = (AboutUs)home.Children.FirstOrDefault(c => c.ContentType.Alias == "aboutUs");
+    var faq = (FAqs)home.Children.FirstOrDefault(c => c.ContentType.Alias == "fAQs");
+    var voucher = (Voucher)home.Children.FirstOrDefault(c => c.ContentType.Alias == "voucher");
+    var cart = (Cart)home.Children.FirstOrDefault(c => c.ContentType.Alias == "cart");
+    var search = (SearchingResult)home.Children.FirstOrDefault(c => c.ContentType.Alias == "searchingResult");
+    var register = (RegisterMember)home.Children.FirstOrDefault(c => c.ContentType.Alias == "registerMember");
+    var login = (LoginMember)home.Children.FirstOrDefault(c => c.ContentType.Alias == "loginMember");
+
+
+    var lang = "vi";
+    var uri = new Uri(Request.Url.AbsoluteUri);
+    if (uri.Segments.Length > 1)
+    {
+        if (uri.Segments[1].Trim('/').ToLower() == "en")
+        {
+            lang = "en";
+        }
+    }
+}
+
+<!doctype html>
+<html class="no-js" lang="@lang">
+<head>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="@(Model.Name ) - @siteName" />
+    <meta property="og:site_name" content="@siteName" />
+    <meta property="og:url" content="@(Request.Url?.AbsoluteUri)" />
+    <meta property="og:image" content="@sharedImage" />
+    <meta property="og:description" content="@sharedContent" />
+    <link rel="shortcut icon" href="@favicon" type="image/x-icon" />
+    <link rel="icon" href="@favicon" type="image/ico" />
+    <title>@Model.Name - @home.SiteName</title>
+    <meta charset="utf-8">
+    <meta name="author" content="ThemeZaa">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+
+    <link rel="stylesheet" href="~/css/normalize.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/slick.css" />
+    <link rel="stylesheet" href="~/css/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <div class="top_header">
+                <div class="container-fluid">
+                    <div class="row top_header-row">
+                        <div class="col-4">
+                            <div class="logo">
+                                <a href="@home.Url()">
+                                    <img src="@logo" alt="" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <ul class="menu_top">
+                                <li>
+                                    @Html.Partial("~/Views/Partials/Language.cshtml")
+                                </li>
+                                <li>
+                                    <a href="tel:@settings.ContactPhone">@settings.ContactPhone</a>
+                                </li>
+                                <li>
+                                    <a href="@home.DownloadApp.Url">@home.DownloadApp.Name</a>
+                                </li>
+                                <li><a class="cart" href="@cart.Url()">@Umbraco.GetDictionaryValue("Cart") @Html.Action("CartCount", "CartSurface")</a></li>                         
+                                <li>  @Html.Partial("~/Views/Partials/Login Status.cshtml")</li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu_header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="main_menu">
+                                <li>
+                                    <a style="cursor: pointer">@tours.PageTitle</a>
+                                    <ul class="sub_menu">
+                                        @if (tours.Children != null)
+                                        {
+                                            foreach (var child in tours.Children)
+                                            {
+                                                IPublishedContent content = child;
+                                                if (child.HasProperty("referencePage"))
+                                                {
+                                                    content = child.Value<IPublishedContent>("referencePage");
+                                                }
+                                                if (content != null)
+                                                {
+                                                    <li><a href="@(content.Url())">@content.Value("pageTitle")</a></li>
+                                                }
+                                            }
+                                        }
+                                    </ul>
+                                </li>
+
+                                <li><a href="@hotel.Url()">@Umbraco.GetDictionaryValue("Hotel").ToFirstUpper()</a></li>
+
+
+                                @*<li>
+                                        <a href="@hotel.Url()">@hotel.PageTitle</a>
+                                        <ul class="sub_menu">
+                                            @if (tours.Children != null)
+                                            {
+                                                foreach (var child in hotel.Children)
+                                                {
+                                                    IPublishedContent content = child;
+                                                    if (child.HasProperty("referencePage"))
+                                                    {
+                                                        content = child.Value<IPublishedContent>("referencePage");
+                                                    }
+                                                    if (content != null)
+                                                    {
+                                                        <li><a href="@(content.Url())">@content.Value("pageTitle")</a></li>
+                                                    }
+                                                }
+                                            }
+                                        </ul>
+                                    </li>*@
+
+                                <li>
+                                    <a style="cursor: pointer">@vehicle.PageTitle</a>
+                                    <ul class="sub_menu">
+                                        @if (tours.Children != null)
+                                        {
+                                            foreach (var child in vehicle.Children)
+                                            {
+                                                IPublishedContent content = child;
+                                                if (child.HasProperty("referencePage"))
+                                                {
+                                                    content = child.Value<IPublishedContent>("referencePage");
+                                                }
+                                                if (content != null)
+                                                {
+                                                    <li><a href="@(content.Url())">@content.Value("pageTitle")</a></li>
+                                                }
+                                            }
+                                        }
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a style="cursor: pointer">@food.PageTitle</a>
+                                    <ul class="sub_menu">
+                                        @if (tours.Children != null)
+                                        {
+                                            foreach (var child in food.Children)
+                                            {
+                                                IPublishedContent content = child;
+                                                if (child.HasProperty("referencePage"))
+                                                {
+                                                    content = child.Value<IPublishedContent>("referencePage");
+                                                }
+                                                if (content != null)
+                                                {
+                                                    <li><a href="@(content.Url())">@content.Value("pageTitle")</a></li>
+                                                }
+                                            }
+                                        }
+                                    </ul>
+                                </li>
+
+                                <li><a href="@news.Url()">@Umbraco.GetDictionaryValue("News").ToFirstUpper()</a></li>
+
+                                <li><a href="@contact.Url()">@Umbraco.GetDictionaryValue("Contact").ToFirstUpper()</a></li>
+
+                                <li>
+                                    <a style="cursor: pointer">@aboutus.PageTitle</a>
+                                    <ul class="sub_menu">
+                                        @if (aboutus.Children != null)
+                                        {
+                                            foreach (var child in aboutus.Children)
+                                            {
+                                                IPublishedContent content = child;
+                                                if (child.HasProperty("referencePage"))
+                                                {
+                                                    content = child.Value<IPublishedContent>("referencePage");
+                                                }
+                                                if (content != null)
+                                                {
+                                                    <li><a href="@(content.Url())">@content.Value("pageTitle")</a></li>
+                                                }
+                                            }
+                                        }
+                                    </ul>
+                                </li>
+
+                                @*<li><a href="@aboutus.Url()">@Umbraco.GetDictionaryValue("AboutUs").ToFirstUpper()</a></li>*@
+                                @*<li><a href="@faq.Url()">@Umbraco.GetDictionaryValue("FAQs").ToFirstUpper()</a></li>*@
+                                <li><a href="@voucher.Url()"><i class="fas fa-gift"></i> <span>@Umbraco.GetDictionaryValue("Voucher").ToFirstUpper()</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+
+        @RenderBody()
+
+        <div class="back-to-top">
+            <a id="button"><i class="fas fa-arrow-up"></i></a>
+        </div>
+
+        <footer class="footer" style="background-color: #000000c2">
+            <div class="top_footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="logo">
+                                <a href="">
+                                    <img src="@logo" alt="" />
+                                </a>
+                            </div>
+                            <div class="follow_us">
+                                <p>@Umbraco.GetDictionaryValue("Follow Us")</p>
+                                <ul class="follow_us_icon">
+                                    <li><a href="@home.Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="@home.Twitter"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="@home.Instagram"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="@home.Youtube"><i class="fab fa-youtube"></i></a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <ul class="footer_menu">
+                                @if (home.FooterMenu1 != null)
+                                {
+                                    foreach (var child in home.FooterMenu1)
+                                    {
+                                        IPublishedContent content = child;
+                                        if (child.HasProperty("referencePage"))
+                                        {
+                                            content = child.Value<IPublishedContent>("referencePage");
+                                        }
+                                        <li><a href="@content.Url()">@content.Value("pageTitle")</a></li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+
+                        <div class="col-3">
+                            <ul class="footer_menu">
+                                @if (home.FooterMenu2 != null)
+                                {
+                                    foreach (var child in home.FooterMenu2)
+                                    {
+                                        IPublishedContent content = child;
+                                        if (child.HasProperty("referencePage"))
+                                        {
+                                            content = child.Value<IPublishedContent>("referencePage");
+                                        }
+                                        <li><a href="@content.Url()">@content.Value("pageTitle")</a></li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+
+                        <div class="col-2">
+                            <ul class="footer_menu">
+                                @if (home.FooterMenu3 != null)
+                                {
+                                    foreach (var child in home.FooterMenu3)
+                                    {
+                                        IPublishedContent content = child;
+                                        if (child.HasProperty("referencePage"))
+                                        {
+                                            content = child.Value<IPublishedContent>("referencePage");
+                                        }
+                                        <li><a href="@content.Url()">@content.Value("pageTitle")</a></li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_footer" style="background-color: #000000">
+                <div class="container">
+                    <div class="text_reserved text-center" style="color: #ffffff; ">
+                        @Html.Raw(home.Copyright)
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script type="text/javascript" src="~/js/bootstrap.js"></script>
+    <script type="text/javascript" src="~/js/jquery.min.js"></script>
+    <script type="text/javascript" src="~/js/libs/style.js"></script>
+    <script type="text/javascript" src="~/js/slick.min.js"></script>
+    <script type="text/javascript" src="~/js/libs/validateForm.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script type="text/javascript">
+        var btn = $('#button');
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 400) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '400');
+        });
+
+    </script>
+    <script>
+        $(window).scroll(function () {
+            $('.slider-tours').slick({
+                infinite: true,
+                slidesToShow: 5,
+                slidesToScroll: 1
+            });
+
+            $('.home_bannerimage').slick({
+                arrows: true,
+                centerPadding: "0px",
+                slidesToShow: 1,
+                infinite: true,
+                autoplay: true
+            });
+
+            $('.banner_advertisement').slick({
+                arrows: true,
+                centerPadding: "0px",
+                slidesToShow: 1,
+                infinite: true,
+            });
+
+            $('.single_image_tours').slick({
+                arrows: true,
+                centerPadding: "0px",
+                dots: true,
+                slidesToShow: 1,
+                infinite: true,
+                autoplay: true
+            });
+        });
+    </script>
+
+
+    @RenderSection("ScriptsBottom", false)
+
+</body>
+</html>

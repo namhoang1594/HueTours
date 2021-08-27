@@ -1,5 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.SoloTours>
 @using ContentModels = Umbraco.Web.PublishedModels;
+@using Huetours.Core.Extensions;
+@using Vendr.Core;
 @{
     Layout = "master.cshtml";
     var home = (Home)Model.Root();
@@ -23,9 +25,7 @@
 <section id="news">
     <img style="width: 100%" src="@(Model.BackgroundImage?.LocalCrops)" alt="">
     <div class="box_content">
-        <h1 class="text_title">
-            @Html.Raw(Model.Content)
-        </h1>
+        @Html.Raw(Model.Content)
     </div>
 </section>
 
@@ -33,9 +33,43 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div>
-                    <h1>@Umbraco.GetDictionaryValue("Hue News")</h1>
+                <div style="padding-bottom: 20px; text-align: center">
+                    <h1>@Umbraco.GetDictionaryValue("Solo Tours")</h1>
                 </div>
+                <div class="showtours_services">
+                    <div class="showtours_services1">
+                        <img src="~/images/Checklist-dat-xe-don-gian.png" alt="Alternate Text" />
+                        <div class="showtours_services2">
+                            <h5>CHẤT LƯỢNG TỐT NHẤT</h5>
+                            <p>Đặt tour đơn giản, khuyến mãi hấp dẫn, phục vụ chu đáo</p>
+                        </div>
+                    </div>
+                    <div class="showtours_services1">
+                        <img src="~/images/support-huesmile-1.png" alt="Alternate Text" />
+                        <div class="showtours_services2">
+                            <h5>
+                                TƯ VẤN CHUYÊN NGHIỆP
+                            </h5>
+                            <p>Nhân viên nhiệt tình, chuyên nghiệp 24/7</p>
+                            </div>
+                        </div>
+                    <div class="showtours_services1">
+                        <img src="~/images/backpack.png" alt="Alternate Text" />
+                        <div class="showtours_services2">
+                            <h5>
+                                TRẢI NGHIỆM TRỌN VẸN
+                            </h5>
+                            <p>
+                                Mang lại giá trị trải nghiệm tốt nhất cho chuyến đi du lịch
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                <div style="padding-top: 20px;text-align:center;padding-bottom: 20px;">Từ bao đời nay Huế không chỉ thu hút du khách bởi những nét đẹp cổ kính mà còn thu hút du 
+                khách bởi sự thân thiện, ngọt ngào của người dân nơi đây. Đến với Huế là đến với sự nhẹ nhàng,
+                trầm lặng, là đến với những nét đẹp nên thơ, trữ tình. Có rất nhiều địa điểm cũng như nhiều 
+                tour du lịch mà bạn có thể chọn khi đến Huế. Cùng Hue Tours xem qua những tour du lịch 
+                dưới đây nhé!</div>
                 <div class="row">
                     @{
                         if (Model.Children != null)
@@ -55,13 +89,19 @@
                                                     <a href="@toursItem.Url()">@Html.Raw(toursItem.PageTitle)</a>
                                                 </h2>
                                                 <div class="news_startday">
-                                                    <p><i class="far fa-calendar-alt"></i>Ngày đi: <span style="font-weight: 600;">@Html.Raw(toursItem.StartDay.ToString("dd/MM/yyyy"))</span></p>
+                                                    <p><i class="far fa-calendar-alt"></i>@Umbraco.GetDictionaryValue("Start Day")<span style="font-weight: 600;">@Html.Raw(toursItem.StartDay.ToString("dd/MM/yyyy"))</span></p>
                                                 </div>
                                                 <div class="news_startday">
-                                                    <p><i class="fas fa-sort-numeric-up-alt"></i>Số ngày: <span style="font-weight: 600;">@Html.Raw(toursItem.HowManyDays)</span></p>
+                                                    <p><i class="fas fa-sort-numeric-up-alt"></i>@Umbraco.GetDictionaryValue("Number Day")<span style="font-weight: 600;">@Html.Raw(toursItem.HowManyDays)</span></p>
+                                                </div>
+                                                <div class="news_startday">
+                                                    <p><i class="fas fa-user-friends"></i>@Umbraco.GetDictionaryValue("Number Tourist")<span style="font-weight: 600;">@Html.Raw(toursItem.HowManyTourists)</span></p>
+                                                </div>
+                                                <div class="news_discount">
+                                                    @Html.Raw(toursItem.Discount)
                                                 </div>
                                                 <div class="news_price">
-                                                    @Html.Raw(toursItem.Price)
+                                                    @Html.Raw(toursItem.CalculatePrice().Formatted())
                                                 </div>
                                             </div>
                                         </div>
