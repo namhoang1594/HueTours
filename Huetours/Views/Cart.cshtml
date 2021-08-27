@@ -11,9 +11,9 @@
 
 }
 
-<section>
-    <div class="container">
-        <h3>Shopping Cart</h3>
+<section style="background-color: #f5f5f5">
+    <div class="container" style="padding-top: 50px;">
+        <h3>Giỏ hàng</h3>
         <br />
         @if (Model != null && order != null && order.OrderLines.Any())
         {
@@ -49,9 +49,9 @@
                                         </div>
                                     </td>
                                     <td colspan="2">
-                                        <a href="@product.Url()">@item.OrderLine.Name</a>
+                                        <a style="color:darkviolet;font-size: 18px;font-weight:500;" href="@product.Url()">@item.OrderLine.Name</a>
                                     </td>
-                                    <td>
+                                    <td style="color:red">
                                         @(item.OrderLine.UnitPrice.Value.Formatted())
                                     </td>
                                     <td>
@@ -61,12 +61,12 @@
                                            new { @class = "form-control input-number quantity", type = "number" })
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="color:red">
                                         @(item.OrderLine.TotalPrice.Value.Formatted())
                                     </td>
                                     <td>
                                         <a href="@Url.SurfaceAction("RemoveFromCart","CartSurface", new {
-                                            OrderLineId = item.OrderLine.Id})" rel="tooltip" class="btn btn-link">
+                                            OrderLineId = item.OrderLine.Id})" rel="tooltip" class="btn btn-link btn-warning" style="color:#000000">
                                             Remove <i class="fas fa-times"></i>
                                         </a>
                                     </td>
@@ -74,8 +74,8 @@
                             }
                             <tr>
                                 <td></td>
-                                <td colspan="2">Tổng: </td>
-                                <td class="td-price">
+                                <td colspan="2" style="font-weight:600;font-size: 20px;">Tổng cộng: </td>
+                                <td class="td-price" style="font-weight:600;font-size: 20px; color:red">
                                     @(order.SubtotalPrice.Value.Formatted())
                                 </td>
                                 <td></td>
@@ -83,7 +83,7 @@
                                     <button class="btn btn-success btn-round" title="Refresh Cart">Cập nhật  <i class="fas fa-sync"></i></button>
                                 </td>
                                 <td class="text-right">
-                                    <a href="@checkout.Url()" class="btn btn-info btn-round">Thanh Toán <i class="fas fa-shopping-cart"></i></a>
+                                    <a href="@checkout.Url()" class="btn btn-round" style="color: #ffffff; font-weight: 600; background-color: #f37a08;">Thanh toán ngay <i class="fas fa-shopping-cart"></i></a>
                                 </td>
                             </tr>
                         </tbody>
@@ -111,7 +111,7 @@
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 Toastify({
-                    text: "Cập nhật giỏ hàng oke",
+                    text: "Đã cập nhật giỏ hàng",
                     duration: 3000,
                     gravity: "bottom",
                     position: "center",
@@ -127,7 +127,7 @@
 <script>
             document.addEventListener('DOMContentLoaded', function() {
                 Toastify({
-                    text: @Umbraco.GetDictionaryValue("Item removed from cart"),
+                    text: "Đã xóa sản phẩm khỏi giỏ hàng",
                     duration: 3000,
                     gravity: "bottom",
                     position: "center",

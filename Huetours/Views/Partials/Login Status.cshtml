@@ -6,8 +6,11 @@
 
 
 @{
+    var home = (Home)Model.Root();
     var loginStatusModel = Members.GetCurrentLoginStatus();
     var logoutModel = new PostRedirectModel();
+    var register = (RegisterMember)home.Children.FirstOrDefault(c => c.ContentType.Alias == "registerMember");
+    var login = (LoginMember)home.Children.FirstOrDefault(c => c.ContentType.Alias == "loginMember");
 
     @*
         Here you can specify a redirect URL for after logging out, by default umbraco will simply
@@ -19,15 +22,15 @@
 
 @if (loginStatusModel.IsLoggedIn)
 {
-    <p>You are currently logged in as @loginStatusModel.Name</p>
+    <p>Xin chào, @loginStatusModel.Name</p>
 
     using (Html.BeginUmbracoForm<UmbLoginStatusController>("HandleLogout"))
     {
         <fieldset>
-            <legend>Logout</legend>
             <button>Logout</button>
         </fieldset>
 
         @Html.HiddenFor(m => logoutModel.RedirectUrl)
     }
+
 }
