@@ -45,6 +45,20 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
+		/// Background Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("backgroundImage")]
+		public virtual global::Umbraco.Core.Models.MediaWithCrops BackgroundImage => this.Value<global::Umbraco.Core.Models.MediaWithCrops>("backgroundImage");
+
+		///<summary>
+		/// How Many Food Should Be Shown?
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]
+		[ImplementPropertyType("howManyFoodShouldBeShown")]
+		public virtual decimal HowManyFoodShouldBeShown => this.Value<decimal>("howManyFoodShouldBeShown");
+
+		///<summary>
 		/// Content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.0")]

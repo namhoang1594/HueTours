@@ -4,7 +4,7 @@
 @using Vendr.Core;
 
 @{
-    Layout = "master.cshtml";
+    Layout = "Layout.cshtml";
     var home = (Home)Model.Root();
     var order = Model.GetCurrentOrder();
     var checkout = (VendrCheckoutCheckoutPage)home.Children.FirstOrDefault(x => x.ContentType.Alias.Equals("vendrCheckoutCheckoutPage"));

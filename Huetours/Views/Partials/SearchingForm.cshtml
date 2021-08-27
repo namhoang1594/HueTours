@@ -5,28 +5,31 @@
             {
                 <div class="container">
                     <div class="row">
-                        <div class="form-group col-md-6">
-                            @Html.LabelFor(m => m.Query)
-                            <div class="input-group">
-                                @Html.TextBoxFor(m => m.Query, new { @class = "form-control", placeholder = "Search......." })
-                                @Html.ValidationMessageFor(m => m.Query)
-                            </div>
-                            <button id="submit" class="btn btn-success btn-lock">Search</button>
+                        <div id="banner_searching">
+                            <div class="form-group home_searching">
+                                @*@Html.LabelFor(m => m.Query)*@
+                                <div class="input-group">
+                                    <i class="fas fa-search"></i>
+                                    @Html.TextBoxFor(m => m.Query, new { @class = "form-control", placeholder = "Tìm kiếm bất cứ gì bạn muốn..." })
+                                    @Html.ValidationMessageFor(m => m.Query)
+                                    <button id="submit" class="btn btn-lock btn-home_searching"><span>Tìm kiếm</span></button>
 
+                                </div>
+
+                            </div>
+
+                            @*<div class="form-group col-md-6">
+                @Html.LabelFor(m => m.Page)
+                <div class="input-group">
+                    @Html.TextBoxFor(m => m.Page, new { @class = "form-control", placeholder = "Search Page" })
+                    @Html.ValidationMessageFor(m => m.Page)
+                </div>
+            </div>*@
+
+                            @*<div class="form-group col-md-6">
+                <button id="submit" class="btn btn-success btn-lock">Search</button>
+            </div>*@
                         </div>
-
-                        @*<div class="form-group col-md-6">
-                            @Html.LabelFor(m => m.Page)
-                            <div class="input-group">
-                                @Html.TextBoxFor(m => m.Page, new { @class = "form-control", placeholder = "Search Page" })
-                                @Html.ValidationMessageFor(m => m.Page)
-                            </div>
-                        </div>*@
-
-                        @*<div class="form-group col-md-6">
-                            <button id="submit" class="btn btn-success btn-lock">Search</button>
-                        </div>*@
                     </div>
-
                 </div>
             }

@@ -631,7 +631,8 @@ article .createdDate {
 }
 
     #contact .section-title {
-        margin-bottom: -50px
+        margin-bottom: -50px;
+        padding-top: 50px;
     }
 
 
@@ -1429,23 +1430,38 @@ button:disabled,
         #toursItem .order_tours .order_tours_startday {
             font-size: 15px;
         }
+            #toursItem .order_tours .order_tours_startday p{
+                color: black;
+                font-weight: 500
+            }
 
             #toursItem .order_tours .order_tours_startday input {
                 width: 100%;
                 border-bottom: unset !important;
                 height: 40px;
             }
+        #toursItem .order_tours .order_tours_price p {
+            color: black;
+            font-size: 15px;
+        }
 
         #toursItem .order_tours .order_tours_price {
             padding-top: 15px;
+            color: red;
+            font-weight: 500;
+            font-size: 20px;
         }
 
         #toursItem .order_tours .order_tours_numbertourist {
             padding-top: 10px;
         }
-        #toursItem .order_tours .order_tours_numbertourist input{
-            height: 40px;
-        }
+            #toursItem .order_tours .order_tours_numbertourist p {
+                color: black;
+                font-weight: 500
+            }
+            #toursItem .order_tours .order_tours_numbertourist input {
+                height: 40px;
+            }
 
 #toursItem .order_tours .input-group-btn {
     padding: 15px 0;
@@ -1459,4 +1475,91 @@ button:disabled,
     top: 50%;
     left: 22%;
     z-index: 1
+}
+
+
+#banner_searching .home_searching {
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 24%;
+    z-index: 1
+}
+
+    #banner_searching .home_searching i {
+        position: absolute;
+        padding: 20px 0 0 9px;
+        font-size: 25px;
+        color: black
+    }
+
+    #banner_searching .home_searching input {
+        padding: 20px 40px;
+        -webkit-border-top-left-radius: 25px;
+        -webkit-border-bottom-left-radius: 25px;
+        -moz-border-radius-topleft: 25px;
+        -moz-border-radius-bottomleft: 25px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        box-shadow: none;
+        border: none;
+        flex: 1;
+        background: #ffffff;
+        border-bottom: unset !important;
+        height: unset;
+    }
+
+    #banner_searching .home_searching button {
+        padding-right: 10px;
+        background-color: #fff;
+        -webkit-border-top-right-radius: 25px;
+        -webkit-border-bottom-right-radius: 25px;
+        -webkit-border-top-left-radius: unset;
+        -webkit-border-bottom-left-radius: unset;
+        -moz-border-radius-topright: 25px;
+        -moz-border-radius-bottomright: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        box-shadow: 5px 4px 6px rgb(0 0 0 / 19%);
+        border: none;
+        cursor: pointer;
+    }
+
+    #banner_searching .home_searching span {
+        margin-left: 50px;
+        padding: 12px 40px;
+        font-size: 16px;
+        font-weight: 300;
+        color: #fff;
+        background-color: #aa96da;
+        border-radius: 20px;
+        box-shadow: 2px 4px 6px rgb(0 0 0 / 19%);
+    }
+
+    #banner_searching .home_searching input::placeholder {
+        color: #000000 !important;
+    }
+
+#showtours .showtours_services {
+    display: flex;
+}
+
+#showtours .showtours_services1 img {
+    width: 20%;
+}
+#showtours .showtours_services1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#showtours .showtours_services1 .showtours_services2 {
+    padding: 10px;
 }

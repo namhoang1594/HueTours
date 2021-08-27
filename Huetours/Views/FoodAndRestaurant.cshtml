@@ -1,5 +1,154 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.FoodAndRestaurant>
 @using ContentModels = Umbraco.Web.PublishedModels;
+@using Huetours.Core.Extensions;
+@using Vendr.Core;
 @{
-	Layout = "master.cshtml";
+    Layout = "master.cshtml";
+    var home = (Home)Model.Root();
+    var numberOfNews = (int)Model.HowManyFoodShouldBeShown;
+    var newsPosts = Model.Children.OrderByDescending(c => c.CreateDate).ToList();
+    var pageCount = (int)Math.Ceiling((double)newsPosts.Count / numberOfNews);
+    //gets the page from the querystring and sets it to one if it is out of range
+    var page = 1;
+    if (!string.IsNullOrEmpty(Request.QueryString["page"]))
+    {
+        int.TryParse(Request.QueryString["page"], out page);
+        if (page <= 0 || page > pageCount)
+        {
+            page = 1;
+        }
+    }
+    //Gets the blogposts for the current page
+    var pagedNews = newsPosts.Skip((page - 1) * numberOfNews).Take(numberOfNews).ToList();
 }
+
+<section id="news">
+    <img style="width: 100%" src="@(Model.BackgroundImage?.LocalCrops)" alt="">
+    <div class="box_content">
+        @Html.Raw(Model.Content)
+    </div>
+</section>
+
+<section id="showtours">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div style="padding-bottom: 20px; text-align: center">
+                    <h1>Khám phá những tours du lịch về ẩm thực, những nhà hàng, địa điểm ẩm thực nổi tiếng tại Huế</h1>
+                </div>
+                <div class="showtours_services">
+                    <div class="showtours_services1">
+                        <img src="~/images/Checklist-dat-xe-don-gian.png" alt="Alternate Text" />
+                        <div class="showtours_services2">
+                            <h5>CHẤT LƯỢNG TỐT NHẤT</h5>
+                            <p>Đặt tour đơn giản, khuyến mãi hấp dẫn, phục vụ chu đáo</p>
+                        </div>
+                    </div>
+                    <div class="showtours_services1">
+                        <img src="~/images/support-huesmile-1.png" alt="Alternate Text" />
+                        <div class="showtours_services2">
+                            <h5>
+                                TƯ VẤN CHUYÊN NGHIỆP
+                            </h5>
+                            <p>Nhân viên nhiệt tình, chuyên nghiệp 24/7</p>
+                        </div>
+                    </div>
+                    <div class="showtours_services1">
+                        <img src="~/images/backpack.png" alt="Alternate Text" />
+                        <div class="showtours_services2">
+                            <h5>
+                                TRẢI NGHIỆM TRỌN VẸN
+                            </h5>
+                            <p>
+                                Mang lại giá trị trải nghiệm tốt nhất cho chuyến đi du lịch
+                            </p>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="row">
+                    @{
+                        if (Model.Children != null)
+                        {
+                            foreach (ToursItem toursItem in pagedNews)
+                            {
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="card item-card">
+                                        <div class="card-content news_item">
+                                            <div class="news_image">
+                                                <a href="@toursItem.Url()">
+                                                    <img class="image" src="@(toursItem.ThumbnailImage?.LocalCrops)" alt="@(toursItem.ThumbnailImage?.LocalCrops)" />
+                                                </a>
+                                            </div>
+                                            <div class="news_info">
+                                                <h2 class="news_title">
+                                                    <a href="@toursItem.Url()">@Html.Raw(toursItem.PageTitle)</a>
+                                                </h2>
+                                                <div class="news_startday">
+                                                    <p><i class="far fa-calendar-alt"></i>@Umbraco.GetDictionaryValue("Start Day")<span style="font-weight: 600;">@Html.Raw(toursItem.StartDay.ToString("dd/MM/yyyy"))</span></p>
+                                                </div>
+                                                <div class="news_startday">
+                                                    <p><i class="fas fa-sort-numeric-up-alt"></i>@Umbraco.GetDictionaryValue("Number Day")<span style="font-weight: 600;">@Html.Raw(toursItem.HowManyDays)</span></p>
+                                                </div>
+                                                <div class="news_startday">
+                                                    <p><i class="fas fa-user-friends"></i>@Umbraco.GetDictionaryValue("Number Tourist")<span style="font-weight: 600;">@Html.Raw(toursItem.HowManyTourists)</span></p>
+                                                </div>
+                                                <div class="news_discount">
+                                                    @Html.Raw(toursItem.Discount)
+                                                </div>
+                                                <div class="news_price">
+                                                    @Html.Raw(toursItem.CalculatePrice().Formatted())
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+
+                    }
+                </div>
+            </div>
+
+            @if (newsPosts.Count > numberOfNews)
+            {
+                <div class="col-md-12 col-mm-12">
+                    <nav id="box_pagination">
+                        <ul class="pagination">
+                            @if (page <= 1)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="javascript:;">@Umbraco.GetDictionaryValue("Prev")</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="@(Model.Url() + "?page=" + (page - 1))">@Umbraco.GetDictionaryValue("Prev")</a>
+                                </li>
+                            }
+                            @for (int i = 1; i <= pageCount; i++)
+                            {
+                                <li class="page-item @(page == i ? "active" : null)">
+                                    <a class="page-link" href="@(page == i ? "javascript:;":Model.Url() + "?page=" + i )">@i</a>
+                                </li>
+                            }
+                            @if (page == pageCount)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="javascript:;">@Umbraco.GetDictionaryValue("Next")</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="@(Model.Url() + "?page=" + (page + 1))">@Umbraco.GetDictionaryValue("Next")</a>
+                                </li>
+                            }
+                        </ul>
+                    </nav>
+                </div>
+            }
+        </div>
+    </div>
+</section>
